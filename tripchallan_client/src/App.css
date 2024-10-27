@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import 'flowbite-react'; */
+@import 'flowbite';
+  /* src/App.css */
+.App {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .Offcanvas {
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+  } 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
