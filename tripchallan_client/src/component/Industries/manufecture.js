@@ -198,7 +198,7 @@ export default function Manufecture() {
             <img
               src={manufecturepage1}
               alt="Manufacturing Process"
-              className="rounded w-full h-[200px] h-auto object-cover"
+              className="rounded w-full h-[200px]  object-cover"
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import webapp from "../images/webapp.png";
 import { useNavigate } from "react-router-dom";
+import webbg from '../images/webbg.jpg'
 import {
   FaCode,
   FaCloud,
@@ -14,11 +15,13 @@ import webpro from "../images/webproject.png";
 import bgmap from "../images/card-section.jpg";
 
 export default function Webcms() {
-  const navigate=useNavigate();
-
-  const more=()=>{
-    navigate('/webcms')
+  const navigate = useNavigate();
+  const contact =()=>{
+    navigate('/contact')
   }
+  const more = () => {
+    navigate("/webcms");
+  };
   return (
     <>
       <section className="bg-gradient-to-r from-purple-900 to-indigo-900 py-8 px-4">
@@ -68,6 +71,65 @@ export default function Webcms() {
         </div>
       </section>
 
+      <div className="flex flex-col md:flex-row items-center gap-8 justify-center bg-white p-8 md:p-16">
+        {/* Left Section */}
+        <div className="md:w-1/2 mb-8 md:mb-0">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#000031] to-[#7f0f54] text-transparent bg-clip-text">
+            Get a Robust Online Presence with Our Market-Ready Web App
+            Development Solutions
+          </h1>
+          <p className="text-gray-600">
+            At OrangeMantra, we understand the importance of creating immersive
+            web experiences to elevate your market value. Our team of dedicated
+            web experts understands your unique business needs to customize web
+            app development solutions for you. So, that your users get an
+            immersive user experience.
+          </p>
+        </div>
+
+        {/* Right Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md text-center">
+            <div className="text-5xl mb-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              <i className="fas fa-briefcase"></i>
+            </div>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              21+
+            </h2>
+            <p className="text-gray-500">Years of Experience</p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md text-center">
+            <div className="text-5xl mb-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              <i className="fas fa-smile"></i>
+            </div>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              150+
+            </h2>
+            <p className="text-gray-500">Industry Experts</p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md text-center">
+            <div className="text-5xl mb-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              <i className="fas fa-thumbs-up"></i>
+            </div>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              95%
+            </h2>
+            <p className="text-gray-500">User Retention</p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md text-center">
+            <div className="text-5xl mb-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              <i className="fas fa-globe"></i>
+            </div>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-[#000031] to-[#7f0f54] bg-clip-text text-transparent">
+              200+
+            </h2>
+            <p className="text-gray-500">Global Clients</p>
+          </div>
+        </div>
+      </div>
       <div className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-800">
@@ -192,7 +254,10 @@ export default function Webcms() {
               their default model text, and a search for 'lorem ipsum' will
               uncover many web sites still in their infancy.{" "}
             </p>
-            <button className="px-4 py-2 bg-gradient-to-r from-red-500 to-blue-700 text-white font-semibold rounded-full text-lg hover:from-blue-700 hover:to-red-500 transition duration-500" onClick={more}>
+            <button
+              className="px-4 py-2 bg-gradient-to-r from-red-500 to-blue-700 text-white font-semibold rounded-full text-lg hover:from-blue-700 hover:to-red-500 transition duration-500"
+              onClick={more}
+            >
               Read More
             </button>
           </div>
@@ -203,6 +268,33 @@ export default function Webcms() {
           </div>
         </div>
       </section>
+      <div className="bg-indigo-950 relative h-full p-6 sm:p-8 md:p-10 ">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50 "
+          style={{
+            backgroundImage: `url(${webbg})`,
+            backgroundColor: "rgba(0,0,0,0.6)",
+            backgroundBlendMode: "multiply",
+          }}
+        />
+
+        <h1 className="text-white  text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold relative z-10 text-center m-2 p-2 leading-relaxed">
+         Do you Want Custom {" "}
+          <span className="text-orange-500 font-bold">
+            Web App Development{" "}
+          </span>
+          For profitable Application
+        </h1>
+
+        <div className="text-center relative z-10 mt-4">
+          <button
+            onClick={contact}
+            className="text-white bg-orange-500 hover:bg-orange-600 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg inline-block "
+          >
+            Hire Experts Now
+          </button>
+        </div>
+      </div>
     </>
   );
 }

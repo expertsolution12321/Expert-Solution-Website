@@ -147,7 +147,7 @@ function Homepage() {
       </div>
 
       {/* About US Start */}
-      <div id="about_Us" className="p-4 container">
+      <div id="about_Us" className="p-4 ">
         <div>
           <h2 className="text-3xl md:text-4xl font-mono font-bold text-black text-center m-4">
             About Us
@@ -187,12 +187,12 @@ function Homepage() {
           </div>
         </div>
       </div>
-
-      <div className="h-auto p-10 bg-slate-200 border" id="Services">
+        {/* services */}
+      <div className="h-auto p-10 bg-slate-200 " id="Services">
         <h3 className="flex text-4xl font-mono font-bold text-black justify-center items-center text-center border-green-300">
           Services
         </h3>
-        <div className="flex flex-wrap mt-10 justify-center gap-4">
+        <div className="flex flex-wrap mt-10 justify-center gap-4 mb-4">
           {/* Service Card 1 */}
           <div className="h-auto w-full sm:w-60 md:w-72 p-2 bg-white rounded-lg shadow-lg shadow-gray-400">
             <img

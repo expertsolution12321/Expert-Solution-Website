@@ -5,19 +5,29 @@ import img from "./images/logo.svg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaSortDown } from "react-icons/fa";
 import { Dialog } from "@headlessui/react";
-import { FaJs, FaHtml5, FaCss3, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import {
+  FaJs,
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+} from "react-icons/fa";
 import { SiTailwindcss, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const handleClick = () => {
     window.open("https://tripchallanbooks.tripchallanbook.in/", "_blank");
+    setMobileMenuOpen(false);
   };
   const contact = () => {
-    navigate('/contact');
+    navigate("/contact");
+    setMobileMenuOpen(false);
   };
   const home = () => {
-    navigate('/');
+    navigate("/");
+    setMobileMenuOpen(false);
   };
   const handleNavigationService = (e) => {
     const id = e.target.id;
@@ -43,6 +53,7 @@ export default function Header() {
         break;
       default:
     }
+    setMobileMenuOpen(false);
   };
 
   const handleNavigationCompany = (e) => {
@@ -60,6 +71,7 @@ export default function Header() {
         break;
       default:
     }
+    setMobileMenuOpen(false);
   };
 
   const handleNavigationIndustries = (e) => {
@@ -79,6 +91,7 @@ export default function Header() {
         break;
       default:
     }
+    setMobileMenuOpen(false);
   };
 
   const handleNavigationSolution = (e) => {
@@ -95,6 +108,7 @@ export default function Header() {
         break;
       default:
     }
+    setMobileMenuOpen(false);
   };
   const handleNavigationProduct = (e) => {
     const id = e.target.id;
@@ -107,6 +121,7 @@ export default function Header() {
         break;
       default:
     }
+    setMobileMenuOpen(false);
   };
 
   //Menu bar Dropdown
@@ -226,291 +241,309 @@ export default function Header() {
             </button>
           </div>
           <div className="flex mr-4">
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            <ul className="flex p-0  space-x-4">
-              <li className="px-3 ">
-                <a
-                  href="/"
-                  className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
-                >
-                  Home
-                </a>
-              </li>
-              {/* Company */}
-              <li className="relative group px-3" ref={companyRef} id="company">
-                <a
-                  onClick={handleToggleCompany}
-                  className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
-                >
-                  Company{" "}
-                  <span className="inline-block ml-1">
-                    <FaSortDown />
-                  </span>
-                </a>
-                <ul
-                  className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                    isCompanyOpen ? "opacity-100 scale-100" : "hidden scale-10"
-                  }`}
-                >
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationCompany}
-                    id="about"
-                  >
-                    About Us
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationCompany}
-                    id="companyClient"
-                  >
-                    Client
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationCompany}
-                    id="socialmedia"
-                  >
-                    Socialmedia
-                  </li>
-                </ul>
-              </li>
-              {/* Technology */}
-              <li
-                className="relative group px-3"
-                ref={technologyRef}
-                id="technology"
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(true)}
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
               >
-                <a
-                  onClick={handleToggleTechnology}
-                  className="text-[17px] font-semibold leading-6 text-black cursor-pointer"
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+              </button>
+            </div>
+            <div className="hidden lg:flex lg:gap-x-12">
+              <ul className="flex p-0  space-x-4">
+                <li className="px-3 ">
+                  <a
+                    href="/"
+                    className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
+                  >
+                    Home
+                  </a>
+                </li>
+                {/* Company */}
+                <li
+                  className="relative group px-3"
+                  ref={companyRef}
+                  id="company"
                 >
-                  Technology{" "}
-                  <span className="inline-block ml-1">
-                    <FaSortDown />
-                  </span>
-                </a>
-                <ul
-                  className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                    isTechnologyOpen
-                      ? "opacity-100 scale-100"
-                      : "hidden scale-95"
-                  }`}
+                  <a
+                    onClick={handleToggleCompany}
+                    className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
+                  >
+                    Company{" "}
+                    <span className="inline-block ml-1">
+                      <FaSortDown />
+                    </span>
+                  </a>
+                  <ul
+                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
+                      isCompanyOpen
+                        ? "opacity-100 scale-100"
+                        : "hidden scale-10"
+                    }`}
+                  >
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationCompany}
+                      id="about"
+                    >
+                      About Us
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationCompany}
+                      id="companyClient"
+                    >
+                      Client
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationCompany}
+                      id="socialmedia"
+                    >
+                      Socialmedia
+                    </li>
+                  </ul>
+                </li>
+                {/* Technology */}
+                <li
+                  className="relative group px-3"
+                  ref={technologyRef}
+                  id="technology"
                 >
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaJs className="mr-2 text-yellow-500" />
-                    JavaScript
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaHtml5 className="mr-2 text-orange-600" />
-                    HTML/CSS
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiTailwindcss className="mr-2 text-teal-500" />
-                    Tailwind CSS
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaReact className="mr-2 text-blue-500" />
-                    React
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaNodeJs className="mr-2 text-green-600" />
-                    Node.js
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiExpress className="mr-2 text-gray-800" />
-                    Express.js
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaDatabase className="mr-2 text-indigo-600" />
-                    Database
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiMysql className="mr-2 text-blue-700" />
-                    SQL
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiMongodb className="mr-2 text-green-600" />
-                    MongoDB
-                  </li>
-                </ul>
-              </li>
-              {/* Services */}
-              <li
-                className="relative group px-3"
-                ref={servicesRef}
-                id="services"
-              >
-                <a
-                  onClick={handleToggleServices}
-                  className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
+                  <a
+                    onClick={handleToggleTechnology}
+                    className="text-[17px] font-semibold leading-6 text-black cursor-pointer"
+                  >
+                    Technology{" "}
+                    <span className="inline-block ml-1">
+                      <FaSortDown />
+                    </span>
+                  </a>
+                  <ul
+                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
+                      isTechnologyOpen
+                        ? "opacity-100 scale-100"
+                        : "hidden scale-95"
+                    }`}
+                  >
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <FaJs className="mr-2 text-yellow-500" />
+                      JavaScript
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <FaHtml5 className="mr-2 text-orange-600" />
+                      HTML/CSS
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <SiTailwindcss className="mr-2 text-teal-500" />
+                      Tailwind CSS
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <FaReact className="mr-2 text-blue-500" />
+                      React
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <FaNodeJs className="mr-2 text-green-600" />
+                      Node.js
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <SiExpress className="mr-2 text-gray-800" />
+                      Express.js
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <FaDatabase className="mr-2 text-indigo-600" />
+                      Database
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <SiMysql className="mr-2 text-blue-700" />
+                      SQL
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <SiMongodb className="mr-2 text-green-600" />
+                      MongoDB
+                    </li>
+                  </ul>
+                </li>
+                {/* Services */}
+                <li
+                  className="relative group px-3"
+                  ref={servicesRef}
+                  id="services"
                 >
-                  Services{" "}
-                  <span className="inline-block ml-1">
-                    <FaSortDown />
-                  </span>
-                </a>
-                <ul
-                  className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                    isServicesOpen ? "opacity-100 scale-100" : "hidden scale-95"
-                  }`}
+                  <a
+                    onClick={handleToggleServices}
+                    className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
+                  >
+                    Services{" "}
+                    <span className="inline-block ml-1">
+                      <FaSortDown />
+                    </span>
+                  </a>
+                  <ul
+                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
+                      isServicesOpen
+                        ? "opacity-100 scale-100"
+                        : "hidden scale-95"
+                    }`}
+                  >
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="ecommerce"
+                    >
+                      Ecommerce
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="mobileapp"
+                    >
+                      MobileApp
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="uiux"
+                    >
+                      UI/Ux
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="digitalmarketing"
+                    >
+                      Digital marketing
+                    </li>
+                  </ul>
+                </li>
+                {/* Industry */}
+                <li
+                  className="relative group px-3"
+                  ref={industriesRef}
+                  id="industry"
                 >
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationService}
-                    id="ecommerce"
+                  <a
+                    onClick={handleToggleIndustries}
+                    className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Ecommerce
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationService}
-                    id="mobileapp"
+                    Industries{" "}
+                    <span className="inline-block ml-1">
+                      <FaSortDown />
+                    </span>
+                  </a>
+                  <ul
+                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
+                      isIndustriesOpen
+                        ? "opacity-100 scale-100"
+                        : "hidden scale-95"
+                    }`}
                   >
-                    MobileApp
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationService}
-                    id="uiux"
-                  >
-                    UI/Ux
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationService}
-                    id="digitalmarketing"
-                  >
-                    Digital marketing
-                  </li>
-                </ul>
-              </li>
-              {/* Industry */}
-              <li
-                className="relative group px-3"
-                ref={industriesRef}
-                id="industry"
-              >
-                <a
-                  onClick={handleToggleIndustries}
-                  className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationIndustries}
+                      id="retail"
+                    >
+                      Retail
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationIndustries}
+                      id="technology"
+                    >
+                      Technology
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationIndustries}
+                      id="transportation"
+                    >
+                      Transportation
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationIndustries}
+                      id="manufecture"
+                    >
+                      Manufacture
+                    </li>
+                  </ul>
+                </li>
+                {/* Solution */}
+                <li
+                  className="relative group px-3"
+                  ref={solutionRef}
+                  id="solution"
                 >
-                  Industries{" "}
-                  <span className="inline-block ml-1">
-                    <FaSortDown />
-                  </span>
-                </a>
-                <ul
-                  className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                    isIndustriesOpen
-                      ? "opacity-100 scale-100"
-                      : "hidden scale-95"
-                  }`}
-                >
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationIndustries}
-                    id="retail"
+                  <a
+                    onClick={handleToggleSolution}
+                    className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Retail
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationIndustries}
-                    id="technology"
+                    Solutions{" "}
+                    <span className="inline-block ml-1">
+                      <FaSortDown />
+                    </span>
+                  </a>
+                  <ul
+                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
+                      isSolutionOpen
+                        ? "opacity-100 scale-100"
+                        : "hidden scale-95"
+                    }`}
                   >
-                    Technology
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationIndustries}
-                    id="transportation"
-                  >
-                    Transportation
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationIndustries}
-                    id="manufecture"
-                  >
-                    Manufacture
-                  </li>
-                </ul>
-              </li>
-              {/* Solution */}
-              <li
-                className="relative group px-3"
-                ref={solutionRef}
-                id="solution"
-              >
-                <a
-                  onClick={handleToggleSolution}
-                  className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
-                >
-                  Solutions{" "}
-                  <span className="inline-block ml-1">
-                    <FaSortDown />
-                  </span>
-                </a>
-                <ul
-                  className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                    isSolutionOpen ? "opacity-100 scale-100" : "hidden scale-95"
-                  }`}
-                >
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationSolution}
-                    id="secommerce"
-                  >
-                    E-commerce Solutions
-                  </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="secommerce"
+                    >
+                      E-commerce Solutions
+                    </li>
 
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationSolution}
-                    id="smobileapp"
-                  >
-                    MobileApp
-                  </li>
-                  <li
-                    className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
-                    onClick={handleNavigationSolution}
-                    id="webcms"
-                  >
-                    Web and CMS
-                  </li>
-                </ul>
-              </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="smobileapp"
+                    >
+                      MobileApp
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="webcms"
+                    >
+                      Web and CMS
+                    </li>
+                  </ul>
+                </li>
 
-              {/* Contact Us */}
-              <li className="px-3">
-                <button
-                  onClick={contact}
-                  className="text-[17px] font-semibold leading-6 text-gray-900"
-                >
-                  Contact Us
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end ml-2">
-            <button
+                {/* Contact Us */}
+                <li className="px-3">
+                  <button
+                    onClick={contact}
+                    className="text-[17px] font-semibold leading-6 text-gray-900"
+                  >
+                    Contact Us
+                  </button>
+                </li>
+                {/* <li className="px-3">
+              <button
                 onClick={handleClick}
                 className="text-sm font-bold leading-6 text-blue-600 border-2 border-sky-900 px-3 py-2 rounded-full cursor-pointer"
              >
                 SignIn
                 </button>
-          </div>
+              </li> */}
+              </ul>
+            </div>
+            <div className="hidden lg:flex lg:flex-1 lg:justify-end ml-2">
+              <button
+                onClick={handleClick}
+                className="text-sm font-bold leading-6 text-blue-600 border-2 border-sky-900 px-3 py-2 rounded-full cursor-pointer"
+              >
+                SignIn
+              </button>
+            </div>
           </div>
         </nav>
         <Dialog
@@ -536,8 +569,8 @@ export default function Header() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  <button onClick={home}
-                    
+                  <button
+                    onClick={home}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Home
@@ -547,7 +580,7 @@ export default function Header() {
                   <div className="relative">
                     <a
                       onClick={handleToggleCompany}
-                      className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer block"
+                      className="text-base font-semibold leading-6 text-gray-900 cursor-pointer block"
                     >
                       Company{" "}
                       <span className="inline-block ml-1">
@@ -589,7 +622,7 @@ export default function Header() {
                   <div className="relative">
                     <a
                       onClick={handleToggleTechnology}
-                      className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+                      className="text-base font-semibold leading-6 text-gray-900 cursor-pointer"
                     >
                       Technology{" "}
                       <span className="inline-block ml-1">
@@ -604,41 +637,41 @@ export default function Header() {
                       }`}
                     >
                       <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaJs className="mr-2 text-yellow-500" />
-                    JavaScript
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaHtml5 className="mr-2 text-orange-600" />
-                    HTML/CSS
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiTailwindcss className="mr-2 text-teal-500" />
-                    Tailwind CSS
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaReact className="mr-2 text-blue-500" />
-                    React
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaNodeJs className="mr-2 text-green-600" />
-                    Node.js
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiExpress className="mr-2 text-gray-800" />
-                    Express.js
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <FaDatabase className="mr-2 text-indigo-600" />
-                    Database
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiMysql className="mr-2 text-blue-700" />
-                    SQL
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                    <SiMongodb className="mr-2 text-green-600" />
-                    MongoDB
-                  </li>
+                        <FaJs className="mr-2 text-yellow-500" />
+                        JavaScript
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <FaHtml5 className="mr-2 text-orange-600" />
+                        HTML/CSS
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <SiTailwindcss className="mr-2 text-teal-500" />
+                        Tailwind CSS
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <FaReact className="mr-2 text-blue-500" />
+                        React
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <FaNodeJs className="mr-2 text-green-600" />
+                        Node.js
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <SiExpress className="mr-2 text-gray-800" />
+                        Express.js
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <FaDatabase className="mr-2 text-indigo-600" />
+                        Database
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <SiMysql className="mr-2 text-blue-700" />
+                        SQL
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                        <SiMongodb className="mr-2 text-green-600" />
+                        MongoDB
+                      </li>
                     </ul>
                   </div>
 
@@ -646,7 +679,7 @@ export default function Header() {
                   <div className="relative">
                     <a
                       onClick={handleToggleServices}
-                      className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+                      className="text-base font-semibold leading-6 text-gray-900 cursor-pointer"
                     >
                       Services{" "}
                       <span className="inline-block ml-1">
@@ -694,7 +727,7 @@ export default function Header() {
                   <div className="relative">
                     <a
                       onClick={handleToggleIndustries}
-                      className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+                      className="text-base font-semibold leading-6 text-gray-900 cursor-pointer"
                     >
                       Industries{" "}
                       <span className="inline-block ml-1">
@@ -742,7 +775,7 @@ export default function Header() {
                   <div className="relative">
                     <a
                       onClick={handleToggleSolution}
-                      className="text-sm font-semibold  leading-6 text-gray-900 cursor-pointer"
+                      className="text-base font-semibold  leading-6 text-gray-900 cursor-pointer"
                     >
                       Solutions{" "}
                       <span className="inline-block ml-1">
@@ -780,7 +813,7 @@ export default function Header() {
                     </ul>
                   </div>
                   {/* Product */}
-                  <div className="relative">
+                  {/* <div className="relative">
                     <a
                       onClick={handleToggleProduct}
                       className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
@@ -813,14 +846,23 @@ export default function Header() {
                         GpsTracking System
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
+                  {/* contact Us */}
                   <div className="-mx-4 block rounded-lg px-3 py-2 text-base font-semibold  text-gray-900 hover:bg-gray-50">
-                    <a
-                      href="./Contact"
-                      className="  text-gray-900 hover:bg-gray-50"
+                    <button
+                      onClick={contact}
+                      className=" text-gray-900 hover:bg-gray-50"
                     >
                       Contact Us
-                    </a>
+                    </button>
+                  </div>
+                  <div className="-mx-4 block  px-3 py-2 text-base font-semibold  text-gray-900 hover:bg-gray-50 border-t-2">
+                    <button
+                      onClick={handleClick}
+                      className="  text-gray-900 hover:bg-gray-50 "
+                    >
+                      SignIn
+                    </button>
                   </div>
                 </div>
               </div>

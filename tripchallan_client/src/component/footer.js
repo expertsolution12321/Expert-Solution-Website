@@ -24,7 +24,7 @@ export default function Footer() {
   };
   return (
     <>
-      <footer className="container mx-auto p-6 flex flex-wrap justify-between space-y-6 md:space-y-0">
+      <footer className=" mx-auto p-6 flex flex-wrap justify-between space-y-6 md:space-y-0">
         {/* Logo and About Section */}
         <div className="w-full md:w-[40%] lg:w-[23%] flex flex-col items-center md:items-start m-1 p-2">
           <a href="/" className="mb-2">

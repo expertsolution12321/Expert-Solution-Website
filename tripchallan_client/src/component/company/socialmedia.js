@@ -2,11 +2,8 @@ import React from "react";
 
 import social from "../images/social.jpg";
 import social1 from "../images/fleet.jpg";
-// import social2 from "../images/social1.jpeg";
 import social2 from "../images/social3.jpeg";
 import social3 from "../images/social3.jpg";
-// import social4 from "../images/social4.jpg";
-// import social4 from "../images/social5.jpg";
 import social4 from "../images/social4.png";
 import social5 from "../images/social5.jpg";
 import social6 from "../images/social4.jpeg";
@@ -42,7 +39,7 @@ export default function socilamedia() {
       </div>
 
       <div className="bg-cyan-300 text-center text-black py-6 px-4 ">
-        <div className="container">
+        <div className="">
           <h1 className="text-black font-bold text-3xl md:text-3xl text-center w-full mb-8">
             Categories
           </h1>

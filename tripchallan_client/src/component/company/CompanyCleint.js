@@ -1,17 +1,6 @@
 import React from "react";
 import service from "../images/service.jpg";
-//import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
-import clientPage1 from "../images/img1.png";
-import clientPage2 from "../images/img5.png";
-import clientPage3 from "../images/img5.png";
-import clientPage4 from "../images/img1.png";
-import clientPage5 from "../images/img5.png";
 
-import clientPage6 from "../images/img1.png";
-import clientPage7 from "../images/img1.png";
-import clientPage8 from "../images/img5.png";
-import clientPage9 from "../images/img1.png";
-import clientPage10 from "../images/img5.png";
 export default function Client() {
   return (
     <>

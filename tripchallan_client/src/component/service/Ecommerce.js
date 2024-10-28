@@ -4,7 +4,14 @@ import { FaThumbsUp } from "react-icons/fa";
 import { BiHappyBeaming } from "react-icons/bi";
 import { RiMailSettingsFill } from "react-icons/ri";
 import pic from "../images/card3.png";
-import { FaSearch, FaChartLine, FaShareAlt, FaUserShield, FaEnvelope, FaGoogle } from "react-icons/fa";
+import {
+  FaSearch,
+  FaChartLine,
+  FaShareAlt,
+  FaUserShield,
+  FaEnvelope,
+  FaGoogle,
+} from "react-icons/fa";
 export default function Ecommerce() {
   return (
     <div className="w-full">
@@ -14,7 +21,7 @@ export default function Ecommerce() {
           backgroundImage: `linear-gradient(to right, rgba(0, 0, 49, 0.8), rgba(90, 3, 56, 0.8)), url(${pic})`,
         }}
       >
-        <div className=" container flex flex-col max-w-[1440px] md:flex-row items-center justify-center mx-auto p-4 sm:p-6 md:p-8 space-y-8 md:space-y-0 md:space-x-8">
+        <div className=" flex flex-col max-w-[1440px] md:flex-row items-center justify-center mx-auto p-4 sm:p-6 md:p-8 space-y-8 md:space-y-0 md:space-x-8">
           <div className="text-white w-full md:w-1/2 lg:w-2/3">
             <h1 className="font-bold text-2xl sm:text-4xl md:text-5xl mb-4 md:mb-6">
               Ecommerce Website Development That Matches Your Needs
@@ -82,7 +89,7 @@ export default function Ecommerce() {
       </section>
 
       <section className=" w-full bg-white p-4 sm:p-6 md:p-8">
-        <div className="container flex flex-col md:flex-row items-center justify-center max-w-[1280px] mx-auto ">
+        <div className=" flex flex-col md:flex-row items-center justify-center max-w-[1280px] mx-auto ">
           <div className="w-full md:w-1/2">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
               Stay Digitally Competitive with Reliable eCommerce Website
@@ -138,7 +145,7 @@ export default function Ecommerce() {
       </section>
 
       <section className="w-full bg-gray-50 py-4">
-        <div className="container w-full max-w-[1440px] mx-auto p-8">
+        <div className=" w-full max-w-[1440px] mx-auto p-8">
           <h1 className="text-center text-4xl font-semibold mb-10">
             eCommerce Development Platform We Use
           </h1>
