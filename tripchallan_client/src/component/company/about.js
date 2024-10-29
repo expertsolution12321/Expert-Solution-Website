@@ -30,7 +30,7 @@ const handleClick=()=>{
         }}
         className="relative isolate h-96 md:h-[32rem] flex items-center justify-center overflow-hidden bg-cover bg-center w-full"
       >
-        <div className="flex flex-col  items-center p-4 container mx-auto">
+        <div className="flex flex-col  items-center p-4  mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold text-center capitalize mb-4">
             We're the right tech-solutions partner for all your digital
             innovation & transformation needs.
@@ -49,7 +49,7 @@ const handleClick=()=>{
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col md:flex-row h-auto p-4 md:justify-center container">
+      <div className="w-full flex flex-col md:flex-row h-auto p-4 md:justify-center ">
         <div className="w-full mt-5  p-2 pt-20 sm:mt-0 md:mr-4">
           <h1 className="text-4xl md:text-3xl text-orange-600 font-bold pb-4">
             India's Best GPS Tracking Services Company
@@ -78,7 +78,7 @@ const handleClick=()=>{
       </div>
 
       <div className="" style={{ backgroundImage: `url(${bgimg})` }}>
-        <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
           <div className="flex flex-col items-center justify-center p-4">
             <h3 className="text-4xl text-orange-500 text-center font-bold mb-2">
               Core Values
@@ -197,7 +197,7 @@ const handleClick=()=>{
         </div>
       </div>
 
-      <div className="container bg-white py-7 px-4   md:px-10">
+      <div className=" bg-white py-7 px-4   md:px-10">
         <div className=" mx-auto space-y-8">
           {/* Mission Section */}
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0">
@@ -223,7 +223,7 @@ const handleClick=()=>{
       </div>
 
       {/* Vision Section */}
-      <div className="container bg-white py-3 px-4 md:px-10">
+      <div className=" bg-white py-3 px-4 md:px-10">
         <div className=" mx-auto space-y-8">
           {/* Vision Section */}
           <div className="flex flex-col-reverse md:flex-row-reverse items-center space-y-8 md:space-y-0 ">
