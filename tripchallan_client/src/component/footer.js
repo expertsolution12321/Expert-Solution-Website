@@ -35,22 +35,23 @@ export default function Footer() {
             />
           </a>
           <p className="text-base  md:text-left">
-            At <b>Trip-challan Book</b> we have customized offerings for different domains.
+            At <b>Trip Management System</b> we have customized offerings for different domains.
             These solutions enable the users to manage and monitor their assets
             effectively and profitably, as per their requirements, thereby
             increasing the business efficiency.
           </p>
+          <h5 className="m-0  font-bold">Follow Us</h5>
           <div className="flex space-x-4 justify-center mt-4">
-            <a href="#" className="text-blue-800">
+            <a href="https://www.facebook.com/" className="text-blue-800" target="_blank">
               <FaFacebook className="text-3xl" />
             </a>
-            <a href="#" className="text-indigo-900">
+            <a href="https://x.com/" className="text-indigo-900" target="_blank">
               <FaTwitter className="text-3xl" />
             </a>
-            <a href="#" className="text-red-600">
+            <a href="https://www.youtube.com/" className="text-red-600" target="_blank">
               <FaYoutube className="text-3xl" />
             </a>
-            <a href="#" className="text-pink-600">
+            <a href="https://www.instagram.com/" className="text-pink-600" target="_blank">
               <FaInstagram className="text-3xl" />
             </a>
           </div>

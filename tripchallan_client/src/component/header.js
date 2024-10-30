@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import img from "./images/logo.svg";
+import sql from "./images/sql.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaSortDown } from "react-icons/fa";
 import { Dialog } from "@headlessui/react";
@@ -31,7 +32,6 @@ export default function Header() {
   };
   const handleNavigationService = (e) => {
     const id = e.target.id;
-    console.log("id", id);
     switch (id) {
       case "ecommerce":
         navigate("/ecommerce");
@@ -54,6 +54,7 @@ export default function Header() {
       default:
     }
     setMobileMenuOpen(false);
+    setIsServicesOpen(false);
   };
 
   const handleNavigationCompany = (e) => {
@@ -72,6 +73,7 @@ export default function Header() {
       default:
     }
     setMobileMenuOpen(false);
+    setIsCompanyOpen(false);
   };
 
   const handleNavigationIndustries = (e) => {
@@ -92,6 +94,7 @@ export default function Header() {
       default:
     }
     setMobileMenuOpen(false);
+    setIsIndustriesOpen(false);
   };
 
   const handleNavigationSolution = (e) => {
@@ -109,20 +112,36 @@ export default function Header() {
       default:
     }
     setMobileMenuOpen(false);
+    setIsSolutionOpen(false);
   };
-  const handleNavigationProduct = (e) => {
+  const handleNavigationTechnology = (e) => {
     const id = e.target.id;
     switch (id) {
-      case "challan":
-        window.open("https://tripchallanbooks.tripchallanbook.in/", "_blank");
+      case "secommerce":
+        // navigate("/secommerce");
         break;
-      case "gps":
-        window.open("http://expertsolutionsgps.com", "_blank");
+      case "smobileapp":
+        // navigate("/smobileapp");
+        break;
+      case "webcms":
+        // navigate("/webcms");
         break;
       default:
     }
-    setMobileMenuOpen(false);
   };
+  // const handleNavigationProduct = (e) => {
+  //   const id = e.target.id;
+  //   switch (id) {
+  //     case "challan":
+  //       window.open("https://tripchallanbooks.tripchallanbook.in/", "_blank");
+  //       break;
+  //     case "gps":
+  //       window.open("http://expertsolutionsgps.com", "_blank");
+  //       break;
+  //     default:
+  //   }
+  //   setMobileMenuOpen(false);
+  // };
 
   //Menu bar Dropdown
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
@@ -302,7 +321,7 @@ export default function Header() {
                       onClick={handleNavigationCompany}
                       id="socialmedia"
                     >
-                      Socialmedia
+                      Social Media
                     </li>
                   </ul>
                 </li>
@@ -342,7 +361,7 @@ export default function Header() {
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
                       <FaReact className="mr-2 text-blue-500" />
-                      React
+                      React.js
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
                       <FaNodeJs className="mr-2 text-green-600" />
@@ -357,7 +376,7 @@ export default function Header() {
                       Database
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                      <SiMysql className="mr-2 text-blue-700" />
+                      <img src={sql} className="mr-2 text-blue-700 h-5" />
                       SQL
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
@@ -393,14 +412,14 @@ export default function Header() {
                       onClick={handleNavigationService}
                       id="ecommerce"
                     >
-                      Ecommerce
+                      E-commerce
                     </li>
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                       onClick={handleNavigationService}
                       id="mobileapp"
                     >
-                      MobileApp
+                      Mobile App
                     </li>
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
@@ -414,7 +433,7 @@ export default function Header() {
                       onClick={handleNavigationService}
                       id="digitalmarketing"
                     >
-                      Digital marketing
+                      Digital Marketing
                     </li>
                   </ul>
                 </li>
@@ -505,7 +524,7 @@ export default function Header() {
                       onClick={handleNavigationSolution}
                       id="smobileapp"
                     >
-                      MobileApp
+                      Mobile App
                     </li>
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
@@ -536,10 +555,10 @@ export default function Header() {
               </li> */}
               </ul>
             </div>
-            <div className="hidden lg:flex lg:flex-1 lg:justify-end ml-2">
+            <div className="hidden group lg:flex lg:flex-1 lg:justify-end ml-2 -mt-3">
               <button
                 onClick={handleClick}
-                className="text-sm font-bold leading-6 text-blue-600 border-2 border-sky-900 px-3 py-2 rounded-full cursor-pointer"
+                className="text-sm font-bold leading-6 text-blue-600 border-2 border-sky-700 px-4 rounded-full cursor-pointer hover:bg-blue-600 hover:text-white "
               >
                 SignIn
               </button>

@@ -127,21 +127,15 @@ function Homepage() {
         <div className="absolute inset-0 flex flex-col items-center text-center px-4 md:px-8 space-y-4 mt-24">
           <h1 className="text-3xl md:text-6xl font-mono font-bold text-white">
             Welcome To{" "}
-            <span>
-              <a
-                className="text-orange-500 cursor-pointer"
-                href="https://smodality.tripchallanbook.in/"
-                target="_blank"
-              >
-                Trip-challan Book
-              </a>
+            <span className="text-orange-500 cursor-pointer" target="_blank">
+              Trip Management System
             </span>
           </h1>
           <p className="text-sm md:text-base text-white max-w-2xl">
-            At Trip-challan Book we have customized offerings for different domains.
-            These solutions enable the users to manage and monitor their assets
-            effectively and profitably, as per their requirements, thereby
-            increasing the business efficiency.
+            At Trip Management System we have customized offerings for different
+            domains. These solutions enable the users to manage and monitor
+            their assets effectively and profitably, as per their requirements,
+            thereby increasing the business efficiency.
           </p>
         </div>
       </div>
@@ -157,7 +151,7 @@ function Homepage() {
           {/* Section for Text */}
           <div className="w-full md:w-1/2 p-2 md:mr-4 pt-6 md:pt-0">
             <h3 className="text-xl md:text-3xl text-red-600 font-bold pb-4">
-              India Best Gps Tracking Services Company
+              India Best GPS Tracking Services Company
             </h3>
             <p className="text-sm md:text-base pb-4">
               All our solutions are customized & designed to meet the specific
@@ -169,12 +163,12 @@ function Homepage() {
               across 150 locations, 24/7 Helpline, with complete integration to
               SAP/Oracle/ERP systems & multiple Vendor configurations.
             </p>
-            <button
+            {/* <button
               className="text-white hover:text-white font-bold bg-[#111a51] py-2 px-4 rounded-full hover:translate-x-3 transition-all duration-300 ease-out "
               onClick={handleClick}
             >
               Read More
-            </button>
+            </button> */}
           </div>
 
           {/* Section for Image */}
@@ -187,7 +181,7 @@ function Homepage() {
           </div>
         </div>
       </div>
-        {/* services */}
+      {/* services */}
       <div className="h-auto p-10 bg-slate-200 " id="Services">
         <h3 className="flex text-4xl font-mono font-bold text-black justify-center items-center text-center border-green-300">
           Services
@@ -259,8 +253,8 @@ function Homepage() {
             </h3>
             <p className="text-sm md:text-base mt-2">
               Digital marketing is a powerful, versatile strategy for reaching
-              and engaging customers in the digital age. Its wide range of tools
-              and tactics allows businesses of all sizes to build brand
+              and engaging customers in the digital age. It's wide range of
+              tools and tactics allows businesses of all sizes to build brand
               awareness, drive traffic, and achieve measurable results.
             </p>
           </div>
@@ -277,9 +271,11 @@ function Homepage() {
               Get In Touch
             </h2>
             <p className="pt-8 text-base md:text-lg leading-6">
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document or
-              a typeface without relying on meaningful content.
+              A Trip Management System is a digital solution designed to
+              streamline and automate the process of managing travel and
+              transportation logistics. It enables users, especially businesses
+              in the transportation and logistics sector, to efficiently plan,
+              track, and document trips for vehicles and drivers
             </p>
           </div>
           <div className="flex flex-col space-y-4">
@@ -296,12 +292,12 @@ function Homepage() {
 
             {/* Email Section */}
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
-              <FaEnvelope className="text-xl md:text-2xl w-8 md:w-10 text-white" />
+              <FaEnvelope className="text-2xl md:text-2xl w-8 md:w-10 text-white" />
               <a
                 href="mailto:expertsolution@gmail.com"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >
-                expertsolution@gmail.com
+                expertsolutions@gmail.com
               </a>
             </div>
 
@@ -314,7 +310,7 @@ function Homepage() {
                 rel="noopener noreferrer"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >
-                78, Gautam Nagar St, Bapuji Nagar, Bhubaneswar, Odisha 751014
+                78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014
               </a>
             </div>
           </div>
@@ -341,7 +337,7 @@ function Homepage() {
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -359,7 +355,7 @@ function Homepage() {
                         type="text"
                         value={lname}
                         onChange={(e) => setLname(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -377,7 +373,7 @@ function Homepage() {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -395,7 +391,7 @@ function Homepage() {
                         type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -412,7 +408,7 @@ function Homepage() {
                         type="text"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -430,7 +426,7 @@ function Homepage() {
                         type="text"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -441,7 +437,7 @@ function Homepage() {
               <div className="mt-6 flex items-center justify-end gap-x-6">
                 <button
                   type="reset"
-                  className="text-md font-semibold leading-6 bg-red-600 text-white rounded-md px-3 py-2 w-28 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-200 hover:bg-red-500"
+                  className="text-md font-semibold leading-6 bg-red-600 text-white rounded-md px-3 py-2.5 w-28 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-200 hover:bg-red-500"
                 >
                   Reset
                 </button>

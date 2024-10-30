@@ -26,27 +26,28 @@ export default function socilamedia() {
             Safety First, Protect Your Fleet with Advanced Tracking!
           </h1>
           <p className="text-xs sm:text-sm md:text-base text-white mt-4 md:mt-6">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. There are many
-            variations of passages of Lorem Ipsum available, but the majority
-            have suffered alteration in some form, by injected humour, or
-            randomised words which don't look even slightly believable. If you
-            are going to use a passage of Lorem Ipsum, you need to be sure there
-            isn't anything embarrassing hidden in the middle of the text.
+            Safety First, Protect Your Fleet with Advanced Tracking! emphasizes
+            the importance of prioritizing safety in fleet management through
+            the use of sophisticated tracking technologies. This approach
+            enables real-time monitoring of vehicles, enhancing security,
+            improving operational efficiency, and minimizing risks. By utilizing
+            advanced tracking systems, fleet operators can ensure better
+            visibility, timely responses to incidents, and proactive
+            maintenance, ultimately safeguarding their assets and promoting a
+            safer environment for drivers and cargo.
           </p>
         </div>
       </div>
 
-      <div className="bg-cyan-300 text-center text-black py-6 px-4 ">
+      <div className="bg-gray-50 text-center text-black py-6 px-4 pt-9">
         <div className="">
           <h1 className="text-black font-bold text-3xl md:text-3xl text-center w-full mb-8">
             Categories
           </h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Category Item 1 */}
-            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md">
+            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md shadow-gray-300">
               <img
                 src={social1}
                 alt="social1 images"
@@ -56,13 +57,15 @@ export default function socilamedia() {
                 Fleet Management and Transforming Supply Chain
               </p>
               <p className="text-base text-black text-center mt-2 px-4">
-                Introduction: Supply chain operations face numerous challenges,
-                from real-time tracking to cost optimization.
+                Efficiently monitor and control your transportation assets with
+                our Fleet Management solutions. Track vehicle locations in
+                real-time, optimize routes, reduce fuel costs, and ensure timely
+                maintenance to maximize fleet productivity.
               </p>
             </div>
 
             {/* Category Item 2 */}
-            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md">
+            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md shadow-gray-300">
               <img
                 src={social2}
                 alt="social2 images"
@@ -72,13 +75,14 @@ export default function socilamedia() {
                 Gps Tracking and Route Optimization
               </p>
               <p className="text-base text-black text-center mt-2 px-4">
-                Introduction: Supply chain operations face numerous challenges,
-                from real-time tracking to cost optimization.
+                Optimize delivery routes to reduce travel time and fuel costs,
+                enhancing efficiency and ensuring timely deliveries for
+                increased customer satisfaction
               </p>
             </div>
 
             {/* Category Item 3 */}
-            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md">
+            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md shadow-gray-300">
               <img
                 src={social3}
                 alt="social3 images"
@@ -88,13 +92,14 @@ export default function socilamedia() {
                 UserFriendly Controled With Mobile App
               </p>
               <p className="text-base text-black text-center mt-2 px-4">
-                Introduction: Supply chain operations face numerous challenges,
-                from real-time tracking to cost optimization.
+                User-Friendly Controlled with Mobile App refers to a system or
+                device that can be easily operated and managed through a mobile
+                application.
               </p>
             </div>
 
             {/* Category Item 4 */}
-            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md">
+            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md shadow-gray-300">
               <img
                 src={social4}
                 alt="social4 images"
@@ -104,13 +109,14 @@ export default function socilamedia() {
                 Trusted By the Client
               </p>
               <p className="text-base text-black text-center mt-2 px-4">
-                Introduction: Supply chain operations face numerous challenges,
-                from real-time tracking to cost optimization.
+                Trusted by the Client signifies a strong reputation or
+                reliability established through positive relationships and
+                consistent performance in delivering products or services.
               </p>
             </div>
 
             {/* Category Item 5 */}
-            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md">
+            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md shadow-gray-300">
               <img
                 src={social5}
                 alt="social5 images"
@@ -120,13 +126,16 @@ export default function socilamedia() {
                 Warrenty and Safety Product
               </p>
               <p className="text-base text-black text-center mt-2 px-4">
-                Introduction: Supply chain operations face numerous challenges,
-                from real-time tracking to cost optimization.
+                Warranty and Safety Product refers to items that come with a
+                guarantee from the manufacturer, ensuring that they will
+                function as intended for a specified period. This warranty
+                provides customers with confidence in the product's quality and
+                reliability.
               </p>
             </div>
 
             {/* Category Item 6 */}
-            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md">
+            <div className="flex flex-col items-center border rounded-lg p-2 bg-white shadow-md shadow-gray-300">
               <img
                 src={social6}
                 alt="social7 images"
@@ -136,8 +145,11 @@ export default function socilamedia() {
                 24/7 services with High Security
               </p>
               <p className="text-base text-black text-center mt-2 px-4">
-                Introduction: Supply chain operations face numerous challenges,
-                from real-time tracking to cost optimization.
+                24/7 Services with High Security refers to round-the-clock
+                availability of services combined with robust security measures.
+                This ensures that customers can access support or assistance at
+                any time, day or night, while also safeguarding their
+                information and assets from potential threats.
               </p>
             </div>
           </div>

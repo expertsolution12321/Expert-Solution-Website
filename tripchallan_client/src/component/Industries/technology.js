@@ -18,10 +18,10 @@ import {
 } from "react-icons/fa";
 
 export default function Technology() {
-  const navigate=useNavigate();
-  const contact=()=>{
-    navigate('/contact')
-  }
+  const navigate = useNavigate();
+  const contact = () => {
+    navigate("/contact");
+  };
   return (
     <>
       <div className="">
@@ -35,7 +35,8 @@ export default function Technology() {
           {/* Heading */}
           <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold relative z-10 text-center m-2 p-2">
             <span className="text-white font-bold">
-              Leading The Technology Revolution
+              Leading The <span className="text-orange-500">Technology</span>{" "}
+              Revolution
             </span>
           </h1>
 
@@ -58,11 +59,10 @@ export default function Technology() {
           {/* Call to Action Button */}
           <div className="text-center relative z-10 mt-6">
             <button
-                href="/contact"
-                className="text-white bg-orange-500 rounded-full px-6 py-2 text-sm sm:text-base md:text-lg"
-              >
-                Connect Now
-              
+              onClick={contact}
+              className="text-white bg-orange-500 rounded-full px-6 py-2 text-sm sm:text-base md:text-lg"
+            >
+              Connect Now
             </button>
           </div>
         </div>
@@ -248,7 +248,7 @@ export default function Technology() {
                     className="w-6 h-6 mr-2"
                     alt="Node JS"
                   />
-                  Node JS
+                  Node Js
                 </li>
               </ul>
             </div>
@@ -263,7 +263,7 @@ export default function Technology() {
                     className="w-6 h-6 mr-2"
                     alt="React JS"
                   />
-                  React JS
+                  React Js
                 </li>
                 <li className="flex items-center cursor-pointer">
                   <FaAngular className="w-6 h-6 mr-2" />

@@ -15,7 +15,7 @@ import { MdError } from "react-icons/md";
 import { FaShoppingCart, FaSitemap } from "react-icons/fa";
 import agile from "../images/agile.png";
 import { SiVisualstudiocode, SiPhpstorm } from "react-icons/si";
-import { SiLinux } from 'react-icons/si';
+import { SiLinux } from "react-icons/si";
 // import { FaGit } from 'react-icons/fa';
 import {
   FaApple,
@@ -79,28 +79,30 @@ export default function Ecommerce() {
             </p>
           </div>
           <div className="w-full md:w-1/2 flex flex-wrap items-center justify-center gap-4">
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-400">
               <FaGlobe className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 15+
               </h1>
               <span className="text-base font-semibold">Year In Market</span>
             </div>
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-400">
               <FaShoppingCart className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 250+
               </h1>
-              <span className="text-base font-semibold">Ecommerce Specialists</span>
+              <span className="text-base font-semibold">
+                Ecommerce Specialists
+              </span>
             </div>
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-400">
               <FaThumbsUp className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 90%
               </h1>
               <span className="text-base font-semibold">Customer NPS</span>
             </div>
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-400">
               <FaRocket className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 50+
@@ -131,10 +133,12 @@ export default function Ecommerce() {
                   Fleet tracking and Management Software
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  t is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
+                  Fleet Tracking and Management Software is a specialized
+                  application designed to monitor and manage a fleet of vehicles
+                  efficiently. It provides real-time tracking, route
+                  optimization, and performance analytics, enabling fleet
+                  operators to enhance operational efficiency, reduce costs, and
+                  improve safety.
                 </p>
               </div>
             </div>
@@ -149,10 +153,11 @@ export default function Ecommerce() {
                   Field Service and Scheduling Management Software
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  t is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
+                  Field Service and Scheduling Management Software is a digital
+                  solution designed to optimize the planning, dispatching, and
+                  management of field service operations. It enables businesses
+                  to efficiently schedule appointments, allocate resources, and
+                  track technician performance in real-time.
                 </p>
               </div>
             </div>
@@ -167,10 +172,11 @@ export default function Ecommerce() {
                   Suitable Mobile Tracking Services
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  t is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
+                  Suitable Mobile Tracking Services provide users with effective
+                  solutions for monitoring the location and movement of mobile
+                  devices in real-time. These services are designed for various
+                  applications, including personal safety, fleet management, and
+                  asset tracking.
                 </p>
               </div>
             </div>
@@ -185,10 +191,11 @@ export default function Ecommerce() {
                   Fuel Mangement Software
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  t is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
+                  Fuel Management Software is a specialized tool designed to
+                  monitor and control fuel consumption, inventory, and expenses
+                  in fleet operations. It helps businesses optimize fuel
+                  efficiency by providing real-time data on fuel usage,
+                  identifying potential waste, and tracking fuel purchases.
                 </p>
               </div>
             </div>
@@ -203,10 +210,12 @@ export default function Ecommerce() {
                   Online Monitoring and Backup history
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  t is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
+                  Online Monitoring and Backup History refers to a digital
+                  solution that allows users to oversee and track their data and
+                  system activities in real-time, along with maintaining a
+                  record of backup operations. This service ensures that
+                  critical data is securely backed up regularly, enabling easy
+                  recovery in case of data loss or system failure.
                 </p>
               </div>
             </div>
@@ -221,10 +230,12 @@ export default function Ecommerce() {
                   Route Optimizing
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  t is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters
+                  Route Optimizing is a process that uses technology to
+                  determine the most efficient paths for vehicles to take while
+                  traveling from one location to another. This method considers
+                  various factors such as distance, traffic conditions, road
+                  types, and delivery windows to minimize travel time and fuel
+                  consumption.
                 </p>
               </div>
             </div>
@@ -244,7 +255,7 @@ export default function Ecommerce() {
         <h1 className="text-white  text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold relative z-10 text-center m-2 p-2">
           Relay End-to-End{" "}
           <span className="text-orange-500 font-bold">
-            Ecommerce Development Services{" "}
+            E-commerce Development Services{" "}
           </span>
           to increase Retail Business sales
         </h1>
@@ -352,7 +363,10 @@ export default function Ecommerce() {
               </div>
               <ul className="mt-2 space-y-2 p-2">
                 <li className="flex items-center space-x-2 border-b-2 py-2">
-                  <FaWindows className="w-6 h-6 " style={{ color: "#4CAF50" }} />{" "}
+                  <FaWindows
+                    className="w-6 h-6 "
+                    style={{ color: "#4CAF50" }}
+                  />{" "}
                   {/* Green */}
                   <span>Window</span>
                 </li>

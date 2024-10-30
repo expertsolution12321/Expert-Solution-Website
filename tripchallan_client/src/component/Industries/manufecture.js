@@ -29,10 +29,10 @@ import {
   FaVuejs,
 } from "react-icons/fa";
 export default function Manufecture() {
-  const navigate=useNavigate();
-  const contact=()=>{
-    navigate('/contact')
-  }
+  const navigate = useNavigate();
+  const contact = () => {
+    navigate("/contact");
+  };
   return (
     <>
       <div
@@ -53,11 +53,15 @@ export default function Manufecture() {
         <ul className="flex flex-col sm:flex-row gap-4 text-center relative z-10 mt-4">
           <li className="group hover:bg-white text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg cursor-pointer">
             <FaLightbulb className="mr-2 text-lg sm:text-xl md:text-2xl text-yellow-400" />
-            <span className="group-hover:text-black leading-5">Scalable Technology Integration</span>
+            <span className="group-hover:text-black leading-5">
+              Scalable Technology Integration
+            </span>
           </li>
           <li className="group hover:bg-white text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg cursor-pointer">
             <FaCog className="mr-2 text-lg sm:text-xl md:text-2xl text-red-600" />
-            <span className="group-hover:text-black leading-5">Expertise With Technological Innovation</span>
+            <span className="group-hover:text-black leading-5">
+              Expertise With Technological Innovation
+            </span>
           </li>
         </ul>
 
@@ -198,7 +202,7 @@ export default function Manufecture() {
             <img
               src={manufecturepage1}
               alt="Manufacturing Process"
-              className="rounded w-full h-[200px]  object-cover"
+              className="rounded w-full h-auto  object-cover"
             />
           </div>
         </div>
@@ -218,7 +222,7 @@ export default function Manufecture() {
             <h5 className="text-black text-base sm:text-lg p-2">
               Automotive Manufacturing
             </h5>
-            <p className="text-sm sm:text-base p-2">
+            <p className="text-sm sm:text-base px-2">
               Our manufacturing IT solutions enhance production efficiency and
               quality control in the automotive industry through automated
               processes and data-driven decision making.
@@ -233,7 +237,7 @@ export default function Manufecture() {
             <h5 className="text-black text-base sm:text-lg p-2">
               Food & Beverage Manufacturing
             </h5>
-            <p className="text-sm sm:text-base p-2">
+            <p className="text-sm sm:text-base px-2">
               Manufacturing IT solutions optimize food safety, traceability and
               production efficiency while adhering to industry regulations.
             </p>
@@ -247,7 +251,7 @@ export default function Manufecture() {
             <h5 className="text-black text-base sm:text-lg p-2">
               Pharmaceutical Manufacturing
             </h5>
-            <p className="text-sm sm:text-base p-2">
+            <p className="text-sm sm:text-base px-2">
               Manufacturing software developing services ensure regulatory
               compliance and quality control with IT solutions tailored to
               pharmaceutical manufacturing.
@@ -262,7 +266,7 @@ export default function Manufecture() {
             <h5 className="text-black text-base sm:text-lg p-2">
               Aerospace and Defence
             </h5>
-            <p className="text-sm sm:text-base p-2">
+            <p className="text-sm sm:text-base px-2">
               With our IT services for manufacturing industry, you can
               streamline complex manufacturing processes, manage supply chains,
               and enhance quality control in aerospace and defence.

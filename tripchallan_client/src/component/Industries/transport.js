@@ -20,9 +20,7 @@ import {
   FaIndustry,
   FaLightbulb,
   FaCog,
-  
   FaCheck,
-  
   FaAngular,
   FaVuejs,
 } from "react-icons/fa";
@@ -75,10 +73,10 @@ export default function Transport() {
         "Smart automotive solutions help in recognizing and analyzing the patterns of human behavior for future uses. It enables data-driven decisions to assist different situations to the users with the best next-gen solutions for the industry.",
     },
   ];
-  const navigate=useNavigate();
-  const contact=()=>{
-    navigate('/contact')
-  }
+  const navigate = useNavigate();
+  const contact = () => {
+    navigate("/contact");
+  };
   return (
     <>
       <div className="bg-indigo-950 p-10 sm:p-20 md:p-32 lg:p-44 relative flex flex-col items-center justify-center min-h-screen">
@@ -95,21 +93,24 @@ export default function Transport() {
         <ul className="flex flex-col sm:flex-row gap-4 text-center relative z-10 mt-4">
           <li className="group text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer hover:bg-white">
             <FaLightbulb className="mr-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-yellow-300 " />
-            <span className="group-hover:text-black leading-5">Streamline Logistic Process</span>
+            <span className="group-hover:text-black leading-5">
+              Streamline Logistic Process
+            </span>
           </li>
           <li className="group text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer hover:bg-white">
             <FaCog className="mr-2 text-lg sm:text-xl md:text-2xl lg:text-3xl text-pink-600 " />
-            <span className="group-hover:text-black leading-5">Quality Transportation Solution</span>
+            <span className="group-hover:text-black leading-5">
+              Quality Transportation Solution
+            </span>
           </li>
         </ul>
 
         <div className="text-center relative z-10 mt-6">
-          <button 
-              onClick={contact}
-              className="bg-orange-500  terounded-full px-4 sm:px-6 py-2 text-white text-sm sm:text-base md:text-lg hover:bg-orange-600 transition duration-300 rounded-full"
-            >
-              Request A Quote
-            
+          <button
+            onClick={contact}
+            className="bg-orange-500  terounded-full px-4 sm:px-6 py-2 text-white text-sm sm:text-base md:text-lg hover:bg-orange-600 transition duration-300 rounded-full"
+          >
+            Request A Quote
           </button>
         </div>
       </div>
@@ -134,15 +135,15 @@ export default function Transport() {
 
       <div className="bg-indigo-800 relative">
         <div className="text-center grid grid-cols-1 md:grid-cols-2  gap-2 container ">
-          <div className="mt-2 bg-indigo-800">
-            <h3 className="text-white text-4xl font-bold">
+          <div className="mt-4 bg-indigo-800">
+            <h3 className="text-white text-4xl font-bold ">
               Get The tech-driven IT service For The Transportation History
             </h3>
-            <p className="text-slate-300">
-              At OrangeMantra, we believe that smooth operations and effective
-              management are fundamental to a successful retail business. Our{" "}
-              <strong>Retail Management System services</strong> are designed to
-              empower your company.
+            <p className="text-slate-300 mt-4">
+              At Trip Management System, we believe that smooth operations and
+              effective management are fundamental to a successful retail
+              business. Our <strong>Retail Management System services</strong>{" "}
+              are designed to empower your company.
             </p>
             <ul className="flex flex-wrap justify-center md:justify-start items-center gap-2">
               <li className="flex items-center px-4 py-2 m-2 border rounded-full bg-white shadow-md cursor-pointer">
@@ -191,7 +192,7 @@ export default function Transport() {
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
             <img src={ware} className="w-full rounded-t-lg h-[250px]" />
             <h5 className="text-black p-2">Warehouse management Software</h5>
-            <p className="p-2">
+            <p className="px-2">
               Our manufacturing IT solutions enhance production efficiency and
               quality control in the automotive industry.
             </p>
@@ -199,7 +200,7 @@ export default function Transport() {
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
             <img src={logis} className="w-full rounded-t-lg h-[250px]" />
             <h5 className="text-black p-2">Logistic visibility Software</h5>
-            <p className="p-2">
+            <p className="px-2">
               Manufacturing IT solutions optimize food safety and production
               efficiency while adhering to regulations.
             </p>
@@ -207,7 +208,7 @@ export default function Transport() {
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
             <img src={tracking} className="w-full rounded-t-lg h-[250px]" />
             <h5 className="text-black p-2">End to End Tracking Services</h5>
-            <p className="p-2">
+            <p className="px-2">
               Software developing services ensure regulatory compliance and
               quality control.
             </p>
@@ -215,7 +216,7 @@ export default function Transport() {
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
             <img src={analyst} className="w-full rounded-t-lg h-[250px]" />
             <h5 className="text-black p-2">Business Intelligence Analysis</h5>
-            <p className="p-2">
+            <p className="px-2">
               Streamline complex manufacturing processes and manage supply
               chains.
             </p>
