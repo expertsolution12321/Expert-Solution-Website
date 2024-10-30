@@ -107,7 +107,7 @@ export default function Contact() {
             Contact Us
           </h1>
           <p className="text-2xl md:text-xl text-white max-w-2xl font-bold">
-            <a href="/" className="text-white">
+            <a href="/" className="text-orange-500 text-2xl">
               Home
             </a>
           </p>
@@ -123,10 +123,11 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className="pt-8 text-base md:text-xl leading-6">
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document or
-              a typeface without relying on meaningful content. Lorem ipsum may
-              be used as a placeholder before the final copy is available.
+            A Trip Management System is a digital solution designed to
+              streamline and automate the process of managing travel and
+              transportation logistics. It enables users, especially businesses
+              in the transportation and logistics sector, to efficiently plan,
+              track, and document trips for vehicles and drivers.
             </p>
           </div>
           <div className="flex flex-col space-y-4">
@@ -148,7 +149,7 @@ export default function Contact() {
                 href="mailto:expertsolution@gmail.com"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >
-                expertsolution@gmail.com
+                expertsolutions@gmail.com
               </a>
             </div>
 
@@ -161,7 +162,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >
-                78, Gautam Nagar St, Bapuji Nagar, Bhubaneswar, Odisha 751014
+                78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014
               </a>
             </div>
           </div>
@@ -188,7 +189,7 @@ export default function Contact() {
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -206,7 +207,7 @@ export default function Contact() {
                         type="text"
                         value={lname}
                         onChange={(e) => setLname(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -224,7 +225,7 @@ export default function Contact() {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -242,7 +243,7 @@ export default function Contact() {
                         type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -255,11 +256,11 @@ export default function Contact() {
                       Message
                     </label>
                     <div className="mt-2">
-                      <input
+                      <textarea
                         type="text"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -277,7 +278,7 @@ export default function Contact() {
                         type="text"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
                       />
                     </div>
@@ -288,7 +289,7 @@ export default function Contact() {
               <div className="mt-6 flex items-center justify-end gap-x-6">
                 <button
                   type="reset"
-                  className="text-md font-semibold leading-6 bg-red-600 text-white rounded-md px-3 py-2 w-28 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-200 hover:bg-red-500"
+                  className="text-md font-semibold leading-6 bg-red-600 text-white rounded-md px-3 py-2.5 w-28 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-200 hover:bg-red-500"
                 >
                   Reset
                 </button>

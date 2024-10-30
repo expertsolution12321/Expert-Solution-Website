@@ -1,6 +1,6 @@
 import React from "react";
 import mobapp from "../images/mobileapp.png";
-import mobile from "../images/mapp.png";
+import mobile from "../images/mobapp.png";
 import searching from "../images/Searching.png";
 import bgmap from "../images/card-section.jpg";
 import note from "../images/signature.png";
@@ -65,7 +65,7 @@ export default function Mobileapp() {
               Mobile App Development Services
             </h2>
             <p className="mb-6">
-              We at Trip Challan Book offer a custom range of mobile app
+              We at Trip Management system offer a custom range of mobile app
               development services which mainly focus on two locations i.e.
               India & USA. We offer services for both Android and iOS platforms.
             </p>
@@ -137,28 +137,28 @@ export default function Mobileapp() {
             </p>
           </div>
           <div className="w-full md:w-1/2 flex flex-wrap items-center justify-center gap-4">
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-300">
               <FaGlobe className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 10+
               </h1>
               <span className="text-base font-semibold">Countries Served</span>
             </div>
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-300">
               <FaTrophy className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 15+
               </h1>
               <span className="text-base font-semibold">Award Won</span>
             </div>
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-300">
               <FaThumbsUp className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 150+
               </h1>
               <span className="text-base font-semibold">Happy Client</span>
             </div>
-            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center">
+            <div className="h-[180px] w-[250px] border rounded-xl flex flex-col items-center p-4 text-center shadow-md shadow-gray-300">
               <FaRocket className="text-5xl text-white p-2 bg-gradient-to-r from-[#000031] to-[#7f0f54] rounded-lg mb-2" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000031]">
                 50+
@@ -172,7 +172,7 @@ export default function Mobileapp() {
         className="py-10 bg-gray-50"
         style={{
           backgroundImage: `url(${backgr})`,
-          backgroundPosition: "center", 
+          backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundAttachment: "scroll",
         }}
@@ -304,12 +304,12 @@ export default function Mobileapp() {
               their default model text, and a search for 'lorem ipsum' will
               uncover many web sites still in their infancy.{" "}
             </p>
-            <button
+            {/* <button
               onClick={more}
               className="px-4 py-2 bg-gradient-to-r from-red-500 to-blue-700 text-white font-semibold rounded-full text-lg hover:from-blue-700 hover:to-red-500 transition duration-500"
             >
               Read More
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
@@ -333,8 +333,8 @@ export default function Mobileapp() {
               <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
                 <h3 className="text-xl font-bold">Languages</h3>
               </div>
-              <ul className="mt-2 space-y-2 p-2">
-                <li className="flex items-center space-x-2">
+              <ul className="mt-2 space-y-2 p-2 cursor-pointer">
+                <li className="flex items-center space-x-2 ">
                   <FaJava className="w-6 h-6 text-red-600" />
                   <span>Java</span>
                 </li>
@@ -362,7 +362,7 @@ export default function Mobileapp() {
               <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
                 <h3 className="text-xl font-bold">Tools</h3>
               </div>
-              <ul className="mt-2 space-y-2 p-2">
+              <ul className="mt-2 space-y-2 p-2 cursor-pointer">
                 <li className="flex items-center space-x-2">
                   <FaMobileAlt className="w-6 h-6 text-blue-500" />
                   <span>Apache Cordova</span>
@@ -396,7 +396,7 @@ export default function Mobileapp() {
               <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
                 <h3 className="text-xl font-bold">Frameworks</h3>
               </div>
-              <ul className="mt-2 space-y-2 p-2">
+              <ul className="mt-2 space-y-2 p-2 cursor-pointer">
                 <li className="flex items-center space-x-2">
                   <SiFlutter className="w-6 h-6" style={{ color: "#02569B" }} />{" "}
                   {/* Flutter Blue */}
@@ -433,7 +433,7 @@ export default function Mobileapp() {
               <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
                 <h3 className="text-xl font-bold">Service Integrations</h3>
               </div>
-              <ul className="mt-2 space-y-2 p-2">
+              <ul className="mt-2 space-y-2 p-2 cursor-pointer">
                 <li className="flex items-center space-x-2">
                   <FaCreditCard
                     className="w-6 h-6"
@@ -506,7 +506,6 @@ export default function Mobileapp() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

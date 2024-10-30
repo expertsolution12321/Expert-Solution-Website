@@ -13,10 +13,10 @@ import visionImage from "../images/vission.jpg";
 import vishead from "../images/Vision1.png";
 
 const About = () => {
-  const navigate=useNavigate();
-const handleClick=()=>{
-  navigate('/contact')
-}
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact");
+  };
   return (
     <>
       <div
@@ -36,8 +36,8 @@ const handleClick=()=>{
             innovation & transformation needs.
           </h1>
           <p className="text-lg text-white text-center font-semibold mb-6">
-            Trip Challan Book empowers enterprises and startups alike to stay ahead in
-            an increasingly digital-driven market.
+            Trip Challan Book empowers enterprises and startups alike to stay
+            ahead in an increasingly digital-driven market.
           </p>
           <div>
             <button
@@ -210,12 +210,12 @@ const handleClick=()=>{
               <img src={mishead} alt="Mission Header" className=" w-24 " />
               <h2 className="text-2xl text-orange-600 font-bold ">Mission</h2>
               <p className="text-gray-700">
-                <b>Trip Challan Book</b> is determined to build an integrated and more
-                efficient service delivery platform to better fulfill our
-                customers' needs. We focus on expanding our geographical reach
-                and increasing technical capabilities in an agile organization
-                where people respond fast, take ownership, make decisions, and
-                achieve results.
+                <b>Trip Challan Book</b> is determined to build an integrated
+                and more efficient service delivery platform to better fulfill
+                our customers' needs. We focus on expanding our geographical
+                reach and increasing technical capabilities in an agile
+                organization where people respond fast, take ownership, make
+                decisions, and achieve results.
               </p>
             </div>
           </div>
@@ -236,16 +236,20 @@ const handleClick=()=>{
 
             {/* Vision Text Section */}
             <div className="text-right md:ml-6 ml-0 mr-5 md:px-0">
-              <img src={vishead} alt="Vision Header" className="w-24 ml-auto " />
+              <img
+                src={vishead}
+                alt="Vision Header"
+                className="w-24 ml-auto "
+              />
               <h2 className="text-2xl text-orange-600 font-bold mb-4">
                 Vision
               </h2>
               <p className="text-gray-700">
-                At <b>Trip Challan Book</b>, we envision a future where businesses thrive
-                through innovative technology solutions. We are committed to
-                empowering organizations, fostering collaboration, and
-                delivering excellence. Together, we will redefine the future of
-                business through cutting-edge technology.
+                At <b>Trip Challan Book</b>, we envision a future where
+                businesses thrive through innovative technology solutions. We
+                are committed to empowering organizations, fostering
+                collaboration, and delivering excellence. Together, we will
+                redefine the future of business through cutting-edge technology.
               </p>
             </div>
           </div>

@@ -23,21 +23,21 @@ export default function UIUX() {
             </h1>
             <p className="font-medium text-base tracking-wider leading-relaxed">
               {" "}
-              OrangeMantra is dedicated to accomplishing your business
+              Trip Management System is dedicated to accomplishing your business
               objectives by offering the best prototype website design elements
               for your projects.{" "}
             </p>
 
             <ul className="flex flex-wrap mt-3 p-0 gap-2">
-              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center  cursor-pointer hover:bg-white hover:text-black">
                 <FaFigma className="mr-2 text-purple-500 text-xl" />
                 Dashboard prototype Figma improvisation
               </li>
-              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center  cursor-pointer hover:bg-white hover:text-black">
                 <FaUsers className="mr-2 text-blue-500 text-xl" />
                 Expert team of developers
               </li>
-              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center  cursor-pointer hover:bg-white hover:text-black">
                 <FaHeadset className="mr-2 text-green-500 text-xl" />
                 24/7 support on post-launch projects
               </li>
@@ -66,11 +66,11 @@ export default function UIUX() {
                     className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
                     placeholder="Phone Number*"
                   />
-                  <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4]  rounded-md"
+                  <textarea
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] border-none  rounded-md"
                     placeholder="messages*"
                   />
-                  <button className="w-full px-6 py-2 mt-10 bg-gradient-to-r from-[#590338] to-[#000031] text-white rounded-full">
+                  <button className="w-full px-6 py-2 mt-10 bg-gradient-to-r from-[#590338] to-[#000031] text-white rounded-full hover:bg-gradient-to-l">
                     Submit
                   </button>
                 </form>
@@ -88,20 +88,21 @@ export default function UIUX() {
             </h1>
             <p className="text-base font-normal ">
               {" "}
-              We, at OrangeMantra, leverage you to upscale your business by
-              offering the best website prototype services. Our team consists of
-              skilled professionals with a shared commitment to delivering
-              high-quality website prototypes. With a wealth of experience in
-              and prototyping tools, we bring your visions to life.
+              We, at Trip Management system, leverage you to upscale your
+              business by offering the best website prototype services. Our team
+              consists of skilled professionals with a shared commitment to
+              delivering high-quality website prototypes. With a wealth of
+              experience in and prototyping tools, we bring your visions to
+              life.
             </p>
           </div>
-          <div className="w-full md:w-1/2 flex flex-wrap items-center justify-center gap-2">
-            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 ">
+          <div className="w-full md:w-1/2 flex flex-wrap items-center justify-center gap-4">
+            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 shadow-md shadow-gray-300 ">
               <BiHappyBeaming className="text-5xl text-white p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg" />
               <h1 className="  text-5xl  font-bold text-[000031]">100+</h1>
               <span className="text-base font-semibold">Happy Clients</span>
             </div>
-            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 ">
+            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 shadow-md shadow-gray-300 ">
               <FaThumbsUp className="text-5xl text-white p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg" />
               <h1 className="text-5xl font-bold text-[000031]">250+</h1>
               <span className="text-base font-semibold">
@@ -109,12 +110,12 @@ export default function UIUX() {
                 Global Top Brands & Enterprises Served{" "}
               </span>
             </div>
-            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 ">
+            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 shadow-md shadow-gray-300 ">
               <RiMailSettingsFill className="text-5xl text-white p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg" />
               <h1 className="text-5xl font-bold text-[000031]">90%</h1>
               <span className="text-base font-semibold">Customers NPS</span>
             </div>
-            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 ">
+            <div className=" h-[200px] w-[250px] border rounded-xl flex flex-col p-4 shadow-md shadow-gray-300 ">
               <BiHappyBeaming className="text-5xl text-white p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg" />
               <h1 className="text-5xl font-bold text-[000031]">400+</h1>
               <span className="text-base font-semibold">

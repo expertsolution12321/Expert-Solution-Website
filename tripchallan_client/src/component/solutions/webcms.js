@@ -1,7 +1,7 @@
 import React from "react";
 import webapp from "../images/webapp.png";
 import { useNavigate } from "react-router-dom";
-import webbg from '../images/webbg.jpg'
+import webbg from "../images/webbg.jpg";
 import {
   FaCode,
   FaCloud,
@@ -16,9 +16,9 @@ import bgmap from "../images/card-section.jpg";
 
 export default function Webcms() {
   const navigate = useNavigate();
-  const contact =()=>{
-    navigate('/contact')
-  }
+  const contact = () => {
+    navigate("/contact");
+  };
   const more = () => {
     navigate("/webcms");
   };
@@ -32,9 +32,9 @@ export default function Webcms() {
               Web App Development Company
             </h2>
             <p className="mb-6">
-              We at S-modality offer a custom range of mobile app development
-              services which mainly focus on two locations i.e. India & USA. We
-              offer services for both Android and iOS platforms.
+              We at Trip Management System offer a custom range of mobile app
+              development services which mainly focus on two locations i.e.
+              India & USA. We offer services for both Android and iOS platforms.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               <button className="flex items-center justify-center border border-white p-2 h-12 font-semibold rounded-full hover:bg-white hover:text-purple-800 transition duration-300">
@@ -79,11 +79,11 @@ export default function Webcms() {
             Development Solutions
           </h1>
           <p className="text-gray-600">
-            At OrangeMantra, we understand the importance of creating immersive
-            web experiences to elevate your market value. Our team of dedicated
-            web experts understands your unique business needs to customize web
-            app development solutions for you. So, that your users get an
-            immersive user experience.
+            At Trip Management System, we understand the importance of creating
+            immersive web experiences to elevate your market value. Our team of
+            dedicated web experts understands your unique business needs to
+            customize web app development solutions for you. So, that your users
+            get an immersive user experience.
           </p>
         </div>
 
@@ -254,12 +254,12 @@ export default function Webcms() {
               their default model text, and a search for 'lorem ipsum' will
               uncover many web sites still in their infancy.{" "}
             </p>
-            <button
+            {/* <button
               className="px-4 py-2 bg-gradient-to-r from-red-500 to-blue-700 text-white font-semibold rounded-full text-lg hover:from-blue-700 hover:to-red-500 transition duration-500"
               onClick={more}
             >
               Read More
-            </button>
+            </button> */}
           </div>
 
           {/* Right Section */}
@@ -279,7 +279,7 @@ export default function Webcms() {
         />
 
         <h1 className="text-white  text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold relative z-10 text-center m-2 p-2 leading-relaxed">
-         Do you Want Custom {" "}
+          Do you Want Custom{" "}
           <span className="text-orange-500 font-bold">
             Web App Development{" "}
           </span>

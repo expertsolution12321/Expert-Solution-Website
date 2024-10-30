@@ -5,6 +5,8 @@ import retailpage2 from "../images/img7.png";
 import retailpage3 from "../images/img8.jpg";
 import retailpage4 from "../images/img9.png";
 import retailpage5 from "../images/project.png";
+import cardsec from "../images/card-section.jpg";
+import techbg from "../images/techbg.jpeg";
 import { useNavigate } from "react-router-dom";
 import {
   FaCheck,
@@ -17,10 +19,10 @@ import {
 } from "react-icons/fa";
 import { FaFreeCodeCamp, FaInvision, FaMobile } from "react-icons/fa6";
 export default function Retail() {
-  const navigate=useNavigate();
-  const contact=()=>{
-    navigate('/contact')
-  }
+  const navigate = useNavigate();
+  const contact = () => {
+    navigate("/contact");
+  };
   return (
     <>
       <div className="bg-indigo-950 p-10 sm:p-20 lg:p-44 relative flex flex-col items-center justify-center h-full ">
@@ -51,16 +53,20 @@ export default function Retail() {
 
         <div className="text-center relative z-10 flex flex-col sm:flex-row">
           <button
-              onClick={contact}
-              className="text-white bg-orange-500 rounded-full p-2 hover:bg-orange-600 transition duration-300"
-            >
-              Request A Quote
-            
+            onClick={contact}
+            className="text-white bg-orange-500 rounded-full p-2 hover:bg-orange-600 transition duration-300"
+          >
+            Request A Quote
           </button>
         </div>
       </div>
 
-      <div className="container mb-8">
+      <div
+        className=" mb-10"
+        style={{
+          backgroundImage: `url(${cardsec})`,
+        }}
+      >
         <h2 className="flex justify-center text-3xl md:text-5xl font-bold text-center mx-5 mt-7">
           Retail Management Software Solutions: Empowering Retail Excellence,
           Every Step of the Way
@@ -72,10 +78,10 @@ export default function Retail() {
           <strong>Store Management Software</strong> services are built to
           tackle these issues head-on.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
-          <div className="border border-white shadow m-3 p-3 rounded">
-            <h3 className="text-indigo-900 text-lg">
-              <FaInnosoft className="text-3xl" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="border border-white shadow m-3 p-3 rounded bg-white">
+            <h3 className="text-indigo-900 text-lg flex items-center gap-2">
+              <FaInnosoft className="text-4xl text-orange-500" />
               Inventory Management
             </h3>
             <p>
@@ -85,10 +91,10 @@ export default function Retail() {
               and maximizing order fulfillment.
             </p>
           </div>
-          <div className="border border-white shadow m-3 p-3 rounded">
-            <h3 className="text-indigo-900 text-lg">
-              <FaWarehouse className="text-3xl" />
-              Warehouses Management{" "}
+          <div className="border border-white shadow m-3 p-3 rounded bg-white">
+            <h3 className="text-indigo-900 text-lg flex items-center gap-2">
+              <FaWarehouse className="text-4xl text-blue-500" />
+              Warehouses Management
             </h3>
             <p>
               Optimize the efficiency of your warehouse operations by
@@ -96,9 +102,9 @@ export default function Retail() {
               planning, monitoring, and optimizing warehouse operations.
             </p>
           </div>
-          <div className="border border-white shadow m-3 p-3 rounded">
-            <h3 className="text-indigo-900 text-lg">
-              <FaTable className="text-3xl" />
+          <div className="border border-white shadow m-3 p-3 rounded bg-white">
+            <h3 className="text-indigo-900 text-lg flex items-center gap-2">
+              <FaTable className="text-4xl text-green-500" />
               Scheduling of Production
             </h3>
             <p>
@@ -107,9 +113,9 @@ export default function Retail() {
               processes for the best use of available resources.
             </p>
           </div>
-          <div className="border border-white shadow m-3 p-3 rounded">
-            <h3 className="text-indigo-900 text-lg">
-              <FaFreeCodeCamp className="text-3xl" />
+          <div className="border border-white shadow m-3 p-3 rounded bg-white">
+            <h3 className="text-indigo-900 text-lg flex items-center gap-2">
+              <FaFreeCodeCamp className="text-4xl text-teal-500" />
               Forecasting Demand
             </h3>
             <p>
@@ -118,9 +124,9 @@ export default function Retail() {
               and consumer preferences.
             </p>
           </div>
-          <div className="border border-white shadow m-3 p-3 rounded">
-            <h3 className="text-indigo-900 text-lg">
-              <FaDigitalOcean className="text-3xl" />
+          <div className="border border-white shadow m-3 p-3 rounded bg-white">
+            <h3 className="text-indigo-900 text-lg flex items-center gap-2">
+              <FaDigitalOcean className="text-4xl text-purple-500" />
               Engagement of Digital Customers
             </h3>
             <p>
@@ -129,9 +135,9 @@ export default function Retail() {
               client loyalty.
             </p>
           </div>
-          <div className="border border-white shadow m-3 p-3 rounded">
-            <h3 className="text-indigo-900 text-lg">
-              <FaMobile className="text-3xl" />
+          <div className="border border-white shadow m-3 p-3 rounded bg-white">
+            <h3 className="text-indigo-900 text-lg flex items-center gap-2">
+              <FaMobile className="text-4xl text-red-500" />
               Mobile Apps for Retail
             </h3>
             <p>
@@ -196,42 +202,27 @@ export default function Retail() {
         </div>
       </div>
 
-      <div className="container mb-6">
-        <h2 className="text-center m-5">
-          Tailored IT Solutions for Manufacturing Industry
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={retailpage2} className="w-full rounded-t-lg h-[250px]" />
-            <h5 className="text-black p-2">Automotive Manufacturing</h5>
-            <p className="p-2">
-              Our manufacturing IT solutions enhance production efficiency and
-              quality control in the automotive industry.
-            </p>
-          </div>
-          <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={retailpage3} className="w-full rounded-t-lg h-[250px]" />
-            <h5 className="text-black p-2">Food & Beverage Manufacturing</h5>
-            <p className="p-2">
-              Manufacturing IT solutions optimize food safety and production
-              efficiency while adhering to regulations.
-            </p>
-          </div>
-          <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={retailpage4} className="w-full rounded-t-lg h-[250px]" />
-            <h5 className="text-black p-2">Pharmaceutical Manufacturing</h5>
-            <p className="p-2">
-              Software developing services ensure regulatory compliance and
-              quality control.
-            </p>
-          </div>
-          <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={retailpage5} className="w-full rounded-t-lg h-[250px]" />
-            <h5 className="text-black p-2">Aerospace and Defence</h5>
-            <p className="p-2">
-              Streamline complex manufacturing processes and manage supply
-              chains.
-            </p>
+      <div
+        className="flex flex-col md:flex-row items-center bg-cover bg-center p-6"
+        style={{
+          backgroundImage: `url(${techbg})`,
+          backgroundSize: "cover",
+          backgroundColor: "rgba(0,0,0,0.5)",
+          backgroundBlendMode: "multiply",
+        }}
+      >
+        <div className="flex-1 p-6">
+          <div className="max-w-xl  rounded-lg p-6 md:p-8 rigth-0 md:mx-0">
+            <h2 className="text-white text-3xl  mb-4 font-bold">
+              Discover how Trip Management System Revolutionizes Retail
+              Operations with its Adaptability to Diverse Business Needs
+            </h2>
+            <button
+              onClick={contact}
+              className="mt-6 px-6 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition duration-300"
+            >
+              Start Today
+            </button>
           </div>
         </div>
       </div>
