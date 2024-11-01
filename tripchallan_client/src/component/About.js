@@ -131,7 +131,7 @@ export default function About() {
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               About Us
-            </a> 
+            </a>
             <a
               href="./Services"
               className="text-sm font-semibold leading-6 text-gray-900"

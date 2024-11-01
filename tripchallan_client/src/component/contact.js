@@ -123,7 +123,7 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className="pt-8 text-base md:text-xl leading-6">
-            A Trip Management System is a digital solution designed to
+              A Trip Management System is a digital solution designed to
               streamline and automate the process of managing travel and
               transportation logistics. It enables users, especially businesses
               in the transportation and logistics sector, to efficiently plan,
@@ -158,7 +158,7 @@ export default function Contact() {
               <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
               <a
                 href="https://www.google.com/maps/search/?api=1&query=78+Gautam+Nagar+St,+Bapuji+Nagar,+Bhubaneswar,+Odisha+751014"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >

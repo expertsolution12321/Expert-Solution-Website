@@ -22,19 +22,18 @@ export default function socilamedia() {
         className="relative isolate h-80 sm:h-96 md:h-[32rem] flex items-center justify-center overflow-hidden bg-cover bg-center w-full"
       >
         <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-white leading-tight">
-            Safety First, Protect Your Fleet with Advanced Tracking!
+          <h1 className="text-3xl sm:text-2xl md:text-4xl font-bold text-white leading-tight">
+            Connect with Us
           </h1>
+          <p className="text-white font-semibold">
+            ( Stay Updated, Get Inspired, Join the Conversation )
+          </p>
           <p className="text-xs sm:text-sm md:text-base text-white mt-4 md:mt-6">
-            Safety First, Protect Your Fleet with Advanced Tracking! emphasizes
-            the importance of prioritizing safety in fleet management through
-            the use of sophisticated tracking technologies. This approach
-            enables real-time monitoring of vehicles, enhancing security,
-            improving operational efficiency, and minimizing risks. By utilizing
-            advanced tracking systems, fleet operators can ensure better
-            visibility, timely responses to incidents, and proactive
-            maintenance, ultimately safeguarding their assets and promoting a
-            safer environment for drivers and cargo.
+            Follow us on social media to stay connected and learn more about how
+            we’re transforming the world of trip and logistics management. We
+            regularly share updates, tips, industry insights, and client success
+            stories across our platforms to keep our community informed and
+            inspired.
           </p>
         </div>
       </div>

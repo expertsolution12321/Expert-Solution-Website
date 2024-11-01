@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import img from "./images/logo.svg";
+import logo from "./images/newlogo.svg";
 import sql from "./images/sql.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaSortDown } from "react-icons/fa";
@@ -117,17 +117,40 @@ export default function Header() {
   const handleNavigationTechnology = (e) => {
     const id = e.target.id;
     switch (id) {
-      case "secommerce":
-        // navigate("/secommerce");
+      case "javascript":
+        window.open("https://www.w3schools.com/js/DEFAULT.asp", "_blank");
         break;
-      case "smobileapp":
-        // navigate("/smobileapp");
+      case "html":
+        window.open("https://www.w3schools.com/html/html_css.asp", "_blank");
         break;
-      case "webcms":
-        // navigate("/webcms");
+      case "tailwind":
+        window.open("https://tailwindcss.com/", "_blank");
+        break;
+      case "react":
+        window.open("https://react.dev/", "_blank");
+        break;
+      case "node":
+        window.open("https://nodejs.org/en", "_blank");
+        break;
+      case "express":
+        window.open("https://expressjs.com/", "_blank");
+        break;
+      case "database":
+        window.open(
+          "https://www.oracle.com/database/what-is-database/",
+          "_blank"
+        );
+        break;
+      case "sql":
+        window.open("https://www.w3schools.com/sql/", "_blank");
+        break;
+      case "mongodb":
+        window.open("https://www.mongodb.com/", "_blank");
         break;
       default:
     }
+    setMobileMenuOpen(false);
+    setIsTechnologyOpen(false);
   };
   // const handleNavigationProduct = (e) => {
   //   const id = e.target.id;
@@ -256,7 +279,7 @@ export default function Header() {
         >
           <div className="flex ">
             <button className=" p-1.5" onClick={home}>
-              <img alt="Logo" src={img} className="  h-20" />
+              <img alt="Logo" src={logo} className="  h-20" />
             </button>
           </div>
           <div className="flex mr-4">
@@ -347,39 +370,75 @@ export default function Header() {
                         : "hidden scale-95"
                     }`}
                   >
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="javascript"
+                    >
                       <FaJs className="mr-2 text-yellow-500" />
                       JavaScript
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="html"
+                    >
                       <FaHtml5 className="mr-2 text-orange-600" />
                       HTML/CSS
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="tailwind"
+                    >
                       <SiTailwindcss className="mr-2 text-teal-500" />
                       Tailwind CSS
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="react"
+                    >
                       <FaReact className="mr-2 text-blue-500" />
                       React.js
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="node"
+                    >
                       <FaNodeJs className="mr-2 text-green-600" />
                       Node.js
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="express"
+                    >
                       <SiExpress className="mr-2 text-gray-800" />
                       Express.js
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="database"
+                    >
                       <FaDatabase className="mr-2 text-indigo-600" />
                       Database
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="sql"
+                    >
                       <img src={sql} className="mr-2 text-blue-700 h-5" />
                       SQL
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                      onClick={handleNavigationTechnology}
+                      id="mongodb"
+                    >
                       <SiMongodb className="mr-2 text-green-600" />
                       MongoDB
                     </li>
@@ -574,7 +633,7 @@ export default function Header() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <img alt="Logo" src={img} className="h-8 w-auto" />
+                <img alt="Logo" src={logo} className="h-8 w-auto" />
               </a>
               <button
                 type="button"
@@ -655,39 +714,75 @@ export default function Header() {
                           : "hidden h-0 overflow-hidden"
                       }`}
                     >
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="javascript"
+                      >
                         <FaJs className="mr-2 text-yellow-500" />
                         JavaScript
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="html"
+                      >
                         <FaHtml5 className="mr-2 text-orange-600" />
                         HTML/CSS
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="tailwind"
+                      >
                         <SiTailwindcss className="mr-2 text-teal-500" />
                         Tailwind CSS
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="react"
+                      >
                         <FaReact className="mr-2 text-blue-500" />
-                        React
+                        React.js
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="node"
+                      >
                         <FaNodeJs className="mr-2 text-green-600" />
                         Node.js
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="express"
+                      >
                         <SiExpress className="mr-2 text-gray-800" />
                         Express.js
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="database"
+                      >
                         <FaDatabase className="mr-2 text-indigo-600" />
                         Database
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
-                        <SiMysql className="mr-2 text-blue-700" />
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="sql"
+                      >
+                        <img src={sql} className="mr-2 text-blue-700 h-5" />
                         SQL
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
+                        onClick={handleNavigationTechnology}
+                        id="mongodb"
+                      >
                         <SiMongodb className="mr-2 text-green-600" />
                         MongoDB
                       </li>

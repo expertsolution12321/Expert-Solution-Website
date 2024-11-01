@@ -1,5 +1,5 @@
 import React from "react";
-import img from "./images/logo.svg";
+import logo from "./images/newlogo.svg";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 export default function Footer() {
@@ -29,29 +29,45 @@ export default function Footer() {
         <div className="w-full md:w-[40%] lg:w-[23%] flex flex-col items-center md:items-start m-1 p-2">
           <a href="/" className="mb-2">
             <img
-              src={img}
+              src={logo}
               className="w-36 h-20 mb-2 md:mb-4"
               alt="Company Logo"
             />
           </a>
           <p className="text-base  md:text-left">
-            At <b>Trip Management System</b> we have customized offerings for different domains.
-            These solutions enable the users to manage and monitor their assets
-            effectively and profitably, as per their requirements, thereby
-            increasing the business efficiency.
+            At <b>Trip Management System</b> we have customized offerings for
+            different domains. These solutions enable the users to manage and
+            monitor their assets effectively and profitably, as per their
+            requirements, thereby increasing the business efficiency.
           </p>
           <h5 className="m-0  font-bold">Follow Us</h5>
           <div className="flex space-x-4 justify-center mt-4">
-            <a href="https://www.facebook.com/" className="text-blue-800" target="_blank">
+            <a
+              href="https://www.facebook.com/"
+              className="text-blue-800"
+              target="_blank"
+            >
               <FaFacebook className="text-3xl" />
             </a>
-            <a href="https://x.com/" className="text-indigo-900" target="_blank">
+            <a
+              href="https://x.com/"
+              className="text-indigo-900"
+              target="_blank"
+            >
               <FaTwitter className="text-3xl" />
             </a>
-            <a href="https://www.youtube.com/" className="text-red-600" target="_blank">
+            <a
+              href="https://www.youtube.com/"
+              className="text-red-600"
+              target="_blank"
+            >
               <FaYoutube className="text-3xl" />
             </a>
-            <a href="https://www.instagram.com/" className="text-pink-600" target="_blank">
+            <a
+              href="https://www.instagram.com/"
+              className="text-pink-600"
+              target="_blank"
+            >
               <FaInstagram className="text-3xl" />
             </a>
           </div>
