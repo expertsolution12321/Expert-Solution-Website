@@ -32,13 +32,16 @@ const About = () => {
       >
         <div className="flex flex-col  items-center p-4  mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold text-center capitalize mb-4">
-            We're the right tech-solutions partner for all your digital
-            innovation & transformation needs.
+            Welcome to Our{" "}
+            <span className="text-orange-500">Trip Management System</span>
           </h1>
-          <p className="text-lg text-white text-center font-semibold mb-6">
-            Trip Challan Book empowers enterprises and startups alike to stay
-            ahead in an increasingly digital-driven market.
+          <p className="text-white text-lg">
+            {" "}
+            ( Streamlining Your Journeys, Simplifying Your Operations )
           </p>
+          {/* <p className="text-lg text-white text-center font-semibold mb-6">
+          We understand the complexities of managing trips, logistics, and travel plans. Our platform is designed to provide a seamless, end-to-end solution for individuals and organizations looking to manage their journeys efficiently. With powerful tools for planning, tracking, and documenting trips, we make every aspect of trip management easier and more reliable.
+          </p> */}
           <div>
             <button
               onClick={handleClick}
@@ -52,7 +55,8 @@ const About = () => {
       <div className="w-full flex flex-col md:flex-row h-auto p-4 md:justify-center ">
         <div className="w-full mt-5  p-2 pt-20 sm:mt-0 md:mr-4">
           <h1 className="text-4xl md:text-3xl text-orange-600 font-bold pb-4">
-            India's Best GPS Tracking Services Company
+            Your Trusted Partner in{" "}
+            <span className="text-green-500">Trip Management</span>
           </h1>
           <p className="text-base md:text-xl pb-4">
             All our solutions are customized & designed to meet the specific
@@ -209,13 +213,19 @@ const About = () => {
             <div className="text-left  md:ml-6 ">
               <img src={mishead} alt="Mission Header" className=" w-24 " />
               <h2 className="text-2xl text-orange-600 font-bold ">Mission</h2>
+              <p className="font-semibold">
+                ( Empowering Journeys with Efficiency, Safety, and Innovation )
+              </p>
               <p className="text-gray-700">
-                <b>Trip Challan Book</b> is determined to build an integrated
-                and more efficient service delivery platform to better fulfill
-                our customers' needs. We focus on expanding our geographical
-                reach and increasing technical capabilities in an agile
-                organization where people respond fast, take ownership, make
-                decisions, and achieve results.
+                Our mission is to revolutionize the way trips are managed by
+                providing a reliable, comprehensive platform that simplifies
+                logistics and enhances every travel experience. We aim to
+                empower individuals and organizations to make informed
+                decisions, streamline operations, and prioritize safety. Through
+                continuous innovation and a commitment to user satisfaction, we
+                strive to set new standards for excellence in trip and logistics
+                management, making every journey smoother, safer, and more
+                efficient.
               </p>
             </div>
           </div>
@@ -241,15 +251,21 @@ const About = () => {
                 alt="Vision Header"
                 className="w-24 ml-auto "
               />
-              <h2 className="text-2xl text-orange-600 font-bold mb-4">
+              <h2 className="text-2xl text-orange-600 font-bold mb-2">
                 Vision
               </h2>
+              <p className="font-semibold">
+                ( Shaping the Future of Seamless Travel and Logistics )
+              </p>
               <p className="text-gray-700">
-                At <b>Trip Challan Book</b>, we envision a future where
-                businesses thrive through innovative technology solutions. We
-                are committed to empowering organizations, fostering
-                collaboration, and delivering excellence. Together, we will
-                redefine the future of business through cutting-edge technology.
+                We envision a world where every journey—whether personal or
+                professional—is effortlessly managed and optimized through
+                technology. Our goal is to be the leading platform for trip
+                management, known for delivering unparalleled efficiency,
+                safety, and user satisfaction. We aspire to empower our users
+                with tools that turn complex logistics into simple, stress-free
+                experiences, setting new benchmarks in the travel and logistics
+                industry.
               </p>
             </div>
           </div>

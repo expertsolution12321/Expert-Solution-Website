@@ -120,22 +120,28 @@ function Homepage() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundBlendMode: "multiply",
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust color and opacity as needed
+          backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust color and opacity as needed
         }}
         className="relative isolate h-96 md:h-[32rem] flex items-center justify-center overflow-hidden bg-cover bg-center w-full"
       >
         <div className="absolute inset-0 flex flex-col items-center text-center px-4 md:px-8 space-y-4 mt-24">
           <h1 className="text-3xl md:text-6xl font-mono font-bold text-white">
-            Welcome To{" "}
+            Effortless{" "}
             <span className="text-orange-500 cursor-pointer" target="_blank">
-              Trip Management System
+              Trip Management
             </span>
+            , All in One Place
           </h1>
+          <p className="text-white text-xl font-semibold">
+            ( Plan. Track. Succeed. )
+          </p>
           <p className="text-sm md:text-base text-white max-w-2xl">
-            At Trip Management System we have customized offerings for different
-            domains. These solutions enable the users to manage and monitor
-            their assets effectively and profitably, as per their requirements,
-            thereby increasing the business efficiency.
+            Welcome to a smarter way to manage your journeys. Our Trip
+            Management System streamlines every aspect of travel planning and
+            logistics, bringing all your trip details under one easy-to-use
+            platform. From real-time tracking to insightful data, we provide the
+            tools you need to optimize routes, enhance safety, and stay
+            organized.
           </p>
         </div>
       </div>
@@ -151,7 +157,8 @@ function Homepage() {
           {/* Section for Text */}
           <div className="w-full md:w-1/2 p-2 md:mr-4 pt-6 md:pt-0">
             <h3 className="text-xl md:text-3xl text-red-600 font-bold pb-4">
-              India Best GPS Tracking Services Company
+              Welcome to Our{" "}
+              <span className="text-green-500">Trip Management System</span>
             </h3>
             <p className="text-sm md:text-base pb-4">
               All our solutions are customized & designed to meet the specific
