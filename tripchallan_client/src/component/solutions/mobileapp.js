@@ -52,9 +52,6 @@ export default function Mobileapp() {
   const handleClick = () => {
     navigate("/contact");
   };
-  const more = () => {
-    navigate("/mobileapp");
-  };
   return (
     <>
       <section className="bg-gradient-to-r from-purple-900 to-indigo-900 py-8 px-4">

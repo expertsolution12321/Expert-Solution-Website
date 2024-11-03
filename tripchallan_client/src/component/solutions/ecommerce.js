@@ -274,11 +274,11 @@ export default function Ecommerce() {
           {/* Heading Section */}
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-purple-900">
-              Technical Expertise for Mobile App
+              Check Out The Technical Expertise for E-commerce Development
             </h2>
             <p className="mt-2 text-gray-700">
               We employ the most-advanced technical skills to get the best
-              Mobile App developed.
+              E-commerce Development .
             </p>
           </div>
 

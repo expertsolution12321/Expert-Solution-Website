@@ -149,7 +149,7 @@ function Homepage() {
       {/* About US Start */}
       <div id="about_Us" className="p-4 ">
         <div>
-          <h2 className="text-3xl md:text-4xl font-mono font-bold text-black text-center m-4">
+          <h2 className="text-3xl md:text-4xl font-mono font-bold text-black text-center m-0">
             About Us
           </h2>
         </div>
@@ -411,7 +411,7 @@ function Homepage() {
                       Message
                     </label>
                     <div className="mt-2">
-                      <input
+                      <textarea
                         type="text"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}

@@ -68,13 +68,13 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      await axios.post("http://192.168.29.165:5000/contact/create", {
+      await axios.post("http://192.168.29.87:5000/contact/create", {
         firstName: name,
         lastName: lname,
         email: email,
         phoneNumber: phone,
         address: address,
-        Message: message,
+        message: message,
       });
 
       setSuccessMessage("Form submitted successfully!");
