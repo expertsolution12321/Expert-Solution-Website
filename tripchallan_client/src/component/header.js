@@ -296,34 +296,30 @@ export default function Header() {
             <div className="hidden lg:flex lg:gap-x-12">
               <ul className="flex p-0  space-x-4">
                 <li className="px-3 ">
-                  <a
-                    href="/"
+                  <button
+                    onClick={home}
                     className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
                     Home
-                  </a>
+                  </button>
                 </li>
+
                 {/* Company */}
-                <li
-                  className="relative group px-3"
-                  ref={companyRef}
-                  id="company"
-                >
+                <li className="relative group px-3 flex">
                   <a
-                    onClick={handleToggleCompany}
-                    className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
+                    // onClick={handleToggleCompany}
+                    className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer "
                   >
                     Company{" "}
-                    <span className="inline-block ml-1">
-                      <FaSortDown />
-                    </span>
                   </a>
+                  <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <FaSortDown />
+                  </span>
+
                   <ul
-                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                      isCompanyOpen
-                        ? "opacity-100 scale-100"
-                        : "hidden scale-10"
-                    }`}
+                    className={`absolute hidden  mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 group-hover:block top-4  left-10 flex-col space-y-5
+
+                    `}
                   >
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
@@ -348,27 +344,21 @@ export default function Header() {
                     </li>
                   </ul>
                 </li>
+
                 {/* Technology */}
-                <li
-                  className="relative group px-3"
-                  ref={technologyRef}
-                  id="technology"
-                >
+                <li className="relative group px-3 flex">
                   <a
                     onClick={handleToggleTechnology}
                     className="text-[17px] font-semibold leading-6 text-black cursor-pointer"
                   >
                     Technology{" "}
-                    <span className="inline-block ml-1">
-                      <FaSortDown />
-                    </span>
                   </a>
+                  <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <FaSortDown />
+                  </span>
+
                   <ul
-                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                      isTechnologyOpen
-                        ? "opacity-100 scale-100"
-                        : "hidden scale-95"
-                    }`}
+                    className={`absolute hidden  mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 group-hover:block top-4  left-10 flex-col space-y-5`}
                   >
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer flex items-center"
@@ -446,25 +436,22 @@ export default function Header() {
                 </li>
                 {/* Services */}
                 <li
-                  className="relative group px-3"
-                  ref={servicesRef}
-                  id="services"
+                  className="relative group px-3 flex"
+                  // ref={servicesRef}
+                  // id="services"
                 >
                   <a
-                    onClick={handleToggleServices}
+                    // onClick={handleToggleServices}
                     className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Services{" "}
-                    <span className="inline-block ml-1">
+                    Services{" "}</a>
+                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
                       <FaSortDown />
                     </span>
-                  </a>
+                  
                   <ul
-                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                      isServicesOpen
-                        ? "opacity-100 scale-100"
-                        : "hidden scale-95"
-                    }`}
+                    className={`absolute hidden mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all  duration-300 group-hover:block top-4  left-10 flex-col space-y-5
+                      `}
                   >
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
@@ -498,25 +485,21 @@ export default function Header() {
                 </li>
                 {/* Industry */}
                 <li
-                  className="relative group px-3"
-                  ref={industriesRef}
-                  id="industry"
+                  className="relative group px-3 flex"
+                  // ref={industriesRef}
+                  // id="industry"
                 >
                   <a
-                    onClick={handleToggleIndustries}
+                    // onClick={handleToggleIndustries}
                     className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Industries{" "}
-                    <span className="inline-block ml-1">
+                    Industries{" "}</a>
+                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
                       <FaSortDown />
                     </span>
-                  </a>
+                  
                   <ul
-                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                      isIndustriesOpen
-                        ? "opacity-100 scale-100"
-                        : "hidden scale-95"
-                    }`}
+                    className={`absolute hidden  mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 group-hover:block top-4  left-10 flex-col space-y-5 `}
                   >
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
@@ -550,25 +533,21 @@ export default function Header() {
                 </li>
                 {/* Solution */}
                 <li
-                  className="relative group px-3"
-                  ref={solutionRef}
-                  id="solution"
+                  className="relative group px-3 flex"
+                  // ref={solutionRef}
+                  // id="solution"
                 >
                   <a
-                    onClick={handleToggleSolution}
+                    // onClick={handleToggleSolution}
                     className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Solutions{" "}
-                    <span className="inline-block ml-1">
+                    Solutions{" "}</a>
+                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
                       <FaSortDown />
                     </span>
-                  </a>
+                 
                   <ul
-                    className={`absolute left-0 mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 ${
-                      isSolutionOpen
-                        ? "opacity-100 scale-100"
-                        : "hidden scale-95"
-                    }`}
+                    className={`absolute hidden  mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 group-hover:block left-10 top-4 `}
                   >
                     <li
                       className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
