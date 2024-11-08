@@ -22,7 +22,7 @@ export default function socilamedia() {
         className="relative isolate h-80 sm:h-96 md:h-[32rem] flex items-center justify-center overflow-hidden bg-cover bg-center w-full"
       >
         <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-2xl md:text-4xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight m-0">
             Connect with Us
           </h1>
           <p className="text-white font-semibold">

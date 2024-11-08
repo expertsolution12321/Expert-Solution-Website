@@ -444,11 +444,12 @@ export default function Header() {
                     // onClick={handleToggleServices}
                     className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Services{" "}</a>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
-                      <FaSortDown />
-                    </span>
-                  
+                    Services{" "}
+                  </a>
+                  <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <FaSortDown />
+                  </span>
+
                   <ul
                     className={`absolute hidden mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all  duration-300 group-hover:block top-4  left-10 flex-col space-y-5
                       `}
@@ -493,11 +494,12 @@ export default function Header() {
                     // onClick={handleToggleIndustries}
                     className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Industries{" "}</a>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
-                      <FaSortDown />
-                    </span>
-                  
+                    Industries{" "}
+                  </a>
+                  <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <FaSortDown />
+                  </span>
+
                   <ul
                     className={`absolute hidden  mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 group-hover:block top-4  left-10 flex-col space-y-5 `}
                   >
@@ -541,11 +543,12 @@ export default function Header() {
                     // onClick={handleToggleSolution}
                     className="text-[17px] font-semibold leading-6 text-gray-900 cursor-pointer"
                   >
-                    Solutions{" "}</a>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
-                      <FaSortDown />
-                    </span>
-                 
+                    Solutions{" "}
+                  </a>
+                  <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <FaSortDown />
+                  </span>
+
                   <ul
                     className={`absolute hidden  mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 group-hover:block left-10 top-4 `}
                   >

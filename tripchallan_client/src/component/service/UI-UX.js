@@ -1,10 +1,18 @@
 import React from "react";
 import { GrCertificate } from "react-icons/gr";
-import { FaThumbsUp } from "react-icons/fa";
+import prototype from "../images/prototype.png";
+import {
+  FaEye,
+  FaLaptop,
+  FaMobileAlt,
+  FaRegLightbulb,
+  FaThumbsUp,
+} from "react-icons/fa";
 import { BiHappyBeaming } from "react-icons/bi";
 import { RiMailSettingsFill } from "react-icons/ri";
 import { FaFigma, FaUsers, FaHeadset } from "react-icons/fa";
 import pic from "../images/social4.jpeg";
+import { FaLayerGroup, FaMoneyBill1Wave } from "react-icons/fa6";
 
 export default function UIUX() {
   return (
@@ -139,9 +147,9 @@ export default function UIUX() {
           </p>
           <div className="w-full flex flex-wrap  justify-center items-center gap-4 p-8">
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
+              <FaLayerGroup className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
-                Cloud & Headless Commerce{" "}
+                Wireframe Prototypes{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
                 Highly scalable, secure, and super fast cloud-powered eCommerce
@@ -149,9 +157,9 @@ export default function UIUX() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
+              <FaMobileAlt className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
-                Cloud & Headless Commerce{" "}
+                Interactive Mockups{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
                 Highly scalable, secure, and super fast cloud-powered eCommerce
@@ -159,9 +167,9 @@ export default function UIUX() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
+              <FaLaptop className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
-                Cloud & Headless Commerce{" "}
+                Responsive Design{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
                 Highly scalable, secure, and super fast cloud-powered eCommerce
@@ -169,9 +177,9 @@ export default function UIUX() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
+              <FaMoneyBill1Wave className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
-                Cloud & Headless Commerce{" "}
+                E-commerce Prototype{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
                 Highly scalable, secure, and super fast cloud-powered eCommerce
@@ -179,9 +187,9 @@ export default function UIUX() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
+              <FaRegLightbulb className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
-                Cloud & Headless Commerce{" "}
+                Custom Website prototype{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
                 Highly scalable, secure, and super fast cloud-powered eCommerce
@@ -189,9 +197,9 @@ export default function UIUX() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white  group-hover:fill-[#3e1572]" />
+              <FaEye className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white  group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
-                Cloud & Headless Commerce{" "}
+                User Experience Testing{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
                 Highly scalable, secure, and super fast cloud-powered eCommerce
@@ -201,7 +209,48 @@ export default function UIUX() {
           </div>
         </div>
       </section>
-      <section className="w-full p-4"></section>
+      <section className="w-full bg-[#ffff] flex  p-8 ">
+        <div className="container flex flex-col md:flex-row items-center justify-center max-w-[1280px] mx-auto ">
+          <div className="w-full md:w-1/2">
+            <h1 className="text-4xl font-semibold mb-4 ">
+              {" "}
+              Get Next Gen Prototype Development Services
+            </h1>
+            <p className="text-base font-normal ">
+              {" "}
+              User Experience Design: Building intuitive interfaces.
+            </p>
+            <p className="text-base font-normal ">
+              {" "}
+              Agile Development: Rapidly iterating prototypes based on user
+              feedback.
+            </p>{" "}
+            <p className="text-base font-normal ">
+              {" "}
+              Emerging Technologies: Integrating AI and real-time tracking
+              features.
+            </p>{" "}
+            <p className="text-base font-normal ">
+              {" "}
+              Data Analytics: Offering insights for personalized travel
+              experiences.
+            </p>{" "}
+            <p className="text-base font-normal ">
+              {" "}
+              Collaboration Tools: Enabling shared itineraries and communication
+              among travelers.
+            </p>
+            <p className="text-base font-normal ">
+              {" "}
+              Testing and Validation: Ensuring usability and functionality
+              through user testing.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 flex flex-wrap items-center justify-center gap-4">
+            <img src={prototype} className="p-3" />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

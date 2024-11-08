@@ -88,11 +88,17 @@ const About = () => {
               Core Values
             </h3>
             <p className="text-white mb-2">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour.
+              Our trip management system is built on a foundation of
+              <b> reliability, efficiency, and safety</b>, ensuring smooth,
+              cost-effective, and secure operations. We prioritize transparency
+              to build trust through open communication, and innovation to stay
+              competitive with the latest technology. With a customer-centric
+              approach, we focus on meeting user needs, while promoting
+              sustainability through eco-friendly practices. Our commitment to
+              accountability means we take responsibility for all actions,
+              fostering trust and credibility among all users.
             </p>
-            <p className="font-bold text-white mb-2">
+            {/* <p className="font-bold text-white mb-2">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
               injected humour.
@@ -101,11 +107,11 @@ const About = () => {
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
               injected humour.
-            </p>
+            </p> */}
           </div>
 
           <div className="flex flex-col">
-            {/* Continuous Learning */}
+            {/* Reliability */}
             <div className=" flex flex-col md:flex-row items-start">
               <div className="flex-shrink-0 p-4">
                 <img
@@ -115,12 +121,11 @@ const About = () => {
                 />
               </div>
               <div className="flex-1 mt-3">
-                <h3 className="text-white text-xl font-bold">
-                  Continuous Learning
-                </h3>
+                <h3 className="text-white text-xl font-bold">Reliability</h3>
                 <p className="text-white">
-                  In an ever-evolving world of technology, continuous learning
-                  helps us stay on edge.
+                  Ensure accurate and consistent trip information to build trust
+                  and reliability for all users. Reliable data and support
+                  enable seamless trip planning and execution.
                 </p>
               </div>
             </div>
@@ -135,7 +140,7 @@ const About = () => {
                 />
               </div>
               <div className="flex-1 mt-3">
-                <h3 className="text-white text-xl font-bold">Transparency</h3>
+                <h3 className="text-white text-xl font-bold">Efficiency</h3>
                 <p className="text-white">
                   Client-provider relationships that are built around
                   transparency always yield the best results.
@@ -143,20 +148,21 @@ const About = () => {
               </div>
             </div>
 
-            {/* Teamwork */}
+            {/* Safety */}
             <div className=" flex flex-col md:flex-row items-start">
               <div className="flex-shrink-0 p-4">
                 <img
                   src={img3}
-                  alt="Teamwork"
+                  alt="Safety"
                   className="w-15 h-15 md:w-20 md:h-20"
                 />
               </div>
               <div className="flex-1 mt-3">
-                <h3 className="text-white text-xl font-bold">Teamwork</h3>
+                <h3 className="text-white text-xl font-bold">Safety</h3>
                 <p className="text-white">
-                  Exemplary teamwork sits at the center of our endeavors. Every
-                  new undertaking renews our vows as a team of innovators.
+                  Prioritize the safety of drivers, cargo, and passengers.
+                  Implement safety checks, compliance with regulations, and
+                  provide clear protocols to ensure safe and secure trips.
                 </p>
               </div>
             </div>
@@ -173,27 +179,28 @@ const About = () => {
               <div className="flex-1 mt-3">
                 <h3 className="text-white text-xl font-bold">Accountability</h3>
                 <p className="text-white">
-                  It takes unfailing accountability to stay at the top of this
-                  ruthlessly competitive tech solutions market.
+                  Take responsibility for every aspect of the trip management
+                  process. Accountability builds credibility and ensures that
+                  any issues are resolved promptly and effectively.
                 </p>
               </div>
             </div>
 
-            {/* Excellence */}
+            {/* Transparency */}
             <div className=" flex flex-col md:flex-row items-start">
               <div className="flex-shrink-0 p-4">
                 <img
                   src={img1}
-                  alt="Excellence"
+                  alt="Transparency"
                   className="w-15 h-15 md:w-20 md:h-20"
                 />
               </div>
               <div className="flex-1 mt-3">
-                <h3 className="text-white text-xl font-bold">Excellence</h3>
+                <h3 className="text-white text-xl font-bold">Transparency</h3>
                 <p className="text-white">
-                  Innovation and excellence often go hand in hand. And we never
-                  shy away from going the extra mile to ensure exceptional
-                  service quality.
+                  Offer clear and accessible information on routes, schedules,
+                  and costs. Transparent communication fosters trust with
+                  clients, drivers, and partners, making collaboration easier.
                 </p>
               </div>
             </div>
@@ -258,8 +265,8 @@ const About = () => {
                 ( Shaping the Future of Seamless Travel and Logistics )
               </p>
               <p className="text-gray-700">
-                We envision a world where every journey—whether personal or
-                professional—is effortlessly managed and optimized through
+                We envision a world where every journey whether personal or
+                professional is effortlessly managed and optimized through
                 technology. Our goal is to be the leading platform for trip
                 management, known for delivering unparalleled efficiency,
                 safety, and user satisfaction. We aspire to empower our users

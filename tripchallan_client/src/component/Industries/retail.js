@@ -51,10 +51,10 @@ export default function Retail() {
           </li>
         </ul>
 
-        <div className="text-center relative z-10 flex flex-col sm:flex-row">
+        <div className="text-center relative z-10 items-center flex flex-col sm:flex-row">
           <button
             onClick={contact}
-            className="text-white bg-orange-500 rounded-full p-2 hover:bg-orange-600 transition duration-300"
+            className="text-white bg-orange-500 rounded-full px-3 py-2 font-semibold hover:bg-orange-600 transition duration-300"
           >
             Request A Quote
           </button>

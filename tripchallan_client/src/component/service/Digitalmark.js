@@ -1,8 +1,14 @@
 import React from "react";
 import { GrCertificate } from "react-icons/gr";
-import { FaThumbsUp } from "react-icons/fa";
+import {
+  FaMoneyBill,
+  FaNetworkWired,
+  FaThumbsUp,
+  FaVideo,
+} from "react-icons/fa";
 import { BiHappyBeaming } from "react-icons/bi";
 import { RiMailSettingsFill } from "react-icons/ri";
+import { FaSistrix, FaFrog, FaChartArea, FaPaintBrush } from "react-icons/fa";
 import {
   FaSearch,
   FaChartLine,
@@ -11,7 +17,46 @@ import {
   FaEnvelope,
   FaGoogle,
 } from "react-icons/fa";
+import { FaMobile } from "react-icons/fa6";
 export default function Digitalmark() {
+  const tools = [
+    {
+      name: "Semrush",
+      description:
+        "An all-in-one digital marketing tool to perform a comprehensive technical SEO audit and improve SEO strategy for better business outcomes and growth.",
+      icon: <FaSistrix className="h-12 w-12 text-orange-500" />,
+    },
+    {
+      name: "Ahrefs",
+      description:
+        "Exclusively designed for digital marketers, this software contains tools for site audits, competitor analysis, keyword research, link building, and rank tracking.",
+      icon: <FaChartLine className="h-12 w-12 text-blue-500" />,
+    },
+    {
+      name: "Google Analytics",
+      description:
+        "The premier choice of digital marketing experts as it provides a ton of actionable insights into how your audience is engaging with your website and applications.",
+      icon: <FaGoogle className="h-12 w-12 text-orange-600" />,
+    },
+    {
+      name: "Screaming Frog SEO",
+      description:
+        "A user-friendly SEO crawling tool that provides useful SEO-related information about your site that you can use to tweak your SEO strategy.",
+      icon: <FaFrog className="h-12 w-12 text-green-500" />,
+    },
+    {
+      name: "Google Trends",
+      description:
+        "A tool that helps us provide the best digital marketing service to identify trends and popular search queries in Google Search across various locations and languages.",
+      icon: <FaChartArea className="h-12 w-12 text-blue-600" />,
+    },
+    {
+      name: "Canva",
+      description:
+        "A great tool for designing professional-looking graphics. It offers a vast collection of templates that can be used to create social posts, infographics, CTA buttons, etc.",
+      icon: <FaPaintBrush className="h-12 w-12 text-purple-500" />,
+    },
+  ];
   return (
     <div className="w-full">
       <section className="w-full bg-[#3e1572]   ">
@@ -149,7 +194,7 @@ export default function Digitalmark() {
           </p>
           <div className="w-full flex flex-wrap  justify-center items-center gap-4 p-8">
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]" />
+              <FaSearch className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
               <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
                 Search Engine Optimization
               </h1>
@@ -161,9 +206,9 @@ export default function Digitalmark() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]" />
+              <FaMobile className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
               <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Search Engine Optimization
+                Social Media marketing
               </h1>
               <p className="text-base font-medium text-gray-600 group-hover:text-white">
                 Attain the required website traffic and ranking on the Search
@@ -173,9 +218,9 @@ export default function Digitalmark() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]" />
+              <FaMoneyBill className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
               <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Search Engine Optimization
+                Paid Marketing Conpaigns
               </h1>
               <p className="text-base font-medium text-gray-600 group-hover:text-white">
                 Attain the required website traffic and ranking on the Search
@@ -185,9 +230,9 @@ export default function Digitalmark() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]" />
+              <FaVideo className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
               <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Search Engine Optimization
+                Content Marketing
               </h1>
               <p className="text-base font-medium text-gray-600 group-hover:text-white">
                 Attain the required website traffic and ranking on the Search
@@ -197,9 +242,9 @@ export default function Digitalmark() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]" />
+              <FaNetworkWired className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
               <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Search Engine Optimization
+                Online Reputation Management
               </h1>
               <p className="text-base font-medium text-gray-600 group-hover:text-white">
                 Attain the required website traffic and ranking on the Search
@@ -209,9 +254,9 @@ export default function Digitalmark() {
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <BiHappyBeaming className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]" />
+              <FaChartLine className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
               <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Search Engine Optimization
+                Conversion Rate optimization
               </h1>
               <p className="text-base font-medium text-gray-600 group-hover:text-white">
                 Attain the required website traffic and ranking on the Search
@@ -223,6 +268,34 @@ export default function Digitalmark() {
           </div>
         </div>
       </section>
+      <div className="bg-white py-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Popular Tools that Power Our Digital Marketing Services
+          </h2>
+          <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Our digital marketing agency makes best use of latest tools &
+            technologies to get your business goals. For developing digital
+            marketing websites we incorporate trending technologies that help
+            your platform to perform better resulting in an increase in traffic
+            on your website.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {tools.map((tool) => (
+            <div key={tool.name} className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex justify-center">{tool.icon}</div>
+              <h3 className="text-lg font-bold text-gray-900 text-center mt-4">
+                {tool.name}
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 text-center font-semibold">
+                {tool.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
