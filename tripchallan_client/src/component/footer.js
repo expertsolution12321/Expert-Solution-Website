@@ -1,11 +1,14 @@
 import React from "react";
-import logo from "./images/newlogo.svg";
+import logo from "./images/newlogo1.svg";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate();
   const ecom = () => {
     navigate("/ecommerce");
+  };
+  const home = () => {
+    navigate("/");
   };
   const mobile = () => {
     navigate("/mobileapp");
@@ -24,16 +27,15 @@ export default function Footer() {
   };
   return (
     <>
-      <footer className=" mx-auto p-6 flex flex-wrap justify-between space-y-6 md:space-y-0">
+      <footer className=" mx-auto p-6 flex flex-wrap justify-between space-y-6 md:space-y-0 bg-slate-100">
         {/* Logo and About Section */}
         <div className="w-full md:w-[40%] lg:w-[23%] flex flex-col items-center md:items-start m-1 p-2">
-          <a href="/" className="mb-2">
             <img
               src={logo}
-              className="w-36 h-20 mb-2 md:mb-4"
+              className="w-36 h-20 mb-2 md:mb-4 cursor-pointer"
               alt="Company Logo"
+              onClick={home}
             />
-          </a>
           <p className="text-base  md:text-left">
             At <b>Trip Management System</b> we have customized offerings for
             different domains. These solutions enable the users to manage and
@@ -168,7 +170,7 @@ export default function Footer() {
           Copyright ©{" "}
           <b>
             <a href="#" className="text-white">
-              Trip-challan Book
+              Trip Management Systems
             </a>
           </b>{" "}
           2024. All Rights Reserved.
