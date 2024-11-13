@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import social from "../images/social.jpg";
 import social1 from "../images/fleet.jpg";
 import social2 from "../images/social3.jpeg";
@@ -8,7 +8,11 @@ import social4 from "../images/social4.png";
 import social5 from "../images/social5.jpg";
 import social6 from "../images/social4.jpeg";
 
-export default function socilamedia() {
+export default function Socilamedia() {
+  const navigate=useNavigate()
+  const contact=()=>{
+    navigate('/contact')
+  }
   return (
     <>
       <div
@@ -25,7 +29,7 @@ export default function socilamedia() {
           <h1 className="text-4xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight m-0">
             Connect with Us
           </h1>
-          <p className="text-white font-semibold">
+          <p className="text-white font-semibold mt-1">
             ( Stay Updated, Get Inspired, Join the Conversation )
           </p>
           <p className="text-xs sm:text-sm md:text-base text-white mt-4 md:mt-6">
@@ -35,6 +39,7 @@ export default function socilamedia() {
             stories across our platforms to keep our community informed and
             inspired.
           </p>
+          <button onClick={contact} className="bg-orange-500 px-3 py-2 rounded-full text-white font-semibold">Connect With Us</button>
         </div>
       </div>
 

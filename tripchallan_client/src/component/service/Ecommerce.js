@@ -11,8 +11,6 @@ import {
 import { BiHappyBeaming } from "react-icons/bi";
 import { RiMailSettingsFill } from "react-icons/ri";
 import pic from "../images/card3.png";
-import note from "../images/signature.png";
-import cimg from "../images/c.png";
 import mysql from "../images/mysql.png";
 import mariadb from "../images/mariadb.png";
 import mongodb from "../images/mongodb.png";
@@ -30,30 +28,10 @@ import {
   FaUserShield,
   FaEnvelope,
   FaGoogle,
-  FaCreditCard,
-  FaVideo,
-  FaComments,
   FaShoppingCart,
 } from "react-icons/fa";
 import { FaCartShopping, FaNoteSticky, FaPhp } from "react-icons/fa6";
-import {
-  FaGlobe,
-  FaHtml5,
-  FaJava,
-  FaMobile,
-  FaRocket,
-  FaAppStore,
-  FaReact,
-  FaSwift,
-  FaTrophy,
-  FaWifi,
-  FaAppStoreIos,
-  FaMobileAlt,
-  FaSolarPanel,
-  FaTools,
-} from "react-icons/fa";
-import { SiFlutter, SiIonic, SiXamarin } from "react-icons/si";
-import { GiVrHeadset } from "react-icons/gi";
+
 export default function Ecommerce() {
   const services = [
     {
@@ -84,32 +62,32 @@ export default function Ecommerce() {
         <div className=" flex flex-col max-w-[1440px] md:flex-row items-center justify-center mx-auto p-4 sm:p-6 md:p-8 space-y-8 md:space-y-0 md:space-x-8">
           <div className="text-white w-full md:w-1/2 lg:w-2/3">
             <h1 className="font-bold text-2xl sm:text-4xl md:text-5xl mb-4 md:mb-6">
-              <span className="text-orange-500">E-commerce</span> Website
-              Development That Matches Your Needs
+              <span className="text-orange-500 leading-8">E-commerce</span>{" "}
+              Website Development That Matches Your Needs
             </h1>
 
             <ul className="flex flex-wrap mt-3 p-0 gap-2">
-              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center cursor-pointer ">
+              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center  ">
                 <FaSearch className="mr-2 text-blue-500" />
                 SEO
               </li>
-              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center cursor-pointer">
+              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center ">
                 <FaChartLine className="mr-2 text-green-500" />
                 PPC
               </li>
-              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center cursor-pointer">
+              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center ">
                 <FaShareAlt className="mr-2 text-purple-500" />
                 SMO
               </li>
-              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center cursor-pointer">
+              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center ">
                 <FaUserShield className="mr-2 text-red-500" />
                 ORM
               </li>
-              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center cursor-pointer">
+              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center ">
                 <FaEnvelope className="mr-2 text-orange-500" />
                 Email Marketing
               </li>
-              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center cursor-pointer">
+              <li className="px-3 py-2 hover:bg-white hover:text-black border rounded-full font-bold mr-2 flex items-center justify-center ">
                 <FaGoogle className="mr-2 text-indigo-500" />
                 Google Analytics
               </li>
@@ -285,29 +263,27 @@ export default function Ecommerce() {
           </div>
         </div>
       </section>
-      <div className="flex flex-col  items-center py-10  bg-white">
-        <h2 className="text-3xl md:text-4xl font-bold text-purple-700 mb-8">
+      <div
+        className="flex flex-col items-center py-10"
+        style={{
+          backgroundImage: `url(${team1})`,
+          backgroundColor: "rgba(0,0,0,0.5)",
+          backgroundBlendMode: "multiply",
+          backgroundSize: "cover",
+        }}
+      >
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center">
           Our Diverse Services
         </h2>
-        <div className="flex flex-col items-center lg:flex-row gap-4   p-4">
-          {/* Image Section */}
-          <div className="w-full sm:w-2/3 lg:w-1/3 flex-shrink-0">
-            <img
-              src={team1}
-              alt="Team Working"
-              className="rounded-lg w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Services Section */}
-          <div className="flex flex-col sm:flex-row  md:flex-wrap gap-3 w-full md:w-2/3 justify-center cursor-pointer">
+        <div className="flex flex-col items-center gap-4 p-4 w-full md:w-3/4 ">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center w-full">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-4 rounded-lg shadow-lg bg-white w-full sm:w-[180px] h-[200px] hover:shadow-xl transition-shadow"
+                className="flex flex-col items-center p-4 rounded-lg shadow-lg bg-white w-full sm:w-[300px] md:w-[250px] lg:w-[200px] xl:w-[250px] hover:shadow-xl transition-shadow"
               >
                 {service.icon}
-                <p className="text-center font-bold text-gray-800 text-lg mt-4">
+                <p className="text-center font-bold text-gray-800 text-base sm:text-lg mt-4">
                   {service.title}
                 </p>
               </div>
@@ -333,20 +309,20 @@ export default function Ecommerce() {
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {/* Database */}
             <div className="bg-white rounded-lg shadow-lg ">
-              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
+              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg text-center">
                 <h3 className="text-xl font-bold">Database</h3>
               </div>
               <ul className="mt-2 space-y-2 p-2">
                 <li className="flex items-center space-x-2 py-2 border-b-2">
-                  <img src={mysql} className="w-6 h-6 text-red-600" />
+                  <img src={mysql} className="w-6 h-6 text-red-600" alt="sql logo"/>
                   <span>MYSQL</span>
                 </li>
                 <li className="flex items-center space-x-2 py-2 border-b-2">
-                  <img src={mariadb} className="w-6 h-6 text-orange-500" />
+                  <img src={mariadb} className="w-6 h-6 text-orange-500" alt="mariadb logo"/>
                   <span>MariaDB</span>
                 </li>
                 <li className="flex items-center space-x-2 py-2">
-                  <img src={mongodb} className="w-6 h-6" />
+                  <img src={mongodb} className="w-6 h-6" alt="mongodb logo" />
                   <span>MangoDB</span>
                 </li>
               </ul>
@@ -354,7 +330,7 @@ export default function Ecommerce() {
 
             {/* Methodology */}
             <div className="bg-white rounded-lg shadow-lg ">
-              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
+              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg text-center">
                 <h3 className="text-xl font-bold">Methodology</h3>
               </div>
               <ul className="mt-2 space-y-2 p-2">
@@ -367,7 +343,7 @@ export default function Ecommerce() {
                   <span>MVC</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <img src={agile} className="w-6 h-6 text-purple-500" />
+                  <img src={agile} className="w-6 h-6 text-purple-500" alt="agile logo"/>
                   <span>AgileMethodology</span>
                 </li>
               </ul>
@@ -375,7 +351,7 @@ export default function Ecommerce() {
 
             {/* Tools */}
             <div className="bg-white rounded-lg shadow-lg ">
-              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
+              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg text-center">
                 <h3 className="text-xl font-bold">Tools</h3>
               </div>
               <ul className="mt-2 space-y-2 p-2">
@@ -405,7 +381,7 @@ export default function Ecommerce() {
 
             {/* Operating System */}
             <div className="bg-white rounded-lg shadow-lg ">
-              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg">
+              <div className="bg-gradient-to-r from-blue-900 to-purple-700 text-white p-3 rounded-t-lg text-center">
                 <h3 className="text-xl font-bold">Operating System</h3>
               </div>
               <ul className="mt-2 space-y-2 p-2">

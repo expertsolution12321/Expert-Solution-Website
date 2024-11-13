@@ -36,10 +36,10 @@ export default function Manufecture() {
   return (
     <>
       <div
-        className="bg-indigo-950 p-8 sm:p-16 md:p-24 lg:p-44 relative flex flex-col items-center justify-center min-h-screen"
+        className="bg-indigo-950 p-8 sm:p-16 md:p-24 lg:p-44 relative flex flex-col items-center justify-center  lg:h-[400px] xl:h-[400px] text-white"
         style={{
           backgroundImage: `url(${manufecturepage})`,
-          backgroundColor: "rgba(0,0,0,0.7)",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
           backgroundBlendMode: "multiply",
         }}
       >
@@ -51,13 +51,13 @@ export default function Manufecture() {
           with IT Solutions
         </h1>
         <ul className="flex flex-col sm:flex-row gap-4 text-center relative z-10 mt-4">
-          <li className="group hover:bg-white text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg cursor-pointer">
+          <li className="group hover:bg-white text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg">
             <FaLightbulb className="mr-2 text-lg sm:text-xl md:text-2xl text-yellow-400" />
             <span className="group-hover:text-black leading-5">
               Scalable Technology Integration
             </span>
           </li>
-          <li className="group hover:bg-white text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg cursor-pointer">
+          <li className="group hover:bg-white text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg">
             <FaCog className="mr-2 text-lg sm:text-xl md:text-2xl text-red-600" />
             <span className="group-hover:text-black leading-5">
               Expertise With Technological Innovation
@@ -68,7 +68,7 @@ export default function Manufecture() {
         <div className="text-center relative z-10 mt-6">
           <button
             onClick={contact}
-            className="text-white bg-orange-500 hover:bg-orange-400  hover:text-black rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg transition-colors"
+            className="text-white bg-orange-500 hover:bg-orange-600  hover:text-black rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg transition-colors"
           >
             Request A Quote
           </button>
@@ -82,8 +82,8 @@ export default function Manufecture() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
           <div className="border border-white shadow-lg  p-4  rounded cursor-pointer">
-            <h3 className="text-indigo-900 text-lg flex items-center mb-2">
-              <FaIndustry className="mr-2 text-2xl" />
+            <h3 className=" text-lg flex items-center mb-2">
+              <FaIndustry className="mr-2 text-3xl text-blue-700" />
               Industry-leading Professionals
             </h3>
             <p className="text-sm sm:text-base">
@@ -95,7 +95,7 @@ export default function Manufecture() {
           </div>
           <div className="border border-white shadow-lg  p-4  rounded cursor-pointer">
             <h3 className="text-indigo-900 text-lg flex items-center mb-2">
-              <FaArtstation className="mr-2 text-2xl" />
+              <FaArtstation className="mr-2 text-3xl text-orange-600" />
               State-of-the-Art Facilities
             </h3>
             <p className="text-sm sm:text-base">
@@ -108,7 +108,7 @@ export default function Manufecture() {
           </div>
           <div className="border border-white shadow-lg  p-4  rounded cursor-pointer">
             <h3 className="text-indigo-900 text-lg flex items-center mb-2">
-              <FaHandHoldingHeart className="mr-2 text-2xl" />
+              <FaHandHoldingHeart className="mr-2 text-3xl text-pink-600" />
               Innovation at the Core
             </h3>
             <p className="text-sm sm:text-base">
@@ -120,7 +120,7 @@ export default function Manufecture() {
           </div>
           <div className="border border-white shadow-lg  p-4  rounded cursor-pointer">
             <h3 className="text-indigo-900 text-lg flex items-center mb-2">
-              <FaAccessibleIcon className="mr-2 text-2xl" />
+              <FaAccessibleIcon className="mr-2 text-3xl text-sky-500" />
               Quality Assurance
             </h3>
             <p className="text-sm sm:text-base">
@@ -131,7 +131,7 @@ export default function Manufecture() {
           </div>
           <div className="border border-white shadow-lg  p-4  rounded cursor-pointer">
             <h3 className="text-indigo-900 text-lg flex items-center mb-2">
-              <FaAccusoft className="mr-2 text-2xl" />
+              <FaAccusoft className="mr-2 text-3xl text-yellow-400" />
               Customization and Flexibility
             </h3>
             <p className="text-sm sm:text-base">
@@ -143,7 +143,7 @@ export default function Manufecture() {
           </div>
           <div className="border border-white shadow-lg  p-4  rounded cursor-pointer">
             <h3 className="text-indigo-900 text-lg flex items-center mb-2">
-              <FaAngellist className="mr-2 text-2xl" />
+              <FaAngellist className="mr-2 text-3xl text-green-500" />
               Comprehensive Solutions
             </h3>
             <p className="text-sm sm:text-base">

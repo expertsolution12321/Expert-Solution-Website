@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./images/newlogo1.svg";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import FooterDemo from "./FooterDemo";
 export default function Footer() {
   const navigate = useNavigate();
   const ecom = () => {
@@ -27,9 +28,9 @@ export default function Footer() {
   };
   return (
     <>
-      <footer className=" mx-auto p-6 flex flex-wrap justify-between space-y-6 md:space-y-0 bg-slate-100">
+      {/* <footer className=" mx-auto p-6 flex flex-wrap justify-between space-y-6 md:space-y-0 bg-slate-100"> */}
         {/* Logo and About Section */}
-        <div className="w-full md:w-[40%] lg:w-[23%] flex flex-col items-center md:items-start m-1 p-2">
+        {/* <div className="w-full md:w-[40%] lg:w-[23%] flex flex-col items-center md:items-start m-1 p-2">
             <img
               src={logo}
               className="w-36 h-20 mb-2 md:mb-4 cursor-pointer"
@@ -73,10 +74,10 @@ export default function Footer() {
               <FaInstagram className="text-3xl" />
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* Quick Links */}
-        <div className="w-full md:w-[40%] lg:w-[23%] m-1 p-2 text-center md:text-left">
+        {/* <div className="w-full md:w-[40%] lg:w-[23%] m-1 p-2 text-center md:text-left">
           <h2 className="text-xl md:text-2xl font-bold">Quick Links</h2>
           <ul className="pt-4 text-base space-y-2">
             <li>
@@ -110,10 +111,10 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Services */}
-        <div className="w-full md:w-[40%] lg:w-[23%] m-1 p-2 text-center md:text-left">
+        {/* <div className="w-full md:w-[40%] lg:w-[23%] m-1 p-2 text-center md:text-left">
           <h2 className="text-xl md:text-2xl font-bold">Services</h2>
           <ul className="pt-4 text-base space-y-2">
             <li
@@ -150,10 +151,10 @@ export default function Footer() {
               Challan Book
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Reach Us */}
-        <div className="w-full md:w-[40%] lg:w-[23%] m-1 p-2 text-center md:text-left">
+        {/* <div className="w-full md:w-[40%] lg:w-[23%] m-1 p-2 text-center md:text-left">
           <h2 className="text-xl md:text-2xl font-bold pb-4">Reach Us</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.844317695037!2d85.83435087500952!3d20.25687828120627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190a7255555555%3A0xb4da5c97fe15e672!2sEXPERT%20SOLUTIONS!5e1!3m2!1sen!2sin!4v1729942970690!5m2!1sen!2sin"
@@ -163,9 +164,9 @@ export default function Footer() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </footer>
+      </footer> */}
 
-      <div className="p-2 bg-slate-700 text-center pt-3">
+      {/* <div className="p-2 bg-slate-700 text-center pt-3">
         <p className="text-lg text-white">
           Copyright ©{" "}
           <b>
@@ -175,7 +176,8 @@ export default function Footer() {
           </b>{" "}
           2024. All Rights Reserved.
         </p>
-      </div>
+      </div> */}
+      <FooterDemo/>
     </>
   );
 }

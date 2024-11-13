@@ -1,6 +1,6 @@
 import React from "react";
 // import transportpage from '../images/s1.jpg'
-import transportpage from "../images/transport.png";
+import transportpage from "../images/transban.jpg";
 import transec from "../images/trans1.jpg";
 import ware from "../images/ware.jpg";
 import tracking from "../images/tracking.jpg";
@@ -79,11 +79,17 @@ export default function Transport() {
   };
   return (
     <>
-      <div className="bg-indigo-950 p-10 sm:p-20 md:p-32 lg:p-44 relative flex flex-col items-center justify-center min-h-screen">
-        <div
+      <div className="bg-indigo-950 p-8 sm:p-16 md:p-24 lg:p-44 relative flex flex-col items-center justify-center  lg:h-[500px] xl:h-[500px] text-white" 
+      style={{ 
+        backgroundImage: `url(${transportpage})`,
+        backgroundSize:"cover",
+        backgroundColor:"rgba(0,0,0,0.6)",
+        backgroundBlendMode:"multiply"
+        }}>
+        {/* <img
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${transportpage})` }}
-        />
+          
+        /> */}
 
         <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold relative z-10 text-center m-2 p-2">
           Transportation{" "}
@@ -91,13 +97,13 @@ export default function Transport() {
         </h1>
 
         <ul className="flex flex-col sm:flex-row gap-4 text-center relative z-10 mt-4">
-          <li className="group text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer hover:bg-white">
+          <li className="group text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl hover:bg-white">
             <FaLightbulb className="mr-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-yellow-300 " />
             <span className="group-hover:text-black leading-5">
               Streamline Logistic Process
             </span>
           </li>
-          <li className="group text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer hover:bg-white">
+          <li className="group text-white border border-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl hover:bg-white">
             <FaCog className="mr-2 text-lg sm:text-xl md:text-2xl lg:text-3xl text-pink-600 " />
             <span className="group-hover:text-black leading-5">
               Quality Transportation Solution

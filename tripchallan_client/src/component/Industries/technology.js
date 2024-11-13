@@ -25,12 +25,20 @@ export default function Technology() {
   return (
     <>
       <div className="">
-        <div className="bg-indigo-950 p-8 sm:p-16 lg:p-32 xl:p-44 relative flex flex-col items-center justify-center h-full">
+        <div
+          className="bg-indigo-950 p-8 sm:p-16 md:p-24 lg:p-44 relative flex flex-col items-center justify-center  lg:h-[400px] xl:h-[400px] text-white"
+          style={{
+            backgroundImage: `url(${technologypage})`,
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            backgroundBlendMode: "multiply",
+            backgroundSize: "cover",
+          }}
+        >
           {/* Background Image */}
-          <div
+          {/* <div
             className="absolute inset-0 bg-cover bg-center opacity-20"
             style={{ backgroundImage: `url(${technologypage})` }}
-          />
+          /> */}
 
           {/* Heading */}
           <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold relative z-10 text-center m-2 p-2">
@@ -42,13 +50,13 @@ export default function Technology() {
 
           {/* Features List */}
           <ul className="flex flex-col sm:flex-row gap-4 text-center relative z-10 mt-4">
-            <li className="cursor-pointer group text-white border border-t-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg hover:bg-white">
+            <li className=" group text-white border border-t-gray-50 p-2 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg hover:bg-white">
               <FaLightbulb className="mr-2 text-xl sm:text-2xl md:text-3xl  text-yellow-400" />
               <span className="group-hover:text-black leading-5">
                 Scalability On Demand
               </span>
             </li>
-            <li className="group cursor-pointer text-white border border-t-gray-50 p-2 rounded-full flex items-center justify-center sm:mt-0 text-sm sm:text-base md:text-lg hover:bg-white">
+            <li className="group  text-white border border-t-gray-50 p-2 rounded-full flex items-center justify-center sm:mt-0 text-sm sm:text-base md:text-lg hover:bg-white">
               <FaCog className="mr-2 text-xl sm:text-2xl md:text-3xl  text-red-600" />
               <span className="group-hover:text-black leading-4">
                 Seamless Integration

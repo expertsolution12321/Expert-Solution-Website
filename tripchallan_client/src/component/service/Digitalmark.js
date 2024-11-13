@@ -1,4 +1,5 @@
 import React from "react";
+import "../flipcard.css";
 import { GrCertificate } from "react-icons/gr";
 import {
   FaMoneyBill,
@@ -57,6 +58,45 @@ export default function Digitalmark() {
       icon: <FaPaintBrush className="h-12 w-12 text-purple-500" />,
     },
   ];
+
+  const services = [
+    {
+      icon: <FaSearch className="text-blue-800" />,
+      title: "Search Engine Optimization",
+      description:
+        "Attain the required website traffic and ranking on the Search Engine Page Results (SERP).Our SEO services are not just relevant for adding most searched keywords but further increase leads and conversion rates extensively.",
+    },
+    {
+      icon: <FaMobile className="text-pink-700" />,
+      title: "Social Media Marketing",
+      description:
+        "Drive engagement and reach with our social media strategies, designed to connect with your audience and boost brand visibility.",
+    },
+    {
+      icon: <FaMoneyBill className="text-orange-500" />,
+      title: "Paid Marketing Campaigns",
+      description:
+        "Boost your business visibility and reach through targeted paid campaigns. Our strategic approach ensures your ads are displayed to the right audience, maximizing conversions and delivering measurable results.",
+    },
+    {
+      icon: <FaVideo className="text-red-600" />,
+      title: "Content Marketing",
+      description:
+        "Engage and educate your audience with valuable, high-quality content. Our content marketing services help build brand authority, foster customer loyalty, and drive organic traffic to fuel your business growth.",
+    },
+    {
+      icon: <FaNetworkWired className="text-yellow-400" />,
+      title: "Online Reputation Management",
+      description:
+        "Protect and enhance your brand’s online image with our comprehensive reputation management services. We monitor, respond to, and influence customer perception, ensuring your brand is trusted and valued in the digital landscape.",
+    },
+    {
+      icon: <FaChartLine className="text-cyan-400" />,
+      title: "Conversion Rate Optimization",
+      description:
+        "Maximize the impact of your digital presence by improving your website’s user experience and functionality. Our Conversion Rate Optimization (CRO) services focus on turning visitors into loyal customers, increasing lead generation, and boosting overall revenue.",
+    },
+  ];
   return (
     <div className="w-full">
       <section className="w-full bg-[#3e1572]   ">
@@ -73,27 +113,27 @@ export default function Digitalmark() {
               trust on. Get comprehensive services package in one place.
             </p>
             <ul className="flex flex-wrap mt-3 p-0 gap-2">
-              <li className="px-3 cursor-pointer py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
                 <FaSearch className="mr-2 text-blue-500" />
                 SEO
               </li>
-              <li className="px-3 cursor-pointer py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
                 <FaChartLine className="mr-2 text-green-500" />
                 PPC
               </li>
-              <li className="px-3 cursor-pointer py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
                 <FaShareAlt className="mr-2 text-purple-500" />
                 SMO
               </li>
-              <li className="px-3 cursor-pointer py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
                 <FaUserShield className="mr-2 text-red-500" />
                 ORM
               </li>
-              <li className="px-3 cursor-pointer py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
                 <FaEnvelope className="mr-2 text-orange-500" />
                 Email Marketing
               </li>
-              <li className="px-3 cursor-pointer py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black justify-center">
                 <FaGoogle className="mr-2 text-indigo-500" />
                 Google Analytics
               </li>
@@ -181,90 +221,28 @@ export default function Digitalmark() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-gray-50 py-4 ">
-        <div className="container w-full max-w-[1440px] mx-auto p-8">
+      <section className="w-full bg-gray-50 py-4">
+        <div className="container max-w-[1440px] mx-auto p-8">
           <h1 className="text-center text-4xl font-semibold mb-10">
-            360- Degree Digital Marketing Services for Companies of All Kinds
+            360-Degree Digital Marketing Services for Companies of All Kinds
           </h1>
-          <p className="text-center text-base font-medium text-gray-700 mb-12">
-            As your value-driven digital marketing agency in India, we are here
-            to meet all your brand’s advertising needs with our expert-level
-            services. Our extensive services for your digital marketing website
-            will allow you to grow your business immensely.{" "}
-          </p>
-          <div className="w-full flex flex-wrap  justify-center items-center gap-4 p-8">
-            <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaSearch className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
-              <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Search Engine Optimization
-              </h1>
-              <p className="text-base font-medium text-gray-600 group-hover:text-white">
-                Attain the required website traffic and ranking on the Search
-                Engine Page Results (SERP). Our SEO services are not just
-                relevant for adding most searched keywords but further increase
-                leads and conversion rates extensively.
-              </p>
-            </div>
-            <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaMobile className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
-              <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Social Media marketing
-              </h1>
-              <p className="text-base font-medium text-gray-600 group-hover:text-white">
-                Attain the required website traffic and ranking on the Search
-                Engine Page Results (SERP). Our SEO services are not just
-                relevant for adding most searched keywords but further increase
-                leads and conversion rates extensively.
-              </p>
-            </div>
-            <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaMoneyBill className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
-              <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Paid Marketing Conpaigns
-              </h1>
-              <p className="text-base font-medium text-gray-600 group-hover:text-white">
-                Attain the required website traffic and ranking on the Search
-                Engine Page Results (SERP). Our SEO services are not just
-                relevant for adding most searched keywords but further increase
-                leads and conversion rates extensively.
-              </p>
-            </div>
-            <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaVideo className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
-              <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Content Marketing
-              </h1>
-              <p className="text-base font-medium text-gray-600 group-hover:text-white">
-                Attain the required website traffic and ranking on the Search
-                Engine Page Results (SERP). Our SEO services are not just
-                relevant for adding most searched keywords but further increase
-                leads and conversion rates extensively.
-              </p>
-            </div>
-            <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaNetworkWired className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
-              <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Online Reputation Management
-              </h1>
-              <p className="text-base font-medium text-gray-600 group-hover:text-white">
-                Attain the required website traffic and ranking on the Search
-                Engine Page Results (SERP). Our SEO services are not just
-                relevant for adding most searched keywords but further increase
-                leads and conversion rates extensively.
-              </p>
-            </div>
-            <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-[#3e1572] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaChartLine className=" text-white text-5xl fill-white  p-2 bg-[#3e1572] rounded-lg transition-all group-hover:bg-white group-hover:fill-[#3e1572]  mx-auto mb-2" />
-              <h1 className="text-3xl font-semibold mb-3 group-hover:text-white">
-                Conversion Rate optimization
-              </h1>
-              <p className="text-base font-medium text-gray-600 group-hover:text-white">
-                Attain the required website traffic and ranking on the Search
-                Engine Page Results (SERP). Our SEO services are not just
-                relevant for adding most searched keywords but further increase
-                leads and conversion rates extensively.
-              </p>
-            </div>
+          <div className="w-full flex flex-wrap justify-center items-center gap-4 p-8 ">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group w-full md:w-1/3 lg:w-1/4 perspective"
+              >
+                <div className="relative w-full text-center transform-style-preserve transition-transform duration-1000 h-[250px]">
+                  <div className="card-front absolute inset-0 bg-white flex flex-col items-center p-6 shadow-lg rounded-xl transform-style-preserve backface-hidden h-auto">
+                    <div className="text-5xl mb-4">{service.icon}</div>
+                    <h2 className="text-2xl font-semibold">{service.title}</h2>
+                  </div>
+                  <div className="card-back absolute inset-0 bg-[#3e1572] text-white flex flex-col items-center p-6 shadow-lg rounded-xl transform rotate-y-180 backface-hidden ">
+                    <p className="h-auto">{service.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

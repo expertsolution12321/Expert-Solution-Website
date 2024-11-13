@@ -40,6 +40,8 @@ import Groupmng from "./component/service/groupmang";
 import FleetManagement from "./component/service/FleetManagement";
 import Load from "./component/service/load";
 import Report from "./component/service/report";
+import Footernew from "./component/Footernew";
+import FooterNew from "./component/Footernew";
 // Function to check if it's the user's first visit
 function checkFirstVisit() {
   // Check if the 'firstVisit' cookie exists
@@ -144,6 +146,11 @@ function App() {
           <Route path="/secommerce" element={<SEcommerce />} />
           <Route path="/Smobileapp" element={<SMobile />} />
           <Route path="/webcms" element={<Web />} />
+
+
+
+          {/* <Route path="" element={<FooterNew />} /> */}
+          
         </Routes>
         <Footer />
       </Router>
