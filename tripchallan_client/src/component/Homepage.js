@@ -1,71 +1,48 @@
 import { useState } from "react";
 import axios from "axios";
-// import { Field, Label, Switch } from "@headlessui/react";
-// import {
-//   ArrowPathIcon,
-//   ChartPieIcon,
-//   CursorArrowRaysIcon,
-//   FingerPrintIcon,
-//   SquaresPlusIcon,
-// } from "@heroicons/react/24/outline";
-// import {
-//   PhoneIcon,
-//   PlayCircleIcon,
-// } from "@heroicons/react/20/solid";
-// import img from "./images/logo2.svg";
 import banner from "./images/banner.jpg";
 import serv1 from "./images/ecom.jpg";
 import serv2 from "./images/mobile.jpg";
 import serv3 from "./images/uiux.jpg";
 import serv4 from "./images/digital.png";
 import about from "./images/aboutus.png";
+import fleet from "./images/fleetmng.jpg";
+import driver from "./images/driverbanner.jpg";
+import load from "./images/loadover.png";
+import expense from "./images/expensework.png";
+import report from "./images/reportbanner.jpeg";
+import group from "./images/group-banner.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "../../node_modules/swiper/swiper-bundle.min.css";
+import "./flipcard.css";
 import { FaEnvelope } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
-
-
-import {} from "@headlessui/react";
-import { useNavigate } from "react-router-dom";
 // changeend
 
-// const products = [
-//   {
-//     name: "Analytics",
-//     description: "Get a better understanding of your traffic",
-//     href: "#",
-//     icon: ChartPieIcon,
-//   },
-//   {
-//     name: "Engagement",
-//     description: "Speak directly to your customers",
-//     href: "#",
-//     icon: CursorArrowRaysIcon,
-//   },
-//   {
-//     name: "Security",
-//     description: "Your customers’ data will be safe and secure",
-//     href: "#",
-//     icon: FingerPrintIcon,
-//   },
-//   {
-//     name: "Integrations",
-//     description: "Connect with third-party tools",
-//     href: "#",
-//     icon: SquaresPlusIcon,
-//   },
-//   {
-//     name: "Automations",
-//     description: "Build strategic funnels that will convert",
-//     href: "#",
-//     icon: ArrowPathIcon,
-//   },
-// ];
-// const callsToAction = [
-//   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-//   { name: "Contact sales", href: "#", icon: PhoneIcon },
-// ];
+
+
+const services = [
+  { title: "E-commerce", description: "E-commerce continues to grow rapidly, evolving with advances in    technology like mobile shopping (m-commerce), voice-activated shopping (via devices like Amazon's Alexa), and the integration of social media platforms with shopping features.", image: serv1 },
+
+  { title: "MobileApp", description: "Mobile apps continue to grow in importance as more people rely on their mobile devices for daily tasks, communication, entertainment, and business. The increasing integration of technologies like AI, machine learning, and augmented reality is expanding the potential of mobile apps even further.", image: serv2 },
+  { title: "UI-UX", description: " UI and UX design are closely related disciplines in the field of digital product design, but they focus on different aspects of the  user’s interaction with a product or service. Together, they are critical for creating successful, user-friendly applications, websites, and digital experiences.", image: serv3 },
+  { title: " Digital Marketing", description: "Digital marketing is a powerful, versatile strategy for reaching and engaging customers in the digital age. It's wide range of tools and tactics allows businesses of all sizes to build brand awareness, drive traffic, and achieve measurable results.", image: serv4 },
+
+  { title: " FleetManagement", description: "A fleet management system is a comprehensive tool designed to optimize the operation and oversight of vehicle fleets. It allows businesses to streamline everything from vehicle tracking and maintenance scheduling to fuel management and driver safety.", image: fleet },
+
+  { title: " Driver and Vahicle Management", description: "Our Driver and Vehicle Management System is a comprehensive, all-in-one solution designed to optimize and simplify the complex tasks involved in managing a fleet.", image: driver },
+  { title: "Load and Cargo Management", description: " Our Driver and Vehicle Management System is a comprehensive, all-in-one solution designed to optimize and simplify the complex tasks involved in managing a fleet. ", image:load },
+
+  { title: "Expenses and Billing Management", description: "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations.", image: expense },
+
+  { title: "Analytics & Reporting", description: "Uncover key trends, track performance, and make informed decisions with our comprehensive Analytics & Reporting tools. Visualize real-time data, customize dashboards, and gain valuable insights to drive growth and optimize your strategies effectively.", image: report },
+
+  { title: "Group Management", description: "Our Group Management System is designed to simplify team organization and enhance collaboration. This system provides an  all-in-one platform to manage teams effectively, allowing you to assign tasks, track progress, and ensure that projects are completed on time.", image: group },
+];
+
 
 function Homepage() {
-  const navigate = useNavigate();
   const call = () => {
     window.open("tel:+917509617777");
   };
@@ -74,7 +51,9 @@ function Homepage() {
   };
   const location = () => {
     window.open(
-      "https://www.google.com/maps/search/?api=1&query=78+Gautam+Nagar+St,+Bapuji+Nagar,+Bhubaneswar,+Odisha+751014","_blank")
+      "https://www.google.com/maps/search/?api=1&query=78+Gautam+Nagar+St,+Bapuji+Nagar,+Bhubaneswar,+Odisha+751014",
+      "_blank"
+    );
   };
   // ==========================
   // Form Submitted function
@@ -114,6 +93,7 @@ function Homepage() {
 
   return (
     <>
+      {/* Banner  */}
       <div
         style={{
           backgroundImage: `url('${banner}')`,
@@ -127,9 +107,8 @@ function Homepage() {
         <div className="absolute inset-0 flex flex-col items-center text-center px-4 md:px-8 space-y-4 sm:mt-4 lg:mt-24 ">
           <h1 className="text-3xl md:text-6xl font-mono font-bold text-white">
             Effortless{" "}
-            <span className="text-orange-500 cursor-pointer" target="_blank">
-              Trip Management
-            </span>
+            <span className="text-orange-500 ">
+              Trip Management</span>
             , All in One Place
           </h1>
           <p className="text-white text-xl font-semibold">
@@ -189,83 +168,49 @@ function Homepage() {
         </div>
       </div>
       {/* services */}
-      <div className="h-auto p-10 bg-slate-200 " id="Services">
+      <div className="h-auto p-10 bg-slate-200" id="Services">
         <h3 className="flex text-4xl font-mono font-bold text-black justify-center items-center text-center border-green-300">
           Services
         </h3>
-        <div className="flex flex-wrap mt-10 justify-center gap-4 mb-4">
-          {/* Service Card 1 */}
-          <div className="h-auto w-full sm:w-60 md:w-72 p-2 bg-white rounded-lg shadow-lg shadow-gray-400">
-            <img
-              src={serv1}
-              alt="FirstService"
-              className="h-60 w-full rounded-lg"
-            />
-            <h3 className="text-xl md:text-3xl font-semibold mt-2">
-              E-commerce
-            </h3>
-            <p className="text-sm md:text-base mt-2">
-              E-commerce continues to grow rapidly, evolving with advances in
-              technology like mobile shopping (m-commerce), voice-activated
-              shopping (via devices like Amazon’s Alexa), and the integration of
-              social media platforms with shopping features.
-            </p>
-          </div>
-
-          {/* Service Card 2 */}
-          <div className="h-auto w-full sm:w-60 md:w-72 p-2 bg-white rounded-lg shadow-lg shadow-gray-400">
-            <img
-              src={serv2}
-              alt="SecondService"
-              className="h-60 w-full rounded-lg"
-            />
-            <h3 className="text-xl md:text-3xl font-semibold mt-2">
-              MobileApp
-            </h3>
-            <p className="text-sm md:text-base mt-2">
-              Mobile apps continue to grow in importance as more people rely on
-              their mobile devices for daily tasks, communication,
-              entertainment, and business. The increasing integration of
-              technologies like AI, machine learning, and augmented reality is
-              expanding the potential of mobile apps even further.
-            </p>
-          </div>
-
-          {/* Service Card 3 */}
-          <div className="h-auto w-full sm:w-60 md:w-72 p-2 bg-white rounded-lg shadow-lg shadow-gray-400">
-            <img
-              src={serv3}
-              alt="ThirdService"
-              className="h-60 w-full rounded-lg"
-            />
-            <h3 className="text-xl md:text-3xl font-semibold mt-2">UI-UX</h3>
-            <p className="text-sm md:text-base mt-2">
-              UI and UX design are closely related disciplines in the field of
-              digital product design, but they focus on different aspects of the
-              user’s interaction with a product or service. Together, they are
-              critical for creating successful, user-friendly applications,
-              websites, and digital experiences.
-            </p>
-          </div>
-
-          {/* Service Card 4 */}
-          <div className="h-auto w-full sm:w-60 md:w-72 p-2 bg-white rounded-lg shadow-lg shadow-gray-400">
-            <img
-              src={serv4}
-              alt="FourthService"
-              className="h-60 w-full rounded-lg"
-            />
-            <h3 className="text-xl md:text-3xl font-semibold mt-2">
-              Digital Marketing
-            </h3>
-            <p className="text-sm md:text-base mt-2">
-              Digital marketing is a powerful, versatile strategy for reaching
-              and engaging customers in the digital age. It's wide range of
-              tools and tactics allows businesses of all sizes to build brand
-              awareness, drive traffic, and achieve measurable results.
-            </p>
-          </div>
-        </div>
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation
+          autoplay={{
+            delay: 3000, // 3 seconds delay
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+        >
+          {services.map((service, index) => (
+            <SwiperSlide key={index}>
+              <div className="flip-card h-auto w-full p-2 bg-white rounded-lg shadow-sm shadow-gray-400">
+                <div className="flip-card-inner h-[310px]">
+                  <div className="flip-card-front">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="h-60 w-full rounded-lg"
+                    />
+                    <h3 className="text-lg md:text-2xl font-semibold mt-1">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <div className="flip-card-back ">
+                    <p className="text-sm md:text-base mt-2 font-semibold">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       {/*Contact US Start  */}
@@ -296,7 +241,6 @@ function Homepage() {
                 +91 7509617777
               </button>
             </div>
-
 
             {/* Email Section */}
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
@@ -435,8 +379,7 @@ function Homepage() {
                         onChange={(e) => setAddress(e.target.value)}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
-                      >
-                        </textarea>
+                      ></textarea>
                     </div>
                   </div>
                 </div>

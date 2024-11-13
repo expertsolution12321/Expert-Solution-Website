@@ -67,42 +67,42 @@ export default function Mobileapp() {
               India & USA. We offer services for both Android and iOS platforms.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <button className="flex items-center justify-center border border-white py-2 px-2 rounded-lg hover:bg-white hover:text-purple-800 transition">
+              <div className="flex items-center justify-center border border-white py-2 px-2 rounded-lg hover:bg-white hover:text-purple-800 transition">
                 <span className="material-icons-outlined">
                   <FaAndroid className="text-xl" />
                 </span>
                 <span className="ml-3">Android App</span>
-              </button>
-              <button className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
+              </div>
+              <div className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
                 <span className="material-icons-outlined">
                   <FaApple className="text-xl" />
                 </span>
                 <span className="ml-2">iOS App</span>
-              </button>
-              <button className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
+              </div>
+              <div className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
                 <span className="material-icons-outlined">
                   <FaReact className="text-xl" />
                 </span>
                 <span className="ml-2">React Native</span>
-              </button>
-              <button className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
+              </div>
+              <div className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
                 <span className="material-icons-outlined">
                   <FaStickyNote className="text-xl" />
                 </span>
                 <span className="ml-2">Hybrid Apps</span>
-              </button>
-              <button className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
+              </div>
+              <div className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
                 <span className="material-icons-outlined">
                   <FaLaptop className="text-xl" />
                 </span>
                 <span className="ml-2">Cross Platform</span>
-              </button>
-              <button className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
+              </div>
+              <div className="flex items-center justify-center border border-white py-2 px-4 rounded-lg hover:bg-white hover:text-purple-800 transition">
                 <span className="material-icons-outlined">
                   <FaSpeakerDeck className="text-xl" />
                 </span>
                 <span className="ml-2">Flutter</span>
-              </button>
+              </div>
             </div>
           </div>
 
@@ -283,7 +283,7 @@ export default function Mobileapp() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Section */}
           <div className=" rounded-lg">
-            <img src={mobile} alt="mobile app image" />
+            <img src={mobile} alt="mobile-app-image" />
           </div>
 
           {/* Right Section */}

@@ -25,11 +25,15 @@ export default function Retail() {
   };
   return (
     <>
-      <div className="bg-indigo-950 p-10 sm:p-20 lg:p-44 relative flex flex-col items-center justify-center h-full ">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${retailpage})` }}
-        />
+      <div className="bg-indigo-950 p-8 sm:p-16 md:p-24 lg:p-44 relative flex flex-col items-center justify-center  lg:h-[400px] xl:h-[400px] text-white"
+      style={{
+        backgroundImage: `url(${retailpage})`,
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backgroundBlendMode: "multiply",
+        backgroundSize:"cover"
+      }}
+
+      >
 
         <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold relative z-10 text-center m-2 p-2">
           Retail Management Software Solutions to Strengthen Your Company

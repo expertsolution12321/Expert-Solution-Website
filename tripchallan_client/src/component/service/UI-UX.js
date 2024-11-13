@@ -37,15 +37,15 @@ export default function UIUX() {
             </p>
 
             <ul className="flex flex-wrap mt-3 p-0 gap-2">
-              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center  cursor-pointer hover:bg-white hover:text-black">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black">
                 <FaFigma className="mr-2 text-purple-500 text-xl" />
                 Dashboard prototype Figma improvisation
               </li>
-              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center  cursor-pointer hover:bg-white hover:text-black">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black">
                 <FaUsers className="mr-2 text-blue-500 text-xl" />
                 Expert team of developers
               </li>
-              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center  cursor-pointer hover:bg-white hover:text-black">
+              <li className="px-3 py-2 border rounded-full font-bold mr-2 flex items-center hover:bg-white hover:text-black">
                 <FaHeadset className="mr-2 text-green-500 text-xl" />
                 24/7 support on post-launch projects
               </li>
