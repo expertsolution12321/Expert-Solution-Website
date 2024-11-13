@@ -1,19 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "./images/newlogo.svg";
+import logo from "./images/newlogo1.svg";
 import sql from "./images/sql.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaSortDown } from "react-icons/fa";
 import { Dialog } from "@headlessui/react";
-import {
-  FaJs,
-  FaHtml5,
-  FaCss3,
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-} from "react-icons/fa";
+import { FaJs, FaHtml5, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import { SiTailwindcss, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,6 +43,24 @@ export default function Header() {
         break;
       case "taxiservices":
         navigate("/taxiservices");
+        break;
+      case "fleet":
+        navigate("/fleetmanagement");
+        break;
+      case "driver":
+        navigate("/driver");
+        break;
+      case "billing":
+        navigate("/expense");
+        break;
+      case "load":
+        navigate("/load");
+        break;
+      case "report":
+        navigate("/analytics-report");
+        break;
+      case "group":
+        navigate("/groupmng");
         break;
       default:
     }
@@ -108,6 +119,24 @@ export default function Header() {
         break;
       case "webcms":
         navigate("/webcms");
+        break;
+      case "fleet":
+        navigate("/fleetmanagement");
+        break;
+      case "driver":
+        navigate("/driver");
+        break;
+      case "billing":
+        navigate("/expense");
+        break;
+      case "load":
+        navigate("/load");
+        break;
+      case "report":
+        navigate("/analytics-report");
+        break;
+      case "group":
+        navigate("/groupmng");
         break;
       default:
     }
@@ -278,9 +307,12 @@ export default function Header() {
           className=" flex w-full items-center  justify-between"
         >
           <div className="flex ">
-            <button className=" p-1.5" onClick={home}>
-              <img alt="Logo" src={logo} className="  h-20" />
-            </button>
+            <img
+              alt="Logo"
+              src={logo}
+              className=" cursor-pointer h-20"
+              onClick={home}
+            />
           </div>
           <div className="flex mr-4">
             <div className="flex lg:hidden">
@@ -482,6 +514,51 @@ export default function Header() {
                     >
                       Digital Marketing
                     </li>
+
+                    {/* ======================== */}
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="fleet"
+                    >
+                      Fleet Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="driver"
+                    >
+                      Driver & Vahicle Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="load"
+                    >
+                      Load and Cargo Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="billing"
+                    >
+                      Expance & Billing Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="report"
+                    >
+                      Analytics & Reporting
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationService}
+                      id="group"
+                    >
+                      Group Management
+                    </li>
+                    {/* ======================== */}
                   </ul>
                 </li>
                 {/* Industry */}
@@ -574,6 +651,50 @@ export default function Header() {
                     >
                       Web and CMS
                     </li>
+                    {/* ==================== */}
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="fleet"
+                    >
+                      Fleet Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="driver"
+                    >
+                      Driver & Vahicle Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="load"
+                    >
+                      Load and Cargo Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="billing"
+                    >
+                      Expance & Billing Management
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="report"
+                    >
+                      Analytics & Reporting
+                    </li>
+                    <li
+                      className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                      onClick={handleNavigationSolution}
+                      id="group"
+                    >
+                      Group Management
+                    </li>
+                    {/* ==================== */}
                   </ul>
                 </li>
 
@@ -596,14 +717,13 @@ export default function Header() {
               </li> */}
               </ul>
             </div>
-            <div className="hidden group lg:flex lg:flex-1 lg:justify-end ml-2 -mt-3">
-              <button
-                onClick={handleClick}
-                className="text-sm font-bold leading-6 text-blue-600 border-2 border-sky-700 px-4 rounded-full cursor-pointer hover:bg-blue-600 hover:text-white "
-              >
-                SignIn
-              </button>
-            </div>
+
+            <button
+              onClick={handleClick}
+              className=" hidden  lg:flex lg:flex-1 lg:justify-end ml-2 -mt-3 px-4 text-lg font-semibold leading-6 text-blue-600 border-2 border-sky-700  rounded-full cursor-pointer hover:bg-blue-600 hover:text-white  items-center"
+            >
+              SignIn
+            </button>
           </div>
         </nav>
         <Dialog
@@ -614,9 +734,9 @@ export default function Header() {
           <div className="fixed inset-0 z-10" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <button onClick={home} className="-m-1.5 p-1.5">
                 <img alt="Logo" src={logo} className="h-8 w-auto" />
-              </a>
+              </button>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
@@ -817,6 +937,50 @@ export default function Header() {
                       >
                         Digital marketing
                       </li>
+                      {/* ======================== */}
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationService}
+                        id="felet"
+                      >
+                        Fleet Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationService}
+                        id="driver"
+                      >
+                        Driver & Vahicle Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationService}
+                        id="load"
+                      >
+                        Load and Cargo Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationService}
+                        id="billing"
+                      >
+                        Expance & Billing Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationService}
+                        id="report"
+                      >
+                        Analytics & Reporting
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationService}
+                        id="group"
+                      >
+                        Group Management
+                      </li>
+                      {/* ======================== */}
                     </ul>
                   </div>
                   {/* Industries  Dropdown*/}
@@ -906,6 +1070,50 @@ export default function Header() {
                       >
                         Web and CMS
                       </li>
+                      {/* ===================== */}
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationSolution}
+                        id="felet"
+                      >
+                        Fleet Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationSolution}
+                        id="driver"
+                      >
+                        Driver & Vahicle Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationSolution}
+                        id="load"
+                      >
+                        Load and Cargo Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationSolution}
+                        id="billing"
+                      >
+                        Expance & Billing Management
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationSolution}
+                        id="report"
+                      >
+                        Analytics & Reporting
+                      </li>
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        onClick={handleNavigationSolution}
+                        id="group"
+                      >
+                        Group Management
+                      </li>
+                      {/* ======================== */}
                     </ul>
                   </div>
                   {/* Product */}

@@ -1,80 +1,80 @@
 import { useState } from "react";
 import axios from "axios";
-import { Field, Label, Switch } from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-import img from "./images/logo2.svg";
+// import { Field, Label, Switch } from "@headlessui/react";
+// import {
+//   ArrowPathIcon,
+//   ChartPieIcon,
+//   CursorArrowRaysIcon,
+//   FingerPrintIcon,
+//   SquaresPlusIcon,
+// } from "@heroicons/react/24/outline";
+// import {
+//   PhoneIcon,
+//   PlayCircleIcon,
+// } from "@heroicons/react/20/solid";
+// import img from "./images/logo2.svg";
 import banner from "./images/banner.jpg";
 import serv1 from "./images/ecom.jpg";
 import serv2 from "./images/mobile.jpg";
 import serv3 from "./images/uiux.jpg";
 import serv4 from "./images/digital.png";
 import about from "./images/aboutus.png";
-// import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { FaEnvelope } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 
-// change
-import { useForm, Controller } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
+
 import {} from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
 // changeend
 
-const products = [
-  {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-];
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
-];
+// const products = [
+//   {
+//     name: "Analytics",
+//     description: "Get a better understanding of your traffic",
+//     href: "#",
+//     icon: ChartPieIcon,
+//   },
+//   {
+//     name: "Engagement",
+//     description: "Speak directly to your customers",
+//     href: "#",
+//     icon: CursorArrowRaysIcon,
+//   },
+//   {
+//     name: "Security",
+//     description: "Your customers’ data will be safe and secure",
+//     href: "#",
+//     icon: FingerPrintIcon,
+//   },
+//   {
+//     name: "Integrations",
+//     description: "Connect with third-party tools",
+//     href: "#",
+//     icon: SquaresPlusIcon,
+//   },
+//   {
+//     name: "Automations",
+//     description: "Build strategic funnels that will convert",
+//     href: "#",
+//     icon: ArrowPathIcon,
+//   },
+// ];
+// const callsToAction = [
+//   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+//   { name: "Contact sales", href: "#", icon: PhoneIcon },
+// ];
 
 function Homepage() {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/about");
+  const call = () => {
+    window.open("tel:+917509617777");
+  };
+  const emailcontact = () => {
+    window.open("mailto:expertsolution@gmail.com");
+  };
+  const location = () => {
+    window.open(
+      "https://www.google.com/maps/search/?api=1&query=78+Gautam+Nagar+St,+Bapuji+Nagar,+Bhubaneswar,+Odisha+751014","_blank")
   };
   // ==========================
   // Form Submitted function
@@ -120,11 +120,11 @@ function Homepage() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundBlendMode: "multiply",
-          backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust color and opacity as needed
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
         }}
         className="relative isolate h-96 md:h-[32rem] flex items-center justify-center overflow-hidden bg-cover bg-center w-full"
       >
-        <div className="absolute inset-0 flex flex-col items-center text-center px-4 md:px-8 space-y-4 mt-24">
+        <div className="absolute inset-0 flex flex-col items-center text-center px-4 md:px-8 space-y-4 sm:mt-4 lg:mt-24 ">
           <h1 className="text-3xl md:text-6xl font-mono font-bold text-white">
             Effortless{" "}
             <span className="text-orange-500 cursor-pointer" target="_blank">
@@ -289,36 +289,36 @@ function Homepage() {
             {/* Phone Section */}
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
               <FaPhone className="text-xl md:text-2xl w-8 md:w-10 text-white" />
-              <a
-                href="tel:+917509617777"
-                className="font-bold w-72 md:w-80 text-white hover:underline"
+              <button
+                onClick={call}
+                className="font-bold w-72 md:w-80 text-white"
               >
                 +91 7509617777
-              </a>
+              </button>
             </div>
+
 
             {/* Email Section */}
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
-              <FaEnvelope className="text-2xl md:text-2xl w-8 md:w-10 text-white" />
-              <a
-                href="mailto:expertsolution@gmail.com"
-                className="font-bold w-72 md:w-80 text-white hover:underline"
+              <FaEnvelope className="text-xl md:text-2xl w-8 md:w-10 text-white " />
+              <button
+                onClick={emailcontact}
+                className="font-bold w-72 md:w-80 text-white"
               >
                 expertsolutions@gmail.com
-              </a>
+              </button>
             </div>
 
             {/* Location Section */}
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
               <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=78+Gautam+Nagar+St,+Bapuji+Nagar,+Bhubaneswar,+Odisha+751014"
-                target="_blank"
+              <button
+                onClick={location}
                 rel="noopener noreferrer"
-                className="font-bold w-72 md:w-80 text-white hover:underline"
+                className="font-bold w-72 md:w-80 text-white"
               >
                 78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -429,13 +429,14 @@ function Homepage() {
                       Address
                     </label>
                     <div className="mt-2">
-                      <input
+                      <textarea
                         type="text"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         required
-                      />
+                      >
+                        </textarea>
                     </div>
                   </div>
                 </div>
