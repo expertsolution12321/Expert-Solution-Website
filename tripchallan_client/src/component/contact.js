@@ -274,7 +274,7 @@ export default function Contact() {
                       Address
                     </label>
                     <div className="mt-2">
-                      <input
+                      <textarea 
                         type="text"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}

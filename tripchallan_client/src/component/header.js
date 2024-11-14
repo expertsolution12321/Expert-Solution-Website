@@ -17,10 +17,12 @@ export default function Header() {
   };
   const contact = () => {
     navigate("/contact");
+    window.scrollTo(0, 0);
     setMobileMenuOpen(false);
   };
   const home = () => {
     navigate("/");
+    window.scrollTo(0, 0);
     setMobileMenuOpen(false);
   };
   const handleNavigationService = (e) => {
@@ -64,6 +66,7 @@ export default function Header() {
         break;
       default:
     }
+    window.scrollTo(0, 0);
     setMobileMenuOpen(false);
     setIsServicesOpen(false);
   };
@@ -83,6 +86,7 @@ export default function Header() {
         break;
       default:
     }
+    window.scrollTo(0, 0);
     setMobileMenuOpen(false);
     setIsCompanyOpen(false);
   };
@@ -104,6 +108,7 @@ export default function Header() {
         break;
       default:
     }
+    window.scrollTo(0, 0);
     setMobileMenuOpen(false);
     setIsIndustriesOpen(false);
   };
@@ -140,6 +145,7 @@ export default function Header() {
         break;
       default:
     }
+    window.scrollTo(0, 0);
     setMobileMenuOpen(false);
     setIsSolutionOpen(false);
   };
@@ -290,7 +296,7 @@ export default function Header() {
                     >
                       Company{" "}
                     </button>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <span className="inline-block ml-1 transition-all pt-1">
                       <FaSortDown />
                     </span>
 
@@ -331,7 +337,7 @@ export default function Header() {
                     >
                       Technology{" "}
                     </button>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <span className="inline-block ml-1 transition-all  pt-1">
                       <FaSortDown />
                     </span>
 
@@ -419,7 +425,7 @@ export default function Header() {
                     >
                       Services{" "}
                     </button>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <span className="inline-block ml-1 transition-all  pt-1">
                       <FaSortDown />
                     </span>
 
@@ -483,7 +489,7 @@ export default function Header() {
                         onClick={handleNavigationService}
                         id="billing"
                       >
-                        Expance & Billing Management
+                        Expense & Billing Management
                       </li>
                       <li
                         className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
@@ -514,7 +520,7 @@ export default function Header() {
                     >
                       Industries{" "}
                     </button>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <span className="inline-block ml-1 transition-all  pt-1">
                       <FaSortDown />
                     </span>
 
@@ -563,7 +569,7 @@ export default function Header() {
                     >
                       Solutions{" "}
                     </button>
-                    <span className="inline-block ml-1 transition-all group-hover:rotate-180 pt-1">
+                    <span className="inline-block ml-1 transition-all pt-1">
                       <FaSortDown />
                     </span>
 
@@ -619,7 +625,7 @@ export default function Header() {
                         onClick={handleNavigationSolution}
                         id="billing"
                       >
-                        Expance & Billing Management
+                        Expense & Billing Management
                       </li>
                       <li
                         className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
@@ -894,7 +900,7 @@ export default function Header() {
                         onClick={handleNavigationService}
                         id="billing"
                       >
-                        Expance & Billing Management
+                        Expense & Billing Management
                       </li>
                       <li
                         className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"

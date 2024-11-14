@@ -20,27 +20,74 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 // changeend
 
-
-
 const services = [
-  { title: "E-commerce", description: "E-commerce continues to grow rapidly, evolving with advances in    technology like mobile shopping (m-commerce), voice-activated shopping (via devices like Amazon's Alexa), and the integration of social media platforms with shopping features.", image: serv1 },
+  {
+    title: "E-commerce",
+    description:
+      "E-commerce continues to grow rapidly, evolving with advances in    technology like mobile shopping (m-commerce), voice-activated shopping (via devices like Amazon's Alexa), and the integration of social media platforms with shopping features.",
+    image: serv1,
+  },
 
-  { title: "MobileApp", description: "Mobile apps continue to grow in importance as more people rely on their mobile devices for daily tasks, communication, entertainment, and business. The increasing integration of technologies like AI, machine learning, and augmented reality is expanding the potential of mobile apps even further.", image: serv2 },
-  { title: "UI-UX", description: " UI and UX design are closely related disciplines in the field of digital product design, but they focus on different aspects of the  user’s interaction with a product or service. Together, they are critical for creating successful, user-friendly applications, websites, and digital experiences.", image: serv3 },
-  { title: " Digital Marketing", description: "Digital marketing is a powerful, versatile strategy for reaching and engaging customers in the digital age. It's wide range of tools and tactics allows businesses of all sizes to build brand awareness, drive traffic, and achieve measurable results.", image: serv4 },
+  {
+    title: "MobileApp",
+    description:
+      "Mobile apps continue to grow in importance as more people rely on their mobile devices for daily tasks, communication, entertainment, and business. The increasing integration of technologies like AI, machine learning, and augmented reality is expanding the potential of mobile apps even further.",
+    image: serv2,
+  },
+  {
+    title: "UI-UX",
+    description:
+      " UI and UX design are closely related disciplines in the field of digital product design, but they focus on different aspects of the  user’s interaction with a product or service. Together, they are critical for creating successful, user-friendly applications, websites, and digital experiences.",
+    image: serv3,
+  },
+  {
+    title: " Digital Marketing",
+    description:
+      "Digital marketing is a powerful, versatile strategy for reaching and engaging customers in the digital age. It's wide range of tools and tactics allows businesses of all sizes to build brand awareness, drive traffic, and achieve measurable results.",
+    image: serv4,
+  },
 
-  { title: " FleetManagement", description: "A fleet management system is a comprehensive tool designed to optimize the operation and oversight of vehicle fleets. It allows businesses to streamline everything from vehicle tracking and maintenance scheduling to fuel management and driver safety.", image: fleet },
+  {
+    title: " FleetManagement",
+    description:
+      "A fleet management system is a comprehensive tool designed to optimize the operation and oversight of vehicle fleets. It allows businesses to streamline everything from vehicle tracking and maintenance scheduling to fuel management and driver safety.",
+    image: fleet,
+  },
 
-  { title: " Driver and Vahicle Management", description: "Our Driver and Vehicle Management System is a comprehensive, all-in-one solution designed to optimize and simplify the complex tasks involved in managing a fleet.", image: driver },
-  { title: "Load and Cargo Management", description: " Our Driver and Vehicle Management System is a comprehensive, all-in-one solution designed to optimize and simplify the complex tasks involved in managing a fleet. ", image:load },
+  {
+    title: " Driver and Vahicle Management",
+    description:
+      "Our Driver and Vehicle Management System is a comprehensive, all-in-one solution designed to optimize and simplify the complex tasks involved in managing a fleet.",
+    image: driver,
+  },
+  {
+    title: "Load and Cargo Management",
+    description:
+      "Efficient load and cargo management is crucial for optimizing transportation logistics, minimizing delays, and ensuring the safe and timely delivery of goods. ",
+    image: load,
+  },
 
-  { title: "Expenses and Billing Management", description: "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations.", image: expense },
+  {
+    title: "Expenses and Billing Management",
+    description:
+      "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations.",
+    image: expense,
+  },
 
-  { title: "Analytics & Reporting", description: "Uncover key trends, track performance, and make informed decisions with our comprehensive Analytics & Reporting tools. Visualize real-time data, customize dashboards, and gain valuable insights to drive growth and optimize your strategies effectively.", image: report },
+  {
+    title: "Analytics & Reporting",
+    description:
+      "Uncover key trends, track performance, and make informed decisions with our comprehensive Analytics & Reporting tools. Visualize real-time data, customize dashboards, and gain valuable insights to drive growth and optimize your strategies effectively.",
+    image: report,
+  },
 
-  { title: "Group Management", description: "Our Group Management System is designed to simplify team organization and enhance collaboration. This system provides an  all-in-one platform to manage teams effectively, allowing you to assign tasks, track progress, and ensure that projects are completed on time.", image: group },
+  {
+    title: "Group Management",
+    description:
+      "Our Group Management System is designed to simplify team organization and enhance collaboration. This system provides an  all-in-one platform to manage teams effectively, allowing you to assign tasks, track progress, and ensure that projects are completed on time.",
+    image: group,
+  },
 ];
-
 
 function Homepage() {
   const call = () => {
@@ -106,13 +153,11 @@ function Homepage() {
       >
         <div className="absolute inset-0 flex flex-col items-center text-center px-4 md:px-8 space-y-4 sm:mt-4 lg:mt-24 ">
           <h1 className="text-3xl md:text-6xl font-mono font-bold text-white">
-            Effortless{" "}
-            <span className="text-orange-500 ">
-              Trip Management</span>
+            Effortless <span className="text-orange-500 ">Trip Management</span>
             , All in One Place
           </h1>
           <p className="text-white text-xl font-semibold">
-            ( Plan. Track. Succeed. )
+            Plan | Track | Succeed
           </p>
           <p className="text-sm md:text-base text-white max-w-2xl">
             Welcome to a smarter way to manage your journeys. Our Trip
@@ -124,7 +169,6 @@ function Homepage() {
           </p>
         </div>
       </div>
-
       {/* About US Start */}
       <div id="about_Us" className="p-4 ">
         <div>
@@ -212,9 +256,7 @@ function Homepage() {
           ))}
         </Swiper>
       </div>
-
       {/*Contact US Start  */}
-
       <div className="flex flex-col md:flex-row h-auto p-4 md:space-y-0 space-y-8 justify-center">
         {/* Get In Touch Section */}
         <div className="w-full md:w-2/5 h-auto p-2 pt-10 md:mr-2 justify-between">
@@ -385,7 +427,7 @@ function Homepage() {
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center justify-end gap-x-6">
+              <div className="mt-6 flex items-center justify-end gap-x-4">
                 <button
                   type="reset"
                   className="text-md font-semibold leading-6 bg-red-600 text-white rounded-md px-3 py-2.5 w-28 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-200 hover:bg-red-500"
@@ -394,7 +436,7 @@ function Homepage() {
                 </button>
                 <button
                   type="submit"
-                  className="rounded-md bg-indigo-600 px-4 py-2.5 text-md w-aut font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-green-500 px-4 py-2.5 text-md w-aut font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                 >
                   Submit
                 </button>

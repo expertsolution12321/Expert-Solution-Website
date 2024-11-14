@@ -32,7 +32,7 @@ function Load() {
         <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold relative z-10 text-center m-2 p-2">
           <span className="text-white font-bold">
             Efficient, Safe, and{" "}
-            <span className="text-orange-500">Trackable Cargo</span> Solutions
+            <span className="text-orange-500">Trackable Cargo Solutions {' '}</span> 
             for Your Business Needs
           </span>
         </h1>

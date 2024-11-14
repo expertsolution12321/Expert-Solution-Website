@@ -9,7 +9,7 @@ const data = [
   },
   {
     title: "Services",
-    list: ["E-commerce", "Mobile App", "Ui-Ux", "Digital Marketing","Fleet Management",],
+    list: ["E-commerce", "Mobile App", "UI-UX", "Digital Marketing","Fleet Management",],
   },
   {
     title: "Solutions",

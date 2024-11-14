@@ -46,8 +46,9 @@ export default function Ecommerce() {
         <div className="container relative flex items-center h-full">
           <div className="absolute left-0 right-0 text-center">
             <h1 className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[36px] font-semibold text-white">
-              Reliable Trucking and <br /> Transportation Services.
+              Reliable <span className=" font-bold">Trucking and  Transportation</span> Services.
             </h1>
+            <p className="text-white text-lg font-semibold">Reliable Trucking and Transportation Services is dedicated to offering seamless and trustworthy logistics solutions for businesses of all sizes. With a fleet of well-maintained vehicles and a team of experienced drivers, we ensure that your cargo reaches its destination safely and on time. Our services are designed to be flexible and responsive to your needs, whether for local deliveries or long-haul transport.</p>
             <button
               className="mt-4 px-4 py-2 border border-transparent text-white rounded-lg bg-gradient-to-r from-red-600 to-blue-700 hover:from-blue-700 hover:to-red-600 transition duration-300"
               onClick={handleClick}

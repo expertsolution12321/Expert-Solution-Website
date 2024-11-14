@@ -33,9 +33,9 @@ function Groupmng() {
           }}
         />
 
-        <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-center m-2 p-2">
-          <span className="text-white font-bold">
-            Efficiently Organize and Empower Your Teams with Our{" "}
+        <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-center m-2 p-2 leading-10">
+          <span className="text-white font-bold ">
+            Efficiently Organize and Empower Your Teams with Our<br/>
             <span className="text-orange-500">Group Management System</span>{" "}
           </span>
         </h1>
@@ -52,7 +52,7 @@ function Groupmng() {
         <div className="relative z-10 mt-6 flex flex-wrap gap-4 justify-center">
           <button
             onClick={contact}
-            className="text-white bg-orange-500 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg"
+            className="text-white bg-orange-500 hover:bg-orange-600 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg"
           >
             Connect Now
           </button>

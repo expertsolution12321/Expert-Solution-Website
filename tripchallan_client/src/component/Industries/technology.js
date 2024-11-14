@@ -68,7 +68,7 @@ export default function Technology() {
           <div className="text-center relative z-10 mt-6">
             <button
               onClick={contact}
-              className="text-white bg-orange-500 rounded-full px-6 py-2 text-sm sm:text-base md:text-lg"
+              className="text-white bg-orange-500 hover:bg-orange-600 rounded-full px-6 py-2 text-sm sm:text-base md:text-lg"
             >
               Connect Now
             </button>
