@@ -1,14 +1,9 @@
 import React from "react";
-import { GrCertificate } from "react-icons/gr";
 import prototype from "../images/prototype.png";
 import {
   FaCode,
-  FaDraftingCompass,
-  FaEye,
   FaLaptop,
   FaMagic,
-  FaMobileAlt,
-  FaRegLightbulb,
   FaThumbsUp,
   FaUserCheck,
 } from "react-icons/fa";
@@ -245,7 +240,7 @@ export default function UIUX() {
             </p>
           </div>
           <div className="w-full md:w-1/2 flex flex-wrap items-center justify-center gap-4">
-            <img src={prototype} className="p-3" />
+            <img src={prototype} className="p-3" alt="protype icon" />
           </div>
         </div>
       </section>

@@ -37,7 +37,7 @@ const Carousel = ({ carouselImages }) => {
 
   return (
     <>
-      <div className="relative  h-[50vh] w-[100%] overflow-hidden m-auto ">
+      <div className="relative my-4 h-[70vh] w-[100%] overflow-hidden m-auto">
         <button
           onClick={changeToPrevious}
           className="absolute top-0 bottom-0 left-0 flex items-center justify-center p-4 border-0 text-center font-bold bg-gray-500 opacity-30 hover:opacity-60 z-10"
@@ -69,31 +69,26 @@ const Carousel = ({ carouselImages }) => {
           {carouselImages.map((carouselImg, i) => (
             <div
               key={i}
-              className="relative h-full transition-all brightness-50 "
+              className="relative h-full transition-all"
               style={imgContainerstyle(i)}
             >
+              {/* Image */}
               <img
                 src={carouselImg.src}
-                className="block w-full h-full object-cover "
+                className="block w-full h-full object-cover"
                 alt="..."
               />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+              {/* Text */}
+              <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center">
+                <h5 className="text-[40px] text-white font-bold">{carouselImg.label}</h5>
+                <p className="text-[20px] text-white">{carouselImg.text}</p>
+              </div>
             </div>
           ))}
-        </div>
-        <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center text-white">
-          <h1 className="font-bold text-5xl mb-6">Fleet Management System</h1>
-          <p className="font-medium text-base tracking-wider leading-relaxed">
-            A fleet management system is a comprehensive tool designed to
-            optimize the operation and oversight of vehicle fleets. It allows
-            businesses to streamline everything from vehicle tracking and
-            maintenance scheduling to fuel management and driver safety. By
-            using real-time data, a fleet management system can monitor vehicle
-            locations, analyze route efficiency, and improve asset utilization,
-            reducing costs and increasing productivity. In
-            short, a fleet management system provides the insights and control
-            necessary to drive smarter, safer, and more efficient fleet
-            operations.
-          </p>
         </div>
       </div>
     </>

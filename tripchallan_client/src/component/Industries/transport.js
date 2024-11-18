@@ -17,7 +17,6 @@ import technologypage22 from "../images/sql.png";
 // import transban from "../images/transban.png";
 import { useNavigate } from "react-router-dom";
 import {
-  FaIndustry,
   FaLightbulb,
   FaCog,
   FaCheck,
@@ -196,7 +195,7 @@ export default function Transport() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={ware} className="w-full rounded-t-lg h-[250px]" />
+            <img src={ware} className="w-full rounded-t-lg h-[250px] " alt="Warehouse img" />
             <h5 className="text-black p-2">Warehouse management Software</h5>
             <p className="px-2">
               Our manufacturing IT solutions enhance production efficiency and
@@ -204,7 +203,7 @@ export default function Transport() {
             </p>
           </div>
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={logis} className="w-full rounded-t-lg h-[250px]" />
+            <img src={logis} className="w-full rounded-t-lg h-[250px]" alt="Logistic"/>
             <h5 className="text-black p-2">Logistic visibility Software</h5>
             <p className="px-2">
               Manufacturing IT solutions optimize food safety and production
@@ -212,7 +211,7 @@ export default function Transport() {
             </p>
           </div>
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={tracking} className="w-full rounded-t-lg h-[250px]" />
+            <img src={tracking} className="w-full rounded-t-lg h-[250px]" alt="tracking"/>
             <h5 className="text-black p-2">End to End Tracking Services</h5>
             <p className="px-2">
               Software developing services ensure regulatory compliance and
@@ -220,7 +219,7 @@ export default function Transport() {
             </p>
           </div>
           <div className="rounded-xl bg-slate-100 shadow-lg cursor-pointer">
-            <img src={analyst} className="w-full rounded-t-lg h-[250px]" />
+            <img src={analyst} className="w-full rounded-t-lg h-[250px]" alt="analyst"/>
             <h5 className="text-black p-2">Business Intelligence Analysis</h5>
             <p className="px-2">
               Streamline complex manufacturing processes and manage supply

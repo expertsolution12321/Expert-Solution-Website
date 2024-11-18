@@ -68,7 +68,7 @@ const FooterNew = ({ theme = "dark" }) => {
       case "Mobile App":
         navigate("/mobileapp");
         break;
-      case "Ui-Ux":
+      case "UI-UX":
         navigate("/ui-ux");
         break;
       case "Digital Marketing":
@@ -94,6 +94,7 @@ const FooterNew = ({ theme = "dark" }) => {
           break;
       default:
     }
+    window.scrollTo(0, 0);
   };
   return (
     <div

@@ -1,10 +1,6 @@
 import React from "react";
 import retailpage from "../images/retail.png";
 import retailpage1 from "../images/m.jpg";
-import retailpage2 from "../images/img7.png";
-import retailpage3 from "../images/img8.jpg";
-import retailpage4 from "../images/img9.png";
-import retailpage5 from "../images/project.png";
 import cardsec from "../images/card-section.jpg";
 import techbg from "../images/techbg.jpeg";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +13,7 @@ import {
   FaTable,
   FaDigitalOcean,
 } from "react-icons/fa";
-import { FaFreeCodeCamp, FaInvision, FaMobile } from "react-icons/fa6";
+import { FaFreeCodeCamp, FaMobile } from "react-icons/fa6";
 export default function Retail() {
   const navigate = useNavigate();
   const contact = () => {

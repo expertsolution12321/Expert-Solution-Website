@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import banner from "./images/banner.jpg";
+// import banner from "./images/banner.jpg";
+import CarouselDemo from "./CarouselDemo";
 import serv1 from "./images/ecom.jpg";
 import serv2 from "./images/mobile.jpg";
 import serv3 from "./images/uiux.jpg";
@@ -41,21 +43,21 @@ const services = [
     image: serv3,
   },
   {
-    title: " Digital Marketing",
+    title: "Digital Marketing",
     description:
       "Digital marketing is a powerful, versatile strategy for reaching and engaging customers in the digital age. It's wide range of tools and tactics allows businesses of all sizes to build brand awareness, drive traffic, and achieve measurable results.",
     image: serv4,
   },
 
   {
-    title: " FleetManagement",
+    title: "FleetManagement",
     description:
       "A fleet management system is a comprehensive tool designed to optimize the operation and oversight of vehicle fleets. It allows businesses to streamline everything from vehicle tracking and maintenance scheduling to fuel management and driver safety.",
     image: fleet,
   },
 
   {
-    title: " Driver and Vahicle Management",
+    title: "Driver and Vahicle Management",
     description:
       "Our Driver and Vehicle Management System is a comprehensive, all-in-one solution designed to optimize and simplify the complex tasks involved in managing a fleet.",
     image: driver,
@@ -90,6 +92,45 @@ const services = [
 ];
 
 function Homepage() {
+  const navigate = useNavigate();
+
+  const handleNavigate = (title) => {
+    switch (title) {
+      case "E-commerce":
+        navigate("/ecommerce");
+        break;
+      case "MobileApp":
+        navigate("/mobileapp");
+        break;
+      case "UI-UX":
+        navigate("/ui-ux");
+        break;
+      case "Digital Marketing":
+        navigate("/digitalmarketing");
+        break;
+      case "FleetManagement":
+        navigate("/fleetmanagement");
+        break;
+      case "Driver and Vahicle Management":
+        navigate("/driver");
+        break;
+      case "Load and Cargo Management":
+        navigate("/load");
+        break;
+      case "Expenses and Billing Management":
+        navigate("/expense");
+        break;
+      case "Analytics & Reporting":
+        navigate("/analytics-report");
+        break;
+      case "Group Management":
+        navigate("/groupmng");
+        break;
+      default:
+    }
+    window.scrollTo(0, 0);
+  };
+
   const call = () => {
     window.open("tel:+917509617777");
   };
@@ -141,7 +182,7 @@ function Homepage() {
   return (
     <>
       {/* Banner  */}
-      <div
+      {/* <div
         style={{
           backgroundImage: `url('${banner}')`,
           backgroundSize: "cover",
@@ -168,7 +209,12 @@ function Homepage() {
             organized.
           </p>
         </div>
-      </div>
+      </div> */}
+
+      <section className="w-full">
+      <CarouselDemo />
+      </section>
+
       {/* About US Start */}
       <div id="about_Us" className="p-4 ">
         <div>
@@ -212,7 +258,7 @@ function Homepage() {
         </div>
       </div>
       {/* services */}
-      <div className="h-auto p-10 bg-slate-200" id="Services">
+      {/* <div className="h-auto p-10 bg-slate-200" id="Services">
         <h3 className="flex text-4xl font-mono font-bold text-black justify-center items-center text-center border-green-300">
           Services
         </h3>
@@ -234,6 +280,58 @@ function Homepage() {
           {services.map((service, index) => (
             <SwiperSlide key={index}>
               <div className="flip-card h-auto w-full p-2 bg-white rounded-lg shadow-sm shadow-gray-400">
+                <div className="flip-card-inner h-[310px]" >
+                  <div className="flip-card-front">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="h-60 w-full rounded-lg"
+                    />
+                    <h3 className="text-lg md:text-2xl font-semibold mt-1" 
+                    // onClick={() => handlenavigate(service.title)}
+                    >
+                      {service.title}
+                      
+                    </h3>
+                  </div>
+                  <div className="flip-card-back ">
+                    <p className="text-sm md:text-base mt-2 font-semibold">
+                      {service.description}
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div> */}
+
+      <div className="h-auto p-10 bg-slate-200" id="Services">
+        <h3 className="flex text-4xl font-mono font-bold text-black justify-center items-center text-center border-green-300">
+          Services
+        </h3>
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation
+          autoplay={{
+            delay: 3000, // 3 seconds delay
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+        >
+          {services.map((service, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="flip-card h-auto w-full p-2 bg-white rounded-lg shadow-sm shadow-gray-400 cursor-pointer"
+                onClick={() => handleNavigate(service.title)}
+              >
                 <div className="flip-card-inner h-[310px]">
                   <div className="flip-card-front">
                     <img
@@ -245,7 +343,7 @@ function Homepage() {
                       {service.title}
                     </h3>
                   </div>
-                  <div className="flip-card-back ">
+                  <div className="flip-card-back">
                     <p className="text-sm md:text-base mt-2 font-semibold">
                       {service.description}
                     </p>
@@ -256,6 +354,7 @@ function Homepage() {
           ))}
         </Swiper>
       </div>
+
       {/*Contact US Start  */}
       <div className="flex flex-col md:flex-row h-auto p-4 md:space-y-0 space-y-8 justify-center">
         {/* Get In Touch Section */}
@@ -291,7 +390,7 @@ function Homepage() {
                 onClick={emailcontact}
                 className="font-bold w-72 md:w-80 text-white"
               >
-                expertsolutions@gmail.com
+                expertsolutionsbbsr@gmail.com
               </button>
             </div>
 
@@ -299,11 +398,14 @@ function Homepage() {
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
               <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
               <button
-                onClick={location}
+                // onClick={location}
                 rel="noopener noreferrer"
                 className="font-bold w-72 md:w-80 text-white"
               >
                 78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014
+                <br />
+                c-25 Ramkund Vihar Colony, samta colony(Near Vivekanand Ashram),
+                Raipur.
               </button>
             </div>
           </div>

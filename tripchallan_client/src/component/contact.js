@@ -1,59 +1,55 @@
 import { useState } from "react";
 import axios from "axios";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+// import {
+//   ArrowPathIcon,
+//   ChartPieIcon,
+//   CursorArrowRaysIcon,
+//   FingerPrintIcon,
+//   SquaresPlusIcon,
+// } from "@heroicons/react/24/outline";
 
 import contact from "./images/contact.jpg";
-import { FaArrowRight, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 import {
   FaLocationDot,
-  FaMapLocation,
-  FaPhoenixSquadron,
   FaPhone,
 } from "react-icons/fa6";
 
 import {} from "@headlessui/react";
 // changeend
 
-const products = [
-  {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-];
+// const products = [
+//   {
+//     name: "Analytics",
+//     description: "Get a better understanding of your traffic",
+//     href: "#",
+//     icon: ChartPieIcon,
+//   },
+//   {
+//     name: "Engagement",
+//     description: "Speak directly to your customers",
+//     href: "#",
+//     icon: CursorArrowRaysIcon,
+//   },
+//   {
+//     name: "Security",
+//     description: "Your customers’ data will be safe and secure",
+//     href: "#",
+//     icon: FingerPrintIcon,
+//   },
+//   {
+//     name: "Integrations",
+//     description: "Connect with third-party tools",
+//     href: "#",
+//     icon: SquaresPlusIcon,
+//   },
+//   {
+//     name: "Automations",
+//     description: "Build strategic funnels that will convert",
+//     href: "#",
+//     icon: ArrowPathIcon,
+//   },
+// ];
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -149,7 +145,7 @@ export default function Contact() {
                 href="mailto:expertsolution@gmail.com"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >
-                expertsolutions@gmail.com
+                expertsolutionsbbsr@gmail.com
               </a>
             </div>
 
@@ -162,7 +158,8 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >
-                78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014
+                78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014 <br/>
+                c-25 Ramkund Vihar Colony, samta colony(Near Vivekanand Ashram), Raipur.
               </a>
             </div>
           </div>
