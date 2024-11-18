@@ -163,7 +163,7 @@ export default function Retail() {
             <p className="text-slate-300 text-base md:text-lg lg:text-xl mb-6">
               At Trip Challan Book, we believe that smooth operations and
               effective management are fundamental to a successful retail
-              business. Our <strong>Retail Management System services</strong>{" "}
+              business. Our <strong>Retail Management System Services</strong>{" "}
               are designed to empower your company.
             </p>
             <ul className="flex flex-wrap justify-center md:justify-start items-center gap-2">

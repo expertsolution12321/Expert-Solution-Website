@@ -148,7 +148,7 @@ export default function Transport() {
             <p className="text-slate-300 mt-4">
               At Trip Management System, we believe that smooth operations and
               effective management are fundamental to a successful retail
-              business. Our <strong>Retail Management System services</strong>{" "}
+              business. Our <strong>Retail Management System Services</strong>{" "}
               are designed to empower your company.
             </p>
             <ul className="flex flex-wrap justify-center md:justify-start items-center gap-2">

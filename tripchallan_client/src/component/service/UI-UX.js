@@ -2,11 +2,15 @@ import React from "react";
 import { GrCertificate } from "react-icons/gr";
 import prototype from "../images/prototype.png";
 import {
+  FaCode,
+  FaDraftingCompass,
   FaEye,
   FaLaptop,
+  FaMagic,
   FaMobileAlt,
   FaRegLightbulb,
   FaThumbsUp,
+  FaUserCheck,
 } from "react-icons/fa";
 import { BiHappyBeaming } from "react-icons/bi";
 import { RiMailSettingsFill } from "react-icons/ri";
@@ -59,26 +63,26 @@ export default function UIUX() {
               <div className="w-full px-3">
                 <form className="w-full flex flex-col items-center justify-center">
                   <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg shadow-md shadow-gray-400"
                     placeholder="Full Name*"
                   />
                   <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg shadow-md shadow-gray-400"
                     placeholder="Business Email Address*"
                   />
                   <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg shadow-md shadow-gray-400"
                     placeholder="Full Name*"
                   />
                   <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg shadow-md shadow-gray-400"
                     placeholder="Phone Number*"
                   />
                   <textarea
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] border-none  rounded-md"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] border-none  rounded-md shadow-md shadow-gray-400"
                     placeholder="messages*"
                   />
-                  <button className="w-full px-6 py-2 mt-10 bg-gradient-to-r from-[#590338] to-[#000031] text-white rounded-full hover:bg-gradient-to-l">
+                  <button className="w-full px-6 py-2 mt-10 bg-gradient-to-r from-[#590338] to-[#000031] text-white rounded-full hover:bg-gradient-to-l shadow-md shadow-gray-400">
                     Submit
                   </button>
                 </form>
@@ -96,7 +100,7 @@ export default function UIUX() {
             </h1>
             <p className="text-base font-normal ">
               {" "}
-              We, at Trip Management system, leverage you to upscale your
+              We, at Trip Management System, leverage you to upscale your
               business by offering the best website prototype services. Our team
               consists of skilled professionals with a shared commitment to
               delivering high-quality website prototypes. With a wealth of
@@ -152,18 +156,16 @@ export default function UIUX() {
                 Wireframe Prototypes{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered eCommerce
-                solutions that provide your customer with immersive services.
+              Wireframe prototypes are simplified, low-fidelity designs that outline the basic structure and layout of a website or mobile app.
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaMobileAlt className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
+              <FaMagic className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
                 Interactive Mockups{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered eCommerce
-                solutions that provide your customer with immersive services.
+              Interactive Mockups take the concept of Wireframe Prototypes a step further by adding interactivity to the basic layout and structure. 
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
@@ -172,8 +174,7 @@ export default function UIUX() {
                 Responsive Design{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered eCommerce
-                solutions that provide your customer with immersive services.
+              Responsive design is an approach to web design and development that ensures a website or application delivers.
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
@@ -182,28 +183,25 @@ export default function UIUX() {
                 E-commerce Prototype{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered eCommerce
-                solutions that provide your customer with immersive services.
+              An e-commerce prototype is a high-fidelity or low-fidelity representation of an online store or shopping platform designed to showcase its functionality, user interface (UI), and user experience (UX) before actual development begins.
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaRegLightbulb className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
+              <FaCode className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
                 Custom Website prototype{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered eCommerce
-                solutions that provide your customer with immersive services.
+              A custom website prototype is a tailored, interactive representation of a website designed to reflect specific business needs, user requirements, and branding. Unlike generic templates, scratch to meet the unique goals  .
               </p>
             </div>
             <div className="group  w-full md:w-1/3 lg:w-1/4 border flex flex-col p-4 rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-r from-[#7f0f54] to-[#000031] hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl">
-              <FaEye className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white  group-hover:fill-[#3e1572]" />
+              <FaUserCheck className=" text-white mx-auto  text-5xl fill-white  p-2 bg-gradient-to-r from-[#7f0f54] to-[#000031] rounded-lg transition-all group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white  group-hover:fill-[#3e1572]" />
               <h1 className="text-2xl font-semibold mb-3 text-center group-hover:text-white">
                 User Experience Testing{" "}
               </h1>
               <p className="text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered eCommerce
-                solutions that provide your customer with immersive services.
+              User Experience Testing is a process of evaluating a website or app by testing it with real users to identify usability issues and improve the overall user experience (UX). It focuses on understanding how users interact with the interface.
               </p>
             </div>
           </div>
@@ -218,31 +216,31 @@ export default function UIUX() {
             </h1>
             <p className="text-base font-normal ">
               {" "}
-              User Experience Design: Building intuitive interfaces.
+              <b>User Experience Design:</b> Building intuitive interfaces.
             </p>
             <p className="text-base font-normal ">
               {" "}
-              Agile Development: Rapidly iterating prototypes based on user
+              <b>Agile Development:</b> Rapidly iterating prototypes based on user
               feedback.
             </p>{" "}
             <p className="text-base font-normal ">
               {" "}
-              Emerging Technologies: Integrating AI and real-time tracking
+              <b>Emerging Technologies:</b> Integrating AI and real-time tracking
               features.
             </p>{" "}
             <p className="text-base font-normal ">
               {" "}
-              Data Analytics: Offering insights for personalized travel
+              <b>Data Analytics:</b> Offering insights for personalized travel
               experiences.
             </p>{" "}
             <p className="text-base font-normal ">
               {" "}
-              Collaboration Tools: Enabling shared itineraries and communication
+              <b>Collaboration Tools:</b> Enabling shared itineraries and communication
               among travelers.
             </p>
             <p className="text-base font-normal ">
               {" "}
-              Testing and Validation: Ensuring usability and functionality
+              <b>Testing and Validation:</b> Ensuring usability and functionality
               through user testing.
             </p>
           </div>

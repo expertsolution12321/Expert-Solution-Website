@@ -141,29 +141,32 @@ export default function Digitalmark() {
           </div>
           <div className=" w-full  mx-0 my-16">
             <div className="max-w-[450px] mx-auto bg-[#ffffff] flex flex-col items-center justify-center px-3 py-4 rounded-lg">
-              <h1 className="mb-4 text-2xl">Digital marketing</h1>
+              <h1 className="mb-4 text-2xl">Digital Marketing</h1>
               <form className="w-full flex flex-col items-center justify-center">
                 <input
-                  className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
+                  type="text"
+                  className="block w-full px-3 py-2 bg-[#f4f4f4] mb-3 border-0 rounded-lg shadow-md shadow-gray-400"
                   placeholder="Full Name*"
                 />
                 <input
-                  className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
-                  placeholder="Business Email Address*"
+                  type="email"
+                  className="block w-full px-3 py-2 bg-[#f4f4f4] mb-3 border-0 rounded-lg shadow-md shadow-gray-400"
+                  placeholder="Business Email*"
                 />
                 <input
-                  className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
-                  placeholder="Full Name*"
-                />
-                <input
-                  className="block w-full px-3 py-2 bg-[#f4f4f4] mb-2 rounded-lg"
+                  type="phone"
+                  className="block w-full px-3 py-2 bg-[#f4f4f4] mb-3 border-0 rounded-lg shadow-md shadow-gray-400"
                   placeholder="Phone Number*"
                 />
                 <textarea
-                  className="block w-full px-3 py-2 bg-[#f4f4f4] border-0 rounded-md"
-                  placeholder="messages*"
+                  className="block w-full px-3 py-2 bg-[#f4f4f4] border-0 rounded-md shadow-md shadow-gray-400 mb-3"
+                  placeholder="Message*"
                 />
-                <button className="w-full px-6 py-2 mt-10 bg-[#ef5523] text-white rounded-full hover:bg-[#ff6e3e]">
+                <textarea
+                  className="block w-full px-3 py-2 bg-[#f4f4f4] border-0 rounded-md shadow-md shadow-gray-400"
+                  placeholder="Address*"
+                />
+                <button className="w-full px-6 py-2 mt-10 bg-[#ef5523] text-white rounded-full hover:bg-[#ff6e3e] shadow-md shadow-gray-400">
                   Submit
                 </button>
               </form>

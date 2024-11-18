@@ -49,7 +49,7 @@ function Report() {
         <div className="text-center relative z-10 mt-6">
           <button
             onClick={contact}
-            className="text-white bg-orange-500 rounded-full px-6 py-2 text-sm sm:text-base md:text-lg"
+            className="text-white bg-orange-500 hover:bg-orange-600 rounded-full px-6 py-2 text-sm sm:text-base md:text-lg"
           >
             Connect Now
           </button>
@@ -121,7 +121,7 @@ function Report() {
           Key Metrics and KPIs
         </h2>
         <div className="flex flex-col lg:flex-row items-start gap-6">
-          <ul className="w-full lg:w-1/2 space-y-12 mt-5 list-disc ">
+          <ul className="w-full lg:w-1/2 space-y-6 mt-5 list-disc ">
             <li>
               <h4 className="text-xl font-semibold text-gray-800">
                 Traffic and Usage Reports
@@ -153,6 +153,22 @@ function Report() {
               </h4>
               <p className="text-gray-600">
                 Data on user journey, bounce rate, and time spent.
+              </p>
+            </li>
+            <li>
+              <h4 className="text-xl font-semibold text-gray-800">
+              Customer Satisfaction Score (CSAT):
+              </h4>
+              <p className="text-gray-600">
+              Collected through surveys, CSAT gauges user satisfaction based on a specific experience.
+              </p>
+            </li>
+            <li>
+              <h4 className="text-xl font-semibold text-gray-800">
+              Net Promoter Score (NPS):
+              </h4>
+              <p className="text-gray-600">
+              NPS measures user loyalty by asking how likely users are to recommend the product to others.
               </p>
             </li>
           </ul>

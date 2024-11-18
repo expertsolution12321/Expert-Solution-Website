@@ -28,8 +28,8 @@ function Expense() {
         <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-center m-2 p-2">
           <span className="text-white font-bold">
             Streamline Your Finances with Our{" "}
-            <span className="text-orange-500">Expenses and Billing</span>{" "}
-            Management System
+            <br/>
+            <span className="text-orange-500">Expenses and Billing Management System</span>
           </span>
         </h1>
 
@@ -44,13 +44,13 @@ function Expense() {
         <div className="relative z-10 mt-6 flex flex-wrap gap-4 justify-center">
           <button
             onClick={contact}
-            className="text-white bg-orange-500 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg"
+            className="text-white bg-orange-500 hover:bg-orange-600 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg"
           >
             Connect Now
           </button>
           <button
             onClick={contact}
-            className="text-white bg-orange-500 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg"
+            className="text-white bg-orange-500 hover:bg-orange-600 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg"
           >
             Explore Features
           </button>

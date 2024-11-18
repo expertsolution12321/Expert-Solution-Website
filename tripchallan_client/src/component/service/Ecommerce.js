@@ -101,23 +101,23 @@ export default function Ecommerce() {
               <div className="w-full px-3">
                 <form className="w-full flex flex-col items-center justify-center space-y-3">
                   <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg shadow-md shadow-gray-400"
                     placeholder="Full Name*"
                   />
                   <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg shadow-md shadow-gray-400"
                     placeholder="Business Email Address*"
                   />
                   <input
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg shadow-md shadow-gray-400"
                     placeholder="Phone Number*"
                   />
                   <textarea
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg shadow-md shadow-gray-400"
                     placeholder="Message*"
                     rows="3"
                   ></textarea>
-                  <button className="w-full px-6 py-2 mt-4 bg-gradient-to-r from-[#000031] to-[#590338] text-white rounded-full hover:bg-gradient-to-l ">
+                  <button className="w-full px-6 py-2 mt-4 bg-gradient-to-r from-[#000031] to-[#590338] text-white rounded-full hover:bg-gradient-to-l shadow-md shadow-gray-400">
                     Submit
                   </button>
                 </form>
@@ -201,8 +201,7 @@ export default function Ecommerce() {
                 Cloud & Headless Commerce
               </h1>
               <p className="text-sm sm:text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered E-commerce
-                solutions that provide your customer with immersive services.
+              Cloud & Headless Commerce represents the future of digital commerce, enabling businesses to offer flexible, scalable, and personalized online shopping experiences.
               </p>
             </div>
 
@@ -212,8 +211,7 @@ export default function Ecommerce() {
                 M-commerce Development
               </h1>
               <p className="text-sm sm:text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered E-commerce
-                solutions that provide your customer with immersive services.
+              M-commerce (mobile commerce) is the buying and selling of goods and services through wireless handheld devices such as retaining critical data, retaining critical data, smartphones and tablets.
               </p>
             </div>
 
@@ -223,8 +221,7 @@ export default function Ecommerce() {
                 E-commerce Platform Migration
               </h1>
               <p className="text-sm sm:text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered E-commerce
-                solutions that provide your customer with immersive services.
+              E-commerce platform migration refers to the process of transitioning from one E-Commerce platform to another, ensuring that a business's  retaining critical data, functionality, and performance. 
               </p>
             </div>
 
@@ -234,8 +231,7 @@ export default function Ecommerce() {
                 E-commerce maintainance & support
               </h1>
               <p className="text-sm sm:text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered E-commerce
-                solutions that provide your customer with immersive services.
+              E-commerce maintenance and support are critical ongoing services that ensure the smooth operation, security, and performance of an E-Commerce website or platform.  platform running at peak performance.
               </p>
             </div>
 
@@ -245,8 +241,7 @@ export default function Ecommerce() {
                 B2B E-commerce portal Developemnt
               </h1>
               <p className="text-sm sm:text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered E-commerce
-                solutions that provide your customer with immersive services.
+              B2B (Business-to-Business) E-Commerce portal development involves creating a secure, user-friendly, and feature-rich online platform designed to facilitate transactions and business. 
               </p>
             </div>
 
@@ -256,8 +251,7 @@ export default function Ecommerce() {
                 E-commerce CRM Integrations
               </h1>
               <p className="text-sm sm:text-base text-center font-medium text-gray-600 group-hover:text-white">
-                Highly scalable, secure, and super fast cloud-powered E-commerce
-                solutions that provide your customer with immersive services.
+              E-commerce CRM  integrations enable businesses to synchronize their e-commerce platforms with CRM systems to enhance customer engagement, streamline sales processes.
               </p>
             </div>
           </div>
