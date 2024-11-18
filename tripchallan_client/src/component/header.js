@@ -126,19 +126,19 @@ export default function Header() {
         navigate("/webcms");
         break;
       case "fleet":
-        navigate("/fleetmanagement");
+        navigate("/fleetsolution");
         break;
       case "driver":
-        navigate("/driver");
+        navigate("/driversolution");
         break;
       case "billing":
-        navigate("/expense");
+        navigate("/expensesolution");
         break;
       case "load":
-        navigate("/load");
+        navigate("/loadsolution");
         break;
       case "report":
-        navigate("/analytics-report");
+        navigate("/analytics-reportsol");
         break;
       case "group":
         navigate("/groupmng");
@@ -577,7 +577,7 @@ export default function Header() {
                       className={`absolute hidden  mt-2 w-48 p-0 bg-white shadow-lg rounded-lg transform transition-all duration-300 group-hover:block left-10 top-4 `}
                     >
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="secommerce"
                       >
@@ -585,61 +585,61 @@ export default function Header() {
                       </li>
 
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="smobileapp"
                       >
-                        Mobile App
+                        Mobile App solution
                       </li>
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="webcms"
                       >
-                        Web and CMS
+                        Web and CMS solution
                       </li>
                       {/* ==================== */}
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="fleet"
                       >
-                        Fleet Management
+                        Fleet Management solution
                       </li>
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="driver"
                       >
-                        Driver & Vahicle Management
+                        Driver & Vahicle Management solution
                       </li>
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="load"
                       >
-                        Load and Cargo Management
+                        Load and Cargo Management solution
                       </li>
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="billing"
                       >
-                        Expense & Billing Management
+                        Expense & Billing Management solution
                       </li>
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="report"
                       >
-                        Analytics & Reporting
+                        Analytics & Reporting solution
                       </li>
                       <li
-                        className="px-4 py-2 hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
+                        className="px-4  hover:bg-gray-200 hover:border-b-2 hover:border-orange-500 m-2 cursor-pointer"
                         onClick={handleNavigationSolution}
                         id="group"
                       >
-                        Group Management
+                        Group Management solution
                       </li>
                       {/* ==================== */}
                     </ul>

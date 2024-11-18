@@ -103,7 +103,7 @@ export default function Digitalmark() {
         <div className=" container flex flex-col max-w-[1440px]  md:flex-row items-center justify-center mx-auto p-8 space-x-8 ">
           <div className="text-white w-full ">
             <h1 className="font-bold text-5xl mb-6">
-              Digital Marketing Services
+            Elevate Your Brand with Expert Digital Marketing Solutions
             </h1>
             <p className="font-medium text-base tracking-wider leading-relaxed">
               {" "}

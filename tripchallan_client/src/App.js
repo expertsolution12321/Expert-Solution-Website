@@ -25,13 +25,13 @@ import Trans from "./component/Industries/transport";
 import Digital from "./component/service/Digitalmark";
 import Ecommerce from "./component/service/Ecommerce";
 import Gpssupplier from "./component/service/gpssupplier";
-import Mobileapp from "./component/solutions/mobileapp";
+import Mobileapp from "./component/service/mobileApp";
 import Taxiserv from "./component/service/Taxiservices";
 import Ui from "./component/service/UI-UX";
 
 // solutions
 import SEcommerce from "./component/solutions/ecommerce";
-import SMobile from "./component/solutions/mobileapp";
+import SMobile from "./component/solutions/smobileapp";
 import Web from "./component/solutions/webcms";
 import Header from "./component/header";
 import Drivervehicle from "./component/service/Driver&vehicle";
@@ -40,8 +40,12 @@ import Groupmng from "./component/service/groupmang";
 import FleetManagement from "./component/service/FleetManagement";
 import Load from "./component/service/load";
 import Report from "./component/service/report";
-import Footernew from "./component/Footernew";
-import FooterNew from "./component/Footernew";
+import Fleetsolution from "./component/solutions/fleetsolution";
+import Driversol from "./component/solutions/Driversol";
+import Loadsolution from "./component/solutions/loadsolution";
+import Expensesol from "./component/solutions/expensesol";
+import Reportsol from "./component/solutions/reportsol";
+
 // Function to check if it's the user's first visit
 function checkFirstVisit() {
   // Check if the 'firstVisit' cookie exists
@@ -146,11 +150,12 @@ function App() {
           <Route path="/secommerce" element={<SEcommerce />} />
           <Route path="/Smobileapp" element={<SMobile />} />
           <Route path="/webcms" element={<Web />} />
-
-
-
+          <Route path="/fleetsolution" element={<Fleetsolution />} />
+          <Route path="/driversolution" element={<Driversol />} />
+          <Route path="/loadsolution" element={<Loadsolution />} />
+          <Route path="/expensesolution" element={<Expensesol />} />
+          <Route path="/analytics-reportsol" element={<Reportsol />} />
           {/* <Route path="" element={<FooterNew />} /> */}
-          
         </Routes>
         <Footer />
       </Router>

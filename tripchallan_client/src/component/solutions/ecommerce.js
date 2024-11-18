@@ -23,11 +23,9 @@ import {
   FaGlobe,
   FaRocket,
   FaThumbsUp,
-  FaTrophy,
   FaWindows,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { FaGifts } from "react-icons/fa6";
 export default function Ecommerce() {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -46,9 +44,19 @@ export default function Ecommerce() {
         <div className="container relative flex items-center h-full">
           <div className="absolute left-0 right-0 text-center">
             <h1 className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[36px] font-semibold text-white">
-              Reliable <span className=" font-bold">Trucking and  Transportation</span> Services.
+              Reliable{" "}
+              <span className=" font-bold">Trucking and Transportation</span>{" "}
+              Services.
             </h1>
-            <p className="text-white text-lg font-semibold">Reliable Trucking and Transportation Services is dedicated to offering seamless and trustworthy logistics solutions for businesses of all sizes. With a fleet of well-maintained vehicles and a team of experienced drivers, we ensure that your cargo reaches its destination safely and on time. Our services are designed to be flexible and responsive to your needs, whether for local deliveries or long-haul transport.</p>
+            <p className="text-white text-lg font-semibold">
+              Reliable Trucking and Transportation Services is dedicated to
+              offering seamless and trustworthy logistics solutions for
+              businesses of all sizes. With a fleet of well-maintained vehicles
+              and a team of experienced drivers, we ensure that your cargo
+              reaches its destination safely and on time. Our services are
+              designed to be flexible and responsive to your needs, whether for
+              local deliveries or long-haul transport.
+            </p>
             <button
               className="mt-4 px-4 py-2 border border-transparent text-white rounded-lg bg-gradient-to-r from-red-600 to-blue-700 hover:from-blue-700 hover:to-red-600 transition duration-300"
               onClick={handleClick}
@@ -292,16 +300,24 @@ export default function Ecommerce() {
               </div>
               <ul className="mt-2 space-y-2 p-2">
                 <li className="flex items-center space-x-2 py-2 border-b-2">
-                  <img src={mysql} className="w-6 h-6 text-red-600" />
+                  <img
+                    src={mysql}
+                    className="w-6 h-6 text-red-600"
+                    alt="mysql icon"
+                  />
                   <span>MYSQL</span>
                 </li>
                 <li className="flex items-center space-x-2 py-2 border-b-2">
-                  <img src={mariadb} className="w-6 h-6 text-orange-500" />
+                  <img
+                    src={mariadb}
+                    className="w-6 h-6 text-orange-500"
+                    alt="mariadb icon"
+                  />
                   <span>MariaDB</span>
                 </li>
                 <li className="flex items-center space-x-2 py-2">
-                  <img src={mongodb} className="w-6 h-6" />
-                  <span>MangoDB</span>
+                  <img src={mongodb} className="w-6 h-6" alt="mongodb icon" />
+                  <span>MongoDB</span>
                 </li>
               </ul>
             </div>
@@ -321,7 +337,11 @@ export default function Ecommerce() {
                   <span>MVC</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <img src={agile} className="w-6 h-6 text-purple-500" />
+                  <img
+                    src={agile}
+                    className="w-6 h-6 text-purple-500"
+                    alt="agile icon"
+                  />
                   <span>AgileMethodology</span>
                 </li>
               </ul>
