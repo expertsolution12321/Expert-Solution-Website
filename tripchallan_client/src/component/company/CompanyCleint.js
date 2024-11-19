@@ -22,8 +22,7 @@ export default function Client() {
             ( Trusted by Industry Leaders and Trailblazers )
           </p>
           <p className="text-center  text-white max-w-2xl ">
-            We’re proud to serve a diverse range of clients who rely on our Trip
-            Management System to streamline their logistics and enhance their
+            We’re proud to serve a diverse range of clients who rely on our Expert Solutions to streamline their logistics and enhance their
             travel experiences. From small businesses to large corporations, our
             clients span various industries including logistics, transportation,
             corporate travel, and field services each with unique needs and

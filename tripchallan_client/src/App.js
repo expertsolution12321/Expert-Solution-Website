@@ -45,6 +45,7 @@ import Driversol from "./component/solutions/Driversol";
 import Loadsolution from "./component/solutions/loadsolution";
 import Expensesol from "./component/solutions/expensesol";
 import Reportsol from "./component/solutions/reportsol";
+import PrivacyPolicy from "./component/PrivacyPolicy";
 
 // Function to check if it's the user's first visit
 function checkFirstVisit() {
@@ -156,6 +157,9 @@ function App() {
           <Route path="/expensesolution" element={<Expensesol />} />
           <Route path="/analytics-reportsol" element={<Reportsol />} />
           {/* <Route path="" element={<FooterNew />} /> */}
+
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
         </Routes>
         <Footer />
       </Router>

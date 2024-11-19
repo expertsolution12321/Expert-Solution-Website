@@ -33,7 +33,7 @@ const About = () => {
         <div className="flex flex-col  items-center p-4  mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold text-center capitalize mb-4">
             Welcome to Our{" "}
-            <span className="text-orange-500">Trip Management System</span>
+            <span className="text-orange-500">Expert Solutions</span>
           </h1>
           <p className="text-white text-lg">
             {" "}
@@ -88,7 +88,7 @@ const About = () => {
               Core Values
             </h3>
             <p className="text-white mb-2">
-              Our trip management system is built on a foundation of
+              Our Expert Solutions is built on a foundation of
               <b>
                 {" "}
                 reliability, efficiency, and safety, ensuring smooth,

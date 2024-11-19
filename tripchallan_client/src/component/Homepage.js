@@ -91,9 +91,27 @@ const services = [
   },
 ];
 
-function Homepage() {
-  const navigate = useNavigate();
+// Location address
+const addresses = [
+  {
+    location: "78, Gautam Nagar, Bhubaneswar, Odisha 751014",
+    mapLink:
+      "https://www.google.com/maps?q=78,+Gautam+Nagar,+Bhubaneswar,+Odisha+751014",
+  },
+  {
+    location:
+      "EXPERT SOLUTIONS C,25, RAMKUND VIHAR, Samta Colony, Raipur, Chhattisgarh 492001",
+    mapLink:
+      "https://www.google.com/maps?q=EXPERT+SOLUTIONS+C,25,+RAMKUND+VIHAR,+Samta+Colony,+Raipur,+Chhattisgarh+492001",
+  },
+];
 
+function Homepage() {
+  const handleButtonClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  const navigate = useNavigate();
   const handleNavigate = (title) => {
     switch (title) {
       case "E-commerce":
@@ -158,7 +176,7 @@ function Homepage() {
     e.preventDefault();
 
     try {
-      await axios.post("http://192.168.29.165:5000/contact/create", {
+      await axios.post("https://expersolution.onrender.com/api/create", {
         firstName: name,
         lastName: lname,
         email: email,
@@ -239,7 +257,7 @@ function Homepage() {
           slidesPerView={1}
           navigation
           autoplay={{
-            delay: 3000, // 3 seconds delay
+            delay: 3000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -251,22 +269,22 @@ function Homepage() {
           {services.map((service, index) => (
             <SwiperSlide key={index}>
               <div
-                className="flip-card h-auto w-full p-2 bg-white rounded-lg shadow-sm shadow-gray-400 cursor-pointer"
+                className="flip-card h-auto w-full  bg-white rounded-xl shadow-md shadow-sky-500 cursor-pointer m-2"
                 onClick={() => handleNavigate(service.title)}
               >
-                <div className="flip-card-inner h-[310px]">
+                <div className="flip-card-inner h-[240px]">
                   <div className="flip-card-front">
                     <img
                       src={service.image}
                       alt={service.title}
                       className="h-60 w-full rounded-lg"
                     />
-                    <h3 className="text-lg md:text-2xl font-semibold mt-1">
+                  </div>
+                  <div className="flip-card-back flex flex-col items-center justify-center bg-gray-100 p-6 rounded-lg bg-gradient-to-b from-sky-50 via-sky-300 to-sky-400">
+                    <h3 className="text-lg md:text-2xl font-bold mt-1 text-center ">
                       {service.title}
                     </h3>
-                  </div>
-                  <div className="flip-card-back">
-                    <p className="text-sm md:text-base mt-2 font-semibold">
+                    <p className="text-sm md:text-base mt-1 font-medium text-center">
                       {service.description}
                     </p>
                   </div>
@@ -317,22 +335,22 @@ function Homepage() {
             </div>
 
             {/* Location Section */}
-            <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
-              <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
-              <button
-                // onClick={location}
-                rel="noopener noreferrer"
-                className="font-bold w-72 md:w-80 text-white"
+            {addresses.map((address, index) => (
+              <div
+                key={index}
+                className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50"
               >
-                78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014
-                <br />
-                c-25 Ramkund Vihar Colony, samta colony(Near Vivekanand Ashram),
-                Raipur.
-              </button>
-            </div>
+                <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
+                <button
+                  onClick={() => handleButtonClick(address.mapLink)} // Call function on click
+                  className="font-bold w-72 md:w-80 text-white"
+                >
+                  {address.location}
+                </button>
+              </div>
+            ))}
           </div>
         </div>
-
         {/* Contact Us Form Section */}
         <div className="w-full md:w-2/5 p-2 md:ml-2 pt-10">
           <form onSubmit={handleSubmit}>
