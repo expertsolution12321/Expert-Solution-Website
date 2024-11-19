@@ -262,7 +262,7 @@ export default function Header() {
             <img
               alt="Logo"
               src={logo}
-              className=" cursor-pointer h-20"
+              className="cursor-pointer h-16"
               onClick={home}
             />
 

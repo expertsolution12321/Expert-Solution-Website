@@ -1,57 +1,31 @@
 import { useState } from "react";
 import axios from "axios";
-// import {
-//   ArrowPathIcon,
-//   ChartPieIcon,
-//   CursorArrowRaysIcon,
-//   FingerPrintIcon,
-//   SquaresPlusIcon,
-// } from "@heroicons/react/24/outline";
-
 import contact from "./images/contact.jpg";
 import { FaEnvelope } from "react-icons/fa";
-import {
-  FaLocationDot,
-  FaPhone,
-} from "react-icons/fa6";
+import { FaLocationDot, FaPhone } from "react-icons/fa6";
 
-import {} from "@headlessui/react";
-// changeend
-
-// const products = [
-//   {
-//     name: "Analytics",
-//     description: "Get a better understanding of your traffic",
-//     href: "#",
-//     icon: ChartPieIcon,
-//   },
-//   {
-//     name: "Engagement",
-//     description: "Speak directly to your customers",
-//     href: "#",
-//     icon: CursorArrowRaysIcon,
-//   },
-//   {
-//     name: "Security",
-//     description: "Your customers’ data will be safe and secure",
-//     href: "#",
-//     icon: FingerPrintIcon,
-//   },
-//   {
-//     name: "Integrations",
-//     description: "Connect with third-party tools",
-//     href: "#",
-//     icon: SquaresPlusIcon,
-//   },
-//   {
-//     name: "Automations",
-//     description: "Build strategic funnels that will convert",
-//     href: "#",
-//     icon: ArrowPathIcon,
-//   },
-// ];
+const addresses = [
+  {
+    location: "78, Gautam Nagar, Bhubaneswar, Odisha 751014",
+    mapLink:
+      "https://www.google.com/maps?q=78,+Gautam+Nagar,+Bhubaneswar,+Odisha+751014",
+  },
+  {
+    location:
+      "EXPERT SOLUTIONS C,25, RAMKUND VIHAR, Samta Colony, Raipur, Chhattisgarh 492001",
+    mapLink:
+      "https://www.google.com/maps?q=EXPERT+SOLUTIONS+C,25,+RAMKUND+VIHAR,+Samta+Colony,+Raipur,+Chhattisgarh+492001",
+  },
+];
 
 export default function Contact() {
+  const [otp, setOtp] = useState("");
+  const [isOtpVisible, setIsOtpVisible] = useState(false);
+  const [otpVerified, setOtpVerified] = useState(false);
+  const [otpSent, setOtpSent] = useState(false);
+  const [otpResponse, setOtpResponse] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const [name, setName] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -60,31 +34,95 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
+  // Send OTP
+  const handleVerifyEmail = async () => {
     try {
-      await axios.post("http://192.168.29.87:5000/contact/create", {
-        firstName: name,
-        lastName: lname,
-        email: email,
-        phoneNumber: phone,
-        address: address,
-        message: message,
-      });
-
-      setSuccessMessage("Form submitted successfully!");
-
-      setTimeout(() => {
-        window.location.reload();
-      }, 2000);
-      alert("Form submitted successfully");
+      setLoading(true);
+      const response = await axios.post(
+        "https://expersolution.onrender.com/api/get",
+        { email }
+      );
+      if (response.status === 200) {
+        setOtpSent(true);
+        setOtpResponse(response.data.message);
+        setIsOtpVisible(true);
+        alert("OTP sent successfully!");
+      } else {
+        alert("Failed to send OTP.");
+      }
     } catch (error) {
-      console.error("Error submitting the form:", error);
-      alert("Failed to submit the form. Please try again.");
+      alert("Error sending OTP.");
+    } finally {
+      setLoading(false);
     }
   };
 
+  // Verify OTP
+  const handleVerifyOtp = async () => {
+    if (!otp) {
+      alert("Please enter the OTP.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const response = await axios.post(
+        "https://expersolution.onrender.com/api/validate",
+        { otp, email }
+      );
+      if (response.status === 200 && response.data.success) {
+        setOtpVerified(true);
+        alert("OTP Verified!");
+      } else {
+        alert("Invalid OTP. Try again.");
+      }
+    } catch (error) {
+      alert("Error verifying OTP.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Submit the form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!otpVerified) {
+      alert("Please verify the OTP first.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const response = await axios.post(
+        "https://expersolution.onrender.com/api/create",
+        {
+          firstName: name,
+          lastName: lname,
+          email: email,
+          phoneNumber: phone,
+          address: address,
+          message: message,
+        }
+      );
+      if (response.status === 200) {
+        setSuccessMessage("Form submitted successfully!");
+        alert("Form submitted successfully!");
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      } else {
+        alert("Failed to submit the form. Please try again.");
+      }
+    } catch (error) {
+      alert("Error submitting the form.");
+    } finally {
+      setLoading(false);
+    }
+  };
+  const handleButtonClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
     <>
       {/* Banner Section */}
@@ -94,7 +132,7 @@ export default function Contact() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundBlendMode: "multiply",
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust color and opacity as needed
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
         }}
         className="relative isolate h-56 md:h-[25rem] flex items-center justify-center overflow-hidden bg-cover bg-center w-full"
       >
@@ -119,11 +157,9 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className="pt-8 text-base md:text-xl leading-6">
-              A Trip Management System is a digital solution designed to
-              streamline and automate the process of managing travel and
-              transportation logistics. It enables users, especially businesses
-              in the transportation and logistics sector, to efficiently plan,
-              track, and document trips for vehicles and drivers.
+              A Expert Solutions is a digital solution designed to streamline
+              and automate the process of managing travel and transportation
+              logistics.
             </p>
           </div>
           <div className="flex flex-col space-y-4">
@@ -142,7 +178,7 @@ export default function Contact() {
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
               <FaEnvelope className="text-xl md:text-2xl w-8 md:w-10 text-white" />
               <a
-                href="mailto:expertsolution@gmail.com"
+                href="mailto:expertsolutionsbbsr@gmail.com"
                 className="font-bold w-72 md:w-80 text-white hover:underline"
               >
                 expertsolutionsbbsr@gmail.com
@@ -150,18 +186,20 @@ export default function Contact() {
             </div>
 
             {/* Location Section */}
-            <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
-              <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=78+Gautam+Nagar+St,+Bapuji+Nagar,+Bhubaneswar,+Odisha+751014"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold w-72 md:w-80 text-white hover:underline"
+            {addresses.map((address, index) => (
+              <div
+                key={index}
+                className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50"
               >
-                78, Gautam Nagar St., Bapuji Nagar, Bhubaneswar, Odisha 751014 <br/>
-                c-25 Ramkund Vihar Colony, samta colony(Near Vivekanand Ashram), Raipur.
-              </a>
-            </div>
+                <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
+                <button
+                  onClick={() => handleButtonClick(address.mapLink)}
+                  className="font-bold w-72 md:w-80 text-white"
+                >
+                  {address.location}
+                </button>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -173,7 +211,7 @@ export default function Contact() {
                 <h1 className="leading-7 text-gray-900 text-2xl md:text-4xl font-bold">
                   Contact Us
                 </h1>
-                <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6">
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="firstName"
@@ -192,7 +230,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="sm:col-span-3">
+                  <div className="sm:col-span-3 ">
                     <label
                       htmlFor="lastName"
                       className="block text-sm font-medium leading-6 text-gray-900"
@@ -209,7 +247,7 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-
+                  {/* Email Section */}
                   <div className="sm:col-span-full">
                     <label
                       htmlFor="email"
@@ -217,17 +255,61 @@ export default function Contact() {
                     >
                       Email address
                     </label>
-                    <div className="mt-2">
+                    <div className="mt-2 flex items-center space-x-2">
                       <input
                         type="email"
+                        id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        placeholder="Enter your email"
                         required
                       />
+                      <button
+                        onClick={handleVerifyEmail}
+                        className="bg-indigo-600 text-white px-4 py-1 rounded-md focus:outline-none hover:bg-indigo-700"
+                      >
+                        Send OTP
+                      </button>
                     </div>
-                  </div>
 
+                    {isOtpVisible && !otpVerified && (
+                      <div className="mt-4">
+                        <label
+                          htmlFor="otp"
+                          className="block text-sm font-medium leading-6 text-gray-900"
+                        >
+                          OTP
+                        </label>
+                        <div className="mt-2 flex items-center space-x-2">
+                          <input
+                            type="text"
+                            id="otp"
+                            value={otp}
+                            onChange={(e) => setOtp(e.target.value)}
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter OTP"
+                            required
+                          />
+                          <button
+                            onClick={handleVerifyOtp}
+                            className="bg-green-600 text-white px-4 py-2 rounded-md focus:outline-none hover:bg-green-700"
+                          >
+                            Verify OTP
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
+                    {otpVerified && (
+                      <div className="mt-4">
+                        <p className="text-sm text-green-600">
+                          OTP Verified! You can now proceed.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                  {/* Other Fields */}
                   <div className="sm:col-span-full">
                     <label
                       htmlFor="phoneNumber"
@@ -245,6 +327,7 @@ export default function Contact() {
                       />
                     </div>
                   </div>
+                  {/* Other Fields */}
                   <div className="col-span-full">
                     <label
                       htmlFor="message"
@@ -271,7 +354,7 @@ export default function Contact() {
                       Address
                     </label>
                     <div className="mt-2">
-                      <textarea 
+                      <textarea
                         type="text"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
@@ -283,7 +366,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center justify-end gap-x-6">
+              <div className="mt-6 flex items-center justify-end gap-x-4">
                 <button
                   type="reset"
                   className="text-md font-semibold leading-6 bg-red-600 text-white rounded-md px-3 py-2.5 w-28 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-200 hover:bg-red-500"
@@ -292,7 +375,7 @@ export default function Contact() {
                 </button>
                 <button
                   type="submit"
-                  className="rounded-md bg-indigo-600 px-4 py-2.5 text-md w-aut font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-green-500 px-4 py-2.5 text-md w-aut font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                 >
                   Submit
                 </button>
