@@ -182,37 +182,8 @@ function Homepage() {
   return (
     <>
       {/* Banner  */}
-      {/* <div
-        style={{
-          backgroundImage: `url('${banner}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundBlendMode: "multiply",
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
-        }}
-        className="relative isolate h-96 md:h-[32rem] flex items-center justify-center overflow-hidden bg-cover bg-center w-full"
-      >
-        <div className="absolute inset-0 flex flex-col items-center text-center px-4 md:px-8 space-y-4 sm:mt-4 lg:mt-24 ">
-          <h1 className="text-3xl md:text-6xl font-mono font-bold text-white">
-            Effortless <span className="text-orange-500 ">Trip Management</span>
-            , All in One Place
-          </h1>
-          <p className="text-white text-xl font-semibold">
-            Plan | Track | Succeed
-          </p>
-          <p className="text-sm md:text-base text-white max-w-2xl">
-            Welcome to a smarter way to manage your journeys. Our Trip
-            Management System streamlines every aspect of travel planning and
-            logistics, bringing all your trip details under one easy-to-use
-            platform. From real-time tracking to insightful data, we provide the
-            tools you need to optimize routes, enhance safety, and stay
-            organized.
-          </p>
-        </div>
-      </div> */}
-
       <section className="w-full">
-      <CarouselDemo />
+        <CarouselDemo />
       </section>
 
       {/* About US Start */}
@@ -227,7 +198,7 @@ function Homepage() {
           <div className="w-full md:w-1/2 p-2 md:mr-4 pt-6 md:pt-0">
             <h3 className="text-xl md:text-3xl text-red-600 font-bold pb-4">
               Welcome to Our{" "}
-              <span className="text-green-500">Trip Management System</span>
+              <span className="text-green-500">Expert Solutions</span>
             </h3>
             <p className="text-sm md:text-base pb-4">
               All our solutions are customized & designed to meet the specific
@@ -258,55 +229,6 @@ function Homepage() {
         </div>
       </div>
       {/* services */}
-      {/* <div className="h-auto p-10 bg-slate-200" id="Services">
-        <h3 className="flex text-4xl font-mono font-bold text-black justify-center items-center text-center border-green-300">
-          Services
-        </h3>
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation
-          autoplay={{
-            delay: 3000, // 3 seconds delay
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-          }}
-        >
-          {services.map((service, index) => (
-            <SwiperSlide key={index}>
-              <div className="flip-card h-auto w-full p-2 bg-white rounded-lg shadow-sm shadow-gray-400">
-                <div className="flip-card-inner h-[310px]" >
-                  <div className="flip-card-front">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="h-60 w-full rounded-lg"
-                    />
-                    <h3 className="text-lg md:text-2xl font-semibold mt-1" 
-                    // onClick={() => handlenavigate(service.title)}
-                    >
-                      {service.title}
-                      
-                    </h3>
-                  </div>
-                  <div className="flip-card-back ">
-                    <p className="text-sm md:text-base mt-2 font-semibold">
-                      {service.description}
-                    </p>
-                  </div>
-                  
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div> */}
-
       <div className="h-auto p-10 bg-slate-200" id="Services">
         <h3 className="flex text-4xl font-mono font-bold text-black justify-center items-center text-center border-green-300">
           Services
@@ -364,11 +286,11 @@ function Homepage() {
               Get In Touch
             </h2>
             <p className="pt-8 text-base md:text-lg leading-6">
-              A Trip Management System is a digital solution designed to
-              streamline and automate the process of managing travel and
-              transportation logistics. It enables users, especially businesses
-              in the transportation and logistics sector, to efficiently plan,
-              track, and document trips for vehicles and drivers
+              Expert Solutions is a digital solution designed to streamline and
+              automate the process of managing travel and transportation
+              logistics. It enables users, especially businesses in the
+              transportation and logistics sector, to efficiently plan, track,
+              and document trips for vehicles and drivers
             </p>
           </div>
           <div className="flex flex-col space-y-4">

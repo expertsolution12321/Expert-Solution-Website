@@ -31,13 +31,13 @@ const Carousel = ({ carouselImages }) => {
   useEffect(() => {
     const id = window.setInterval(() => {
       setCarouselItem((carouselItem) => (carouselItem + 1) % numCarouselItems);
-    }, 5000);
+    }, 2000);
     return () => window.clearInterval(id);
   }, []);
 
   return (
     <>
-      <div className="relative my-4 h-[70vh] w-[100%] overflow-hidden m-auto">
+      <div className="relative  h-[70vh] w-[100%] overflow-hidden m-auto">
         <button
           onClick={changeToPrevious}
           className="absolute top-0 bottom-0 left-0 flex items-center justify-center p-4 border-0 text-center font-bold bg-gray-500 opacity-30 hover:opacity-60 z-10"
@@ -76,16 +76,20 @@ const Carousel = ({ carouselImages }) => {
               <img
                 src={carouselImg.src}
                 className="block w-full h-full object-cover"
-                alt="..."
+                alt={carouselImg.label}
               />
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
               {/* Text */}
-              <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center">
-                <h5 className="text-[40px] text-white font-bold">{carouselImg.label}</h5>
-                <p className="text-[20px] text-white">{carouselImg.text}</p>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center px-4">
+                <h5 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white font-bold mb-2">
+                  {carouselImg.label}
+                </h5>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white">
+                  {carouselImg.text}
+                </p>
               </div>
             </div>
           ))}

@@ -7,6 +7,6 @@ const FooterDemo = () => {
       <FooterNew theme="light" />
     </div>
   );
-}; 
+};
 
 export default FooterDemo;

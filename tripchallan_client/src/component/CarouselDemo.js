@@ -22,7 +22,7 @@ const CarouselDemo = () => {
           for Seamless Trip Management
         </span>
       ),
-      text: "Streamline your trip planning and execution with our expert trip management services. From route optimization to real-time tracking and comprehensive reporting, we provide everything you need to enhance efficiency, reduce costs, and ensure timely deliveries. ",
+      text: "Streamline your trip planning and execution with our expert trip management services. From route optimization to real-time tracking and comprehensive reporting. ",
     },
     {
       src: pic,
@@ -32,32 +32,37 @@ const CarouselDemo = () => {
           Development That Matches Your Needs
         </span>
       ),
-      text: "Streamline your trip planning and execution with our expert trip management services. From route optimization to real-time tracking and comprehensive reporting, we provide everything you need to enhance efficiency, reduce costs, and ensure timely deliveries. ",
+      text: "Streamline your trip planning and execution with our expert trip management services. From route optimization to real-time tracking and comprehensive reporting. ",
     },
     {
       src: mobile,
-      label:
-        "A Technology Partnership With Expert solution Goes Beyond Your Mobile App Development ",
-      text: "The secret to winning the e-commerce game lies in having an online presence that matches the expectations of your audience and compels them to convert. And it calls for eCommerce website development expertise laser-focused on UX. To attract the desired audience, you need an e-commerce store that is visually stunning and conversion-focused.",
+      label: (
+        <span>
+          Partnering with experts means more than
+          <span className="text-orange-500">app development</span>
+        </span>
+      ),
+      text: "The secret to winning the e-commerce game lies in having an online presence that matches the expectations of your audience and compels them to convert.",
     },
     {
       src: uiux,
-      label: "Top-Notch Website Prototype Services",
+      label: (
+        <span>
+          Top-Notch Website
+          <span className="text-orange-500"> Prototype Services</span>
+        </span>
+      ),
       text: "Trip Management System is dedicated to accomplishing your business objectives by offering the best prototype website design elements for your projects.",
     },
     {
       src: digitalmark,
       label: (
         <span>
-          Elevate Your Brand with
-          <span className="text-orange-500 leading-8">
-            {" "}
-            Expert Digital Marketing{" "}
-          </span>
-          Solutions
+          Elevate Your Brand with{" "}
+          <span className="text-orange-500">Expert Digital Marketing</span>
         </span>
       ),
-      text: "Optimize efficiency, ensure safety, and cut costs with our advanced Fleet Management System. Track vehicles in real-time, schedule maintenance seamlessly, and gain actionable insights with powerful analytics. Your complete solution for smarter, more efficient fleet operations.",
+      text: "Optimize efficiency, ensure safety, and cut costs with our advanced Fleet Management System. ",
     },
     {
       src: fleet,
@@ -67,60 +72,58 @@ const CarouselDemo = () => {
           <span className="text-orange-500"> Fleet Operations</span>{" "}
         </span>
       ),
-      text: "The secret to winning the e-commerce game lies in having an online presence that matches the expectations of your audience and compels them to convert. And it calls for eCommerce website development expertise laser-focused on UX. To attract the desired audience, you need an e-commerce store that is visually stunning and conversion-focused.",
+      text: "The secret to winning the e-commerce game lies in having an online presence that matches the expectations of your audience and compels them to convert. ",
     },
     {
       src: driver,
-      label:(
+      label: (
         <span className="text-white font-bold">
-            <span className="text-orange-500">Driver & Vehicle</span> Management
-            System
-          </span>
+          <span className="text-orange-500">Driver & Vehicle</span> Management
+          System
+        </span>
       ),
-      text: "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations. This system provides a centralized platform to keep track of vehicle maintenance, driver assignments, compliance, and safety measures, helping you operate efficiently and safely.",
+      text: "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations. ",
     },
     {
       src: load,
       label: (
         <span className="text-white font-bold">
-            Efficient, Safe, and{" "}
-            <span className="text-orange-500">Trackable Cargo Solutions {' '}</span> 
-            for Your Business Needs
-          </span>
+          Efficient, Safe, and{" "}
+          <span className="text-orange-500">Trackable Cargo Solutions</span>
+        </span>
       ),
-      text: "Our Load and Cargo Management system streamlines the planning, tracking, and oversight of all cargo movements. This solution ensures every load is optimized for safety and efficiency, minimizing downtime and maximizing profitability. Real-time tracking, comprehensive reporting, and automated load balancing empower your team to handle cargo with precision and ease, whether managing single loads or large-scale operations.",
+      text: "Our Load and Cargo Management system streamlines the planning, tracking, and oversight of all cargo movements.",
     },
     {
       src: expense,
       label: (
         <span className="text-white font-bold">
-            Streamline Your Finances with Our{" "}
-            <br/>
-            <span className="text-orange-500">Expenses and Billing Management System</span>
-          </span>
+          Streamline Finances with Our <br />
+          <span className="text-orange-500">Billing Management System</span>
+        </span>
       ),
-      text: "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations. This system provides a centralized platform to keep track of vehicle maintenance, driver assignments, compliance, and safety measures, helping you operate efficiently and safely.",
+      text: "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations.",
     },
     {
       src: report,
       label: (
         <span className="text-white font-bold">
-            <span className="text-orange-500">Empower Your Business </span>
-            with Data-Driven Insights
-          </span>
+          <span className="text-orange-500">Empower Your Business</span> with
+          Insights
+        </span>
       ),
-      text: "Uncover key trends, track performance, and make informed decisions with our comprehensive Analytics & Reporting tools. Visualize real-time data, customize dashboards, and gain valuable insights to drive growth and optimize your strategies effectively.",
+      text: "Uncover key trends, track performance, and make informed decisions with our comprehensive Analytics & Reporting tools. Visualize real-time data, customize dashboards, and gain valuable insights.",
     },
     {
       src: group,
       label: (
         <span className="text-white font-bold ">
-            Efficiently Organize and Empower Your Teams with Our<br/>
-            <span className="text-orange-500">Group Management System</span>{" "}
-          </span>
+          Empower Teams with Our{" "}
+          <span className="text-orange-500">Group Management System</span>
+        </span>
       ),
-      text: "Our Group Management System streamlines team collaboration, task allocation, and communication, helping you manage projects seamlessly and ensure team accountability. With features like real-time updates, automated notifications, and robust analytics, you can create a structured workflow, keep everyone aligned with organizational goals, and drive productivity across all levels.",
-    }
+      text: "Our Group Management System streamlines team collaboration, task allocation, and communication, helping you manage projects seamlessly and ensure team accountability.",
+    },
   ];
 
   return (
