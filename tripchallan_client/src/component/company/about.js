@@ -56,7 +56,7 @@ const About = () => {
         <div className="w-full mt-5  p-2 pt-20 sm:mt-0 md:mr-4">
           <h1 className="text-4xl md:text-3xl text-orange-600 font-bold pb-4">
             Your Trusted Partner in{" "}
-            <span className="text-green-500">Trip Management System</span>
+            <span className="text-green-500">Expert Solutions</span>
           </h1>
           <p className="text-base md:text-xl pb-4">
             All our solutions are customized & designed to meet the specific
@@ -89,14 +89,18 @@ const About = () => {
             </h3>
             <p className="text-white mb-2">
               Our trip management system is built on a foundation of
-              <b> reliability, efficiency, and safety, ensuring smooth,
-              cost-effective, and secure operations</b>. We prioritize transparency
-              to build trust through open communication, and innovation to stay
-              competitive with the latest technology. With a customer-centric
-              approach, we focus on meeting user needs, while promoting
-              sustainability through eco-friendly practices. Our commitment to
-              accountability means we take responsibility for all actions,
-              fostering trust and credibility among all users.
+              <b>
+                {" "}
+                reliability, efficiency, and safety, ensuring smooth,
+                cost-effective, and secure operations
+              </b>
+              . We prioritize transparency to build trust through open
+              communication, and innovation to stay competitive with the latest
+              technology. With a customer-centric approach, we focus on meeting
+              user needs, while promoting sustainability through eco-friendly
+              practices. Our commitment to accountability means we take
+              responsibility for all actions, fostering trust and credibility
+              among all users.
             </p>
             {/* <p className="font-bold text-white mb-2">
               There are many variations of passages of Lorem Ipsum available,

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./images/newlogo1.svg";
+import logo from "./images/logo1.png";
 import { useNavigate } from "react-router-dom";
 
 const data = [
@@ -9,7 +9,13 @@ const data = [
   },
   {
     title: "Services",
-    list: ["E-commerce", "Mobile App", "UI-UX", "Digital Marketing","Fleet Management",],
+    list: [
+      "E-commerce",
+      "Mobile App",
+      "UI-UX",
+      "Digital Marketing",
+      "Fleet Management",
+    ],
   },
   {
     title: "Solutions",
@@ -62,7 +68,7 @@ const FooterNew = ({ theme = "dark" }) => {
       case "Contact Us":
         navigate("/contact");
         break;
-        case "E-commerce":
+      case "E-commerce":
         navigate("/secommerce");
         break;
       case "Mobile App":
@@ -77,21 +83,21 @@ const FooterNew = ({ theme = "dark" }) => {
       case "Fleet Management":
         navigate("/fleetmanagement");
         break;
-        case "Analytics & Report":
-          navigate("/analytics-report");
-          break;
-        case "Expense & Billing":
-          navigate("/expense");
-          break;
-        case "Load & Cargo":
-          navigate("/load");
-          break;
-        case "Driver & Vehicle":
-          navigate("/driver");
-          break;
-        case "Group Management":
-          navigate("/groupmng");
-          break;
+      case "Analytics & Report":
+        navigate("/analytics-report");
+        break;
+      case "Expense & Billing":
+        navigate("/expense");
+        break;
+      case "Load & Cargo":
+        navigate("/load");
+        break;
+      case "Driver & Vehicle":
+        navigate("/driver");
+        break;
+      case "Group Management":
+        navigate("/groupmng");
+        break;
       default:
     }
     window.scrollTo(0, 0);
@@ -113,7 +119,7 @@ const FooterNew = ({ theme = "dark" }) => {
             onClick={home}
           />
           <p className="text-base leading-relaxed md:text-left">
-            At <b>Trip Management System</b>, we have customized offerings for
+            At <b>Expert Solutions</b>, we have customized offerings for
             different domains. These solutions enable users to manage and
             monitor their assets effectively, increasing business efficiency.
           </p>

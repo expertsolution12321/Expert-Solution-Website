@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "./images/newlogo1.svg";
+import logo from "./images/logo1.png";
 import sql from "./images/sql.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaSortDown } from "react-icons/fa";
