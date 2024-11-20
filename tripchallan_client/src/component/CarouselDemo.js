@@ -52,7 +52,7 @@ const CarouselDemo = () => {
           <span className="text-orange-500"> Prototype Services</span>
         </span>
       ),
-      text: "Trip Management System is dedicated to accomplishing your business objectives by offering the best prototype website design elements for your projects.",
+      text: "EXPERT SOLUTIONS is dedicated to accomplishing your business objectives by offering the best prototype website design elements for your projects.",
     },
     {
       src: digitalmark,
@@ -72,7 +72,7 @@ const CarouselDemo = () => {
           <span className="text-orange-500"> Fleet Operations</span>{" "}
         </span>
       ),
-      text: "The secret to winning the e-commerce game lies in having an online presence that matches the expectations of your audience and compels them to convert. ",
+      text: "Take your fleet management to the next level with cutting-edge technology and streamlined processes. ",
     },
     {
       src: driver,
@@ -102,7 +102,7 @@ const CarouselDemo = () => {
           <span className="text-orange-500">Billing Management System</span>
         </span>
       ),
-      text: "Our comprehensive Driver and Vehicle Management System is designed to streamline the entire process of managing your fleet and driver operations.",
+      text: "Simplify and optimize your financial processes with our powerful billing management system. Automate invoicing, track payments in real-time, and generate detailed financial reports effortlessly.",
     },
     {
       src: report,
@@ -112,7 +112,7 @@ const CarouselDemo = () => {
           Insights
         </span>
       ),
-      text: "Uncover key trends, track performance, and make informed decisions with our comprehensive Analytics & Reporting tools. Visualize real-time data, customize dashboards, and gain valuable insights.",
+      text: "Unlock the power of data-driven decision-making with actionable insights tailored for your business.Gain a deeper understanding of customer behavior and market trends."
     },
     {
       src: group,

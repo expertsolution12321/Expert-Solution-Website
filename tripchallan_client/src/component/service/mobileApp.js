@@ -62,7 +62,7 @@ export default function Mobileapp() {
               Mobile App Development Services
             </h2>
             <p className="mb-6">
-              We at Trip Management System offer a custom range of mobile app
+              We at EXPERT SOLUTIONS offer a custom range of mobile app
               development services which mainly focus on two locations i.e.
               India & USA. We offer services for both Android and iOS platforms.
             </p>

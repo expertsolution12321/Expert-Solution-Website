@@ -98,9 +98,9 @@ const FooterNew = ({ theme = "dark" }) => {
       case "Group Management":
         navigate("/groupmng");
         break;
-        case "Privacy Policy":
-          navigate("/privacy-policy");
-          break;
+      case "Privacy Policy":
+        navigate("/privacy-policy");
+        break;
       default:
     }
     window.scrollTo(0, 0);
@@ -164,20 +164,20 @@ const FooterNew = ({ theme = "dark" }) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between">
+      <div className="flex flex-col sm:flex-row justify-between gap-4">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.844317695037!2d85.83435087500952!3d20.25687828120627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190a7255555555%3A0xb4da5c97fe15e672!2sEXPERT%20SOLUTIONS!5e1!3m2!1sen!2sin!4v1729942970690!5m2!1sen!2sin"
           style={{ border: 0 }}
-          className="w-2/5 h-[300px] rounded-md"
-          title="office-location"
+          className="w-full sm:w-2/5 aspect-video sm:h-[300px] rounded-md"
+          title="office-location-1"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.7470196392273!2d81.61881797526247!3d21.241857080461354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28ddea63ba0585%3A0xc79accfb8d22592d!2sEXPERT%20SOLUTIONS!5e1!3m2!1sen!2sin!4v1732015486244!5m2!1sen!2sin"
           style={{ border: 0 }}
-          className="w-2/5 h-[300px] rounded-md"
-          title="office-location"
+          className="w-full sm:w-2/5 aspect-video sm:h-[300px] rounded-md"
+          title="office-location-2"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>

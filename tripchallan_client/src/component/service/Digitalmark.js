@@ -182,7 +182,7 @@ export default function Digitalmark() {
               Company
             </h1>
             <p className="text-base font-normal ">
-              Trip Management System is the right strategic digital marketing
+              EXPERT SOLUTIONS is the right strategic digital marketing
               agency to provide you with a solution that brings the desired
               digital presence to your business. We empower your digital
               marketing website to get desired engagement, sales, and overall

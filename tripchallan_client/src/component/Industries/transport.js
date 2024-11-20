@@ -145,7 +145,7 @@ export default function Transport() {
               Get The tech-driven IT service For The Transportation History
             </h3>
             <p className="text-slate-300 mt-4">
-              At Trip Management System, we believe that smooth operations and
+              At EXPERT SOLUTIONS, we believe that smooth operations and
               effective management are fundamental to a successful retail
               business. Our <strong>Retail Management System Services</strong>{" "}
               are designed to empower your company.

@@ -3,7 +3,7 @@ import axios from "axios";
 import contact from "./images/contact.jpg";
 import { FaEnvelope } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
-
+const formSubmitted = localStorage.getItem('formdone')
 const addresses = [
   {
     location: "78, Gautam Nagar, Bhubaneswar, Odisha 751014",
@@ -32,8 +32,44 @@ export default function Contact() {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
+  const [businessType, setBusinessType] = useState("");
+  const [vehicleQuantity, setVehicleQuantity] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [error, setError] = useState({});
 
+// Form Validation
+
+const validateForm = () => {
+  const newErrors = {};
+
+  if (!name) newErrors.name = "First name is required.";
+  if (!lname) newErrors.lname = "Last name is required.";
+  if (!email) {
+    newErrors.email = "Email is required.";
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    newErrors.email = "Email is invalid.";
+  }
+  if (!phone) newErrors.phone = "Phone number is required.";
+  else if (!/^\d{10}$/.test(phone)) {
+    newErrors.phone = "Phone number must be 10 digits.";
+  }
+  if (!message) newErrors.message = "Message is required.";
+  if (!address) newErrors.address = "Address is required.";
+  if (businessType === "")
+    newErrors.businessType = "Please select a business type.";
+
+  if (businessType === "Transporter" || businessType === "Travels") {
+    if (!vehicleQuantity)
+      newErrors.vehicleQuantity = "Please enter the vehicle quantity.";
+  }
+
+  setError(newErrors);
+
+  // Return true if no errors
+  return Object.keys(newErrors).length === 0;
+};
+
+// ===================================
   // Send OTP
   const handleVerifyEmail = async () => {
     try {
@@ -51,7 +87,7 @@ export default function Contact() {
         alert("Failed to send OTP.");
       }
     } catch (error) {
-      alert("Error sending OTP.");
+      alert(error.response.data.message);
     } finally {
       setLoading(false);
     }
@@ -70,7 +106,7 @@ export default function Contact() {
         "https://expersolution.onrender.com/api/validate",
         { otp, email }
       );
-      if (response.status === 200 && response.data.success) {
+      if (response.status === 200) {
         setOtpVerified(true);
         alert("OTP Verified!");
       } else {
@@ -86,11 +122,6 @@ export default function Contact() {
   // Submit the form
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!otpVerified) {
-      alert("Please verify the OTP first.");
-      return;
-    }
 
     try {
       setLoading(true);
@@ -119,9 +150,33 @@ export default function Contact() {
     } finally {
       setLoading(false);
     }
+
+    if (validateForm()) {
+      // Proceed with form submission (e.g., API call)
+      alert("Form submitted successfully!");
+    }
   };
+
+
+
   const handleButtonClick = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
+  };
+  // Reset
+  const handleReset = async () => {
+    setName("");
+    setLname("");
+    setEmail("");
+    setPhone("");
+    setAddress("");
+    setMessage("");
+  };
+
+  const call = () => {
+    window.open("tel:+917509617777");
+  };
+  const emailcontact = () => {
+    window.open("mailto:expertsolutionbbsr@gmail.com");
   };
   return (
     <>
@@ -152,37 +207,39 @@ export default function Contact() {
       <div className="flex flex-col md:flex-row h-auto p-4 md:space-y-0 space-y-8 justify-center">
         {/* Get In Touch Section */}
         <div className="w-full md:w-2/5 h-auto p-2 pt-10 md:mr-2 justify-between">
-          <div className="pb-6">
+          <div className="pb-9">
             <h2 className="font-bold text-2xl md:text-4xl tracking-wide">
               Get In Touch
             </h2>
-            <p className="pt-8 text-base md:text-xl leading-6">
-              A Expert Solutions is a digital solution designed to streamline
-              and automate the process of managing travel and transportation
-              logistics.
+            <p className="pt-8 text-base md:text-lg leading-6">
+              Expert Solutions is a digital solution designed to streamline and
+              automate the process of managing travel and transportation
+              logistics. It enables users, especially businesses in the
+              transportation and logistics sector, to efficiently plan, track,
+              and document trips for vehicles and drivers
             </p>
           </div>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-8 mt-11">
             {/* Phone Section */}
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
               <FaPhone className="text-xl md:text-2xl w-8 md:w-10 text-white" />
-              <a
-                href="tel:+917509617777"
-                className="font-bold w-72 md:w-80 text-white hover:underline"
+              <button
+                onClick={call}
+                className="font-bold w-72 md:w-80 text-white"
               >
                 +91 7509617777
-              </a>
+              </button>
             </div>
 
             {/* Email Section */}
             <div className="inline-flex space-x-2 items-center p-4 md:p-6 w-full md:w-auto bg-[#111a51] rounded-md shadow-lg shadow-blue-500/50">
-              <FaEnvelope className="text-xl md:text-2xl w-8 md:w-10 text-white" />
-              <a
-                href="mailto:expertsolutionsbbsr@gmail.com"
-                className="font-bold w-72 md:w-80 text-white hover:underline"
+              <FaEnvelope className="text-xl md:text-2xl w-8 md:w-10 text-white " />
+              <button
+                onClick={emailcontact}
+                className="font-bold w-72 md:w-80 text-white"
               >
                 expertsolutionsbbsr@gmail.com
-              </a>
+              </button>
             </div>
 
             {/* Location Section */}
@@ -193,7 +250,7 @@ export default function Contact() {
               >
                 <FaLocationDot className="text-xl md:text-2xl w-8 md:w-10 text-white" />
                 <button
-                  onClick={() => handleButtonClick(address.mapLink)}
+                  onClick={() => handleButtonClick(address.mapLink)} // Call function on click
                   className="font-bold w-72 md:w-80 text-white"
                 >
                   {address.location}
@@ -202,9 +259,9 @@ export default function Contact() {
             ))}
           </div>
         </div>
-
         {/* Contact Us Form Section */}
         <div className="w-full md:w-2/5 p-2 md:ml-2 pt-10">
+        {formSubmitted ?<p className="text-green-500 font-semibold text-lg">ThankYou For Your Response</p>:""}
           <form onSubmit={handleSubmit}>
             <div className="space-y-12">
               <div>
@@ -223,10 +280,15 @@ export default function Contact() {
                       <input
                         type="text"
                         value={name}
+                        placeholder="Enter First Name"
                         onChange={(e) => setName(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        required
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 ${
+                          error.name ? "border-red-500" : ""
+                        }`}
                       />
+                      {error.name && (
+                        <p className="text-red-500 text-sm">{error.name}</p>
+                      )}
                     </div>
                   </div>
 
@@ -241,10 +303,15 @@ export default function Contact() {
                       <input
                         type="text"
                         value={lname}
+                        placeholder="Enter Last Name"
                         onChange={(e) => setLname(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        required
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 ${
+                          error.lname ? "border-red-500" : ""
+                        }`}
                       />
+                      {error.lname && (
+                        <p className="text-red-500 text-sm">{error.lname}</p>
+                      )}
                     </div>
                   </div>
                   {/* Email Section */}
@@ -258,13 +325,17 @@ export default function Contact() {
                     <div className="mt-2 flex items-center space-x-2">
                       <input
                         type="email"
-                        id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 ${
+                          error.email ? "border-red-500" : ""
+                        }`}
                         placeholder="Enter your email"
                         required
                       />
+                      {error.email && (
+                        <p className="text-red-500 text-sm">{error.email}</p>
+                      )}
                       <button
                         onClick={handleVerifyEmail}
                         className="bg-indigo-600 text-white px-4 py-1 rounded-md focus:outline-none hover:bg-indigo-700"
@@ -287,7 +358,7 @@ export default function Contact() {
                             id="otp"
                             value={otp}
                             onChange={(e) => setOtp(e.target.value)}
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3"
                             placeholder="Enter OTP"
                             required
                           />
@@ -321,12 +392,66 @@ export default function Contact() {
                       <input
                         type="tel"
                         value={phone}
+                        placeholder="Enter Phone Number"
                         onChange={(e) => setPhone(e.target.value)}
-                        className="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 ${
+                          error.phone ? "border-red-500" : ""
+                        }`}
                         required
                       />
+                      {error.phone && (
+                        <p className="text-red-500 text-sm">{error.phone}</p>
+                      )}
                     </div>
                   </div>
+                  {/* =============================== */}
+                  <div className="sm:col-span-full">
+                    <label
+                      htmlFor="Business Type"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      Business Type
+                    </label>
+                    <select
+                      value={businessType}
+                      onChange={(e) => setBusinessType(e.target.value)}
+                      className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 mt-2 ${
+                        error.businessType ? "border-red-500" : ""
+                      }`}
+                    >
+                      <option value="">Select Business Type</option>
+                      <option value="Company">Company</option>
+                      <option value="Transporter">Transporter</option>
+                      <option value="Travels">Travels</option>
+                      <option value="Individual">Individual</option>
+                    </select>
+                    {error.businessType && (
+                      <p className="text-red-500 text-sm">
+                        {error.businessType}
+                      </p>
+                    )}
+                  </div>
+
+                  {(businessType === "Transporter" ||
+                    businessType === "Travels") && (
+                    <div className="sm:col-span-full">
+                      <input
+                        type="number"
+                        value={vehicleQuantity}
+                        onChange={(e) => setVehicleQuantity(e.target.value)}
+                        placeholder="Enter Vehicle Quantity"
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 ${
+                          error.vehicleQuantity ? "border-red-500" : ""
+                        }`}
+                      />
+                      {error.vehicleQuantity && (
+                        <p className="text-red-500 text-sm">
+                          {error.vehicleQuantity}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                  {/* =============================== */}
                   {/* Other Fields */}
                   <div className="col-span-full">
                     <label
@@ -337,12 +462,16 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <textarea
-                        type="text"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        required
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 ${
+                          error.message ? "border-red-500" : ""
+                        }`}
+                        placeholder="Enter your message"
                       />
+                      {error.message && (
+                        <p className="text-red-500 text-sm">{error.message}</p>
+                      )}
                     </div>
                   </div>
 
@@ -355,12 +484,16 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <textarea
-                        type="text"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        required
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-md ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6 p-3 ${
+                          error.address ? "border-red-500" : ""
+                        }`}
+                        placeholder="Enter your address"
                       />
+                      {error.address && (
+                        <p className="text-red-500 text-sm">{error.address}</p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -369,6 +502,7 @@ export default function Contact() {
               <div className="mt-6 flex items-center justify-end gap-x-4">
                 <button
                   type="reset"
+                  onClick={handleReset}
                   className="text-md font-semibold leading-6 bg-red-600 text-white rounded-md px-3 py-2.5 w-28 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-200 hover:bg-red-500"
                 >
                   Reset
