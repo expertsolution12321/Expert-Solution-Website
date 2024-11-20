@@ -113,10 +113,10 @@ export default function Ecommerce() {
                     placeholder="Phone Number*"
                   />
                   <textarea
-                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg shadow-md shadow-gray-400"
+                    className="block w-full px-3 py-2 bg-[#f4f4f4] rounded-lg shadow-md shadow-gray-400 "
                     placeholder="Message*"
                     rows="3"
-                  ></textarea>
+                  />
                   <button className="w-full px-6 py-2 mt-4 bg-gradient-to-r from-[#000031] to-[#590338] text-white rounded-full hover:bg-gradient-to-l shadow-md shadow-gray-400">
                     Submit
                   </button>

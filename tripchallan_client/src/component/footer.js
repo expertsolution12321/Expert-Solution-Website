@@ -38,7 +38,7 @@ export default function Footer() {
               onClick={home}
             />
           <p className="text-base  md:text-left">
-            At <b>Trip Management System</b> we have customized offerings for
+            At <b>EXPERT SOLUTIONS</b> we have customized offerings for
             different domains. These solutions enable the users to manage and
             monitor their assets effectively and profitably, as per their
             requirements, thereby increasing the business efficiency.
@@ -171,7 +171,7 @@ export default function Footer() {
           Copyright ©{" "}
           <b>
             <a href="#" className="text-white">
-              Trip Management Systems
+              EXPERT SOLUTIONSs
             </a>
           </b>{" "}
           2024. All Rights Reserved.

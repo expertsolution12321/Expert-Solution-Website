@@ -7,17 +7,22 @@ function ServiceRoute({ element }) {
   useEffect(() => {
     // Check if the "formSubmitted" cookie is set to true
     const hasSubmitted = document.cookie.includes("formSubmitted=true");
-console.log(hasSubmitted)
+    const formSubmit = localStorage.getItem("formdone");
+    console.log("formdone", formSubmit);
     // Show popup if the form hasn't been submitted
     if (!hasSubmitted) {
-        console.log('true')
       setShowPopup(true);
+    }
+    if (formSubmit) {
+      setShowPopup(false);
     }
   }, []); // Triggers only on initial mount
 
   const handlePopupSubmit = (data) => {
+    console.log("datatatataatatat", data);
     // Set a "formSubmitted" cookie to prevent the popup from showing again
-    document.cookie = "formSubmitted=true; max-age=" + 60 * 60 * 24 * 365 + "; path=/";
+    document.cookie =
+      "formSubmitted=true; max-age=" + 60 * 60 * 24 * 365 + "; path=/";
     setShowPopup(false); // Hide the popup after successful submission
     window.location.reload();
   };
@@ -30,7 +35,9 @@ console.log(hasSubmitted)
 
   return (
     <>
-      {showPopup && <Popup onClose={handleClosePopup} onSubmit={handlePopupSubmit} />}
+      {showPopup && (
+        <Popup onClose={handleClosePopup} onSubmit={handlePopupSubmit} />
+      )}
       {element}
     </>
   );

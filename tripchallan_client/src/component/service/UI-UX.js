@@ -30,7 +30,7 @@ export default function UIUX() {
             </h1>
             <p className="font-medium text-base tracking-wider leading-relaxed">
               {" "}
-              Trip Management System is dedicated to accomplishing your business
+              EXPERT SOLUTIONS is dedicated to accomplishing your business
               objectives by offering the best prototype website design elements
               for your projects.{" "}
             </p>
@@ -95,7 +95,7 @@ export default function UIUX() {
             </h1>
             <p className="text-base font-normal ">
               {" "}
-              We, at Trip Management System, leverage you to upscale your
+              We, at EXPERT SOLUTIONS, leverage you to upscale your
               business by offering the best website prototype services. Our team
               consists of skilled professionals with a shared commitment to
               delivering high-quality website prototypes. With a wealth of

@@ -214,7 +214,7 @@ export default function Retail() {
         <div className="flex-1 p-6">
           <div className="max-w-xl  rounded-lg p-6 md:p-8 rigth-0 md:mx-0">
             <h2 className="text-white text-3xl  mb-4 font-bold">
-              Discover how Trip Management System Revolutionizes Retail
+              Discover how EXPERT SOLUTIONS Revolutionizes Retail
               Operations with its Adaptability to Diverse Business Needs
             </h2>
             <button

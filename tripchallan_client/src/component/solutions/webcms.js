@@ -32,7 +32,7 @@ export default function Webcms() {
               Web App Development Company
             </h2>
             <p className="mb-6">
-              We at Trip Management System offer a custom range of mobile app
+              We at EXPERT SOLUTIONS offer a custom range of mobile app
               development services which mainly focus on two locations i.e.
               India & USA. We offer services for both Android and iOS platforms.
             </p>
@@ -79,7 +79,7 @@ export default function Webcms() {
             Development Solutions
           </h1>
           <p className="text-gray-600">
-            At Trip Management System, we understand the importance of creating
+            At EXPERT SOLUTIONS, we understand the importance of creating
             immersive web experiences to elevate your market value. Our team of
             dedicated web experts understands your unique business needs to
             customize web app development solutions for you. So, that your users

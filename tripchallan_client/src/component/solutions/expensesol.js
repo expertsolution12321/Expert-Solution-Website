@@ -197,15 +197,17 @@ function Expensesol() {
             </div>
           </div>
         </div>
+
+
         {/* Pricing plan */}
-        <div className="bg-gray-50 py-12">
+        {/* <div className="bg-gray-50 py-12">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl text-gray-800 mb-8 font-bold">
               Our Pricing Plans
-            </h2>
+            </h2> */}
 
             {/* Toggle for monthly/annual pricing */}
-            <div className="flex justify-center mb-8">
+            {/* <div className="flex justify-center mb-8">
               <button
                 className={`px-6 py-2 rounded-l-lg ${
                   !isAnnual
@@ -226,10 +228,10 @@ function Expensesol() {
               >
                 Annual
               </button>
-            </div>
+            </div> */}
 
             {/* Pricing Plans */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -238,34 +240,34 @@ function Expensesol() {
                   <h3 className="text-2xl font-bold text-gray-700 mb-4">
                     {plan.title}
                   </h3>
-                  <p className="text-gray-500 mb-4">{plan.description}</p>
+                  <p className="text-gray-500 mb-4">{plan.description}</p> */}
 
                   {/* Price based on toggle */}
-                  <div className="text-3xl font-semibold text-gray-800 mb-4">
+                  {/* <div className="text-3xl font-semibold text-gray-800 mb-4">
                     ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
                     <span className="text-lg text-gray-400">
                       {isAnnual ? "/year" : "/month"}
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* Features */}
-                  <ul className="list-disc list-inside mb-4">
+                  {/* <ul className="list-disc list-inside mb-4">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="text-gray-600">
                         {feature}
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
 
                   {/* CTA Button */}
-                  <button className="bg-blue-500 text-white px-6 py-2 rounded-lg mt-4 hover:bg-blue-600 transition">
+                  {/* <button className="bg-blue-500 text-white px-6 py-2 rounded-lg mt-4 hover:bg-blue-600 transition">
                     Choose Plan
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+                  </button> */}
+                {/* </div> */}
+              {/* ))} */}
+            {/* </div> */}
+          {/* </div> */}
+        {/* </div> */}
       </div>
     </>
   );
